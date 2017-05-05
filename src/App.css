@@ -1,0 +1,83 @@
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-top: -40px;
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  border-right: solid #EFEDEC 1px;
+  background: #F8F8F9;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+  box-shadow: 5px 1px 3px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.24);
+}
+
+.sidebar-content {
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  margin: 20px;
+  margin-top: 80px;
+}
+
+.sidebar-content li {
+  list-style-type: none;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.content-header {
+  position: fixed;
+  width: 100%;
+  margin-top: -60px;
+  background-color: white;
+  padding-left: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.content-header h1 {
+  font-size: 3em;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  padding: 5px;
+}
+
+.content-body {
+  margin-top: 80px;
+  font-size: 1.3em;
+  padding: 50px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+}
+
+.content-body img {
+  width: auto;
+  max-width: 700px;
+  height: auto;
+  max-height: 700px;
+  padding: 50px;
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 40px;
+  background-color: #F8F8F9;
+  box-shadow: 5px 1px 3px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.24);
+}
+
+#ap-logo {
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  max-height: 120px;
+  margin-top: 6px;
+  margin-left: 50px;
+}
