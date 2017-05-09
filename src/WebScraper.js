@@ -7,7 +7,7 @@ class WebScraper extends Component {
 		this.state = {
 			posting_url: "",
 			response_styling: "",
-			response: ""
+			response: []
 		}
 		this.handleUpdatePostingUrl = this.handleUpdatePostingUrl.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,18 +16,21 @@ class WebScraper extends Component {
 		this.setState({ posting_url: event.target.value });
 	}
 	handleSubmit(data){
-		var request = new Request(this.state.posting_url, {
-			method: 'GET',
+		var request = new Request('http://localhost:8080/', {
+			method: 'POST',
 			headers: new Headers({
-				'Accept': 'text/html',
-			})
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			}),
+			body: JSON.stringify({ get_url: this.state.posting_url})
 		});
 		fetch(request)
 		.then((response) => {
 			response.text().then(text => {
-				this.setState({ response: text })
-				console.log(text);
-				console.log("hello");
+				var array_of_fields = text.split(',');
+				this.setState({ response: array_of_fields })
+				console.log(array_of_fields);
+				console.log(typeof array_of_fields);
 			})
 		});
 	}
@@ -40,12 +43,18 @@ class WebScraper extends Component {
 				<div className="content-body">
 					<div className="outer">
 						<div className="form-style-6">
-							<form action={this.state.posting_url} method="POST">
+							<form>
 								<div id="red"><strong>Posting URL:</strong></div>
 								<input name="postingUrl" className="input" type="text" placeholder="Paste your Posting URL here!" required onChange={this.handleUpdatePostingUrl}></input>
 							</form>
 							<button onClick={this.handleSubmit} className="submit-button button disable">Submit</button>
-						<div>{this.state.response}</div>
+						<div>   
+							<ul>
+     							{this.state.response.map(function(item, index){
+       								return <li key={index}>{item}</li>
+     							})}
+   							</ul>
+						</div>
 						</div>
 					</div>
 				</div>
