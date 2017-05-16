@@ -167,3 +167,29 @@
     font-size: .65em ;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
+.fields_ul {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fields {
+    list-style: none;
+    list-style-position: inside;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    border-radius: 5%;
+    background-color: #70b3c1; 
+    color: white;
+    text-decoration: none; 
+    border-radius: 2%;
+    
+}
