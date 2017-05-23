@@ -5,10 +5,8 @@ class Chapter1 extends Component {
 	render() {
 		return(
 			<div>
-				<div className="content-header">
-					<h1>1. The Homepage</h1>
-				</div>
 				<div className="content-body">
+				<h1 className="title">The Homepage</h1>
 				<p> When you sign-in to your LeadConduit account, you'll be taken to your homepage at next.leadconduit.com. The homepage provides you with an overview of your flow activity, as well as a navigation bar with important links to access your flows, libraries, events, and reports.</p>
  				<p><strong> Homepage overview</strong></p>
 				1. Navbar<br/>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Row, Form, FormGroup, FormControl, Button, Grid} from 'react-bootstrap';
 import './Test.css';
 
 class Test extends Component {
@@ -83,43 +84,54 @@ class Test extends Component {
 	}
 	render() {
 		return(
-			<div>
-				<div className="content-header">
-					<h1>Test Your Flow</h1>
-				</div>
-				<div className="content-body">
-					<div className="outer">
-						<div className="form-style-6">
-							<form action={this.state.posting_url} method="POST">
+			<Grid className="content-body">	
+				<Row>
+					<Col xs={6} xsOffset={3} className="outer-results">
+						
+						<div className="response">Response from LeadConduit:
+							{ this.state.response_message.length > 0 && 
+								<div className={this.state.response_styling}>
+									{ this.state.response_styling === 'bad_lead' 
+										? <span className="fail_text"><span id='outcome'>Failure</span>: {this.state.response_message}</span>
+										: <div><span id='outcome'>Success</span></div>
+									}
+								</div>
+							}
+							<div>
+								{ this.state.leadconduit_event_id.length > 0 && 
+									<div className="lc_link"> Click here to see this lead in LeadConduit: <a href={ `https://next.leadconduit.com/events/${this.state.leadconduit_event_id}` } target="_blank"><span id={this.state.response_styling}>My Lead</span></a></div>	
+								}
+							</div>
+						</div>	
+					</Col>
+					<Col xs={6} xsOffset={3} className="outer">
+						<div className="inner">
+						<Form action={this.state.posting_url} method='POST'>
+							<FormGroup>
+							
 								<div id="red"><strong>Posting URL:</strong></div>
-								<input name="postingUrl" className="input" type="text" placeholder="Paste your Posting URL here!" required onChange={this.handleUpdatePostingUrl}></input>
+								<FormControl name="postingUrl" className="input" type="text" autoFocus placeholder="Paste your Posting URL here!" required onChange={this.handleUpdatePostingUrl}></FormControl>
 								<hr />
 								First Name:
-								<input name="first_name" className="input" type="text" onChange={this.handleUpdateFirstName}></input>
+								<FormControl name="first_name" className="input" type="text" onChange={this.handleUpdateFirstName}></FormControl>
 								Last Name: 
-								<input name="l_name" className="input" type="text" onChange={this.handleUpdateLastName}></input>
+								<FormControl name="l_name" className="input" type="text" onChange={this.handleUpdateLastName}></FormControl>
 								Email: 
-								<input name="email" className="input" type="text" onChange={this.handleUpdateEmail}></input>
+								<FormControl name="email" className="input" type="text" onChange={this.handleUpdateEmail}></FormControl>
 								Phone Number:
-								<input name="phone_1" className="input" type="number" onChange={this.handleUpdatePhone}></input>
+								<FormControl name="phone_1" className="input" type="number" onChange={this.handleUpdatePhone}></FormControl>
 								Age:
-								<input name="age" className="input" type="number" onChange={this.handleUpdateAge}></input>
+								<FormControl name="age" className="input" type="number" onChange={this.handleUpdateAge}></FormControl>
 								Favorite Sports Team:
-								<input name="sports_team" className="input" type="text" onChange={this.handleUpdateSportsTeam}></input>
-							</form>
-							<button onClick={this.handleSubmit} className="submit-button button disable">Submit</button>
-							<hr />
-							<div className="lc_response">Response from LeadConduit:</div>
-								<div id="response_box">
-									<div className={this.state.response_styling}>{this.state.response_message}</div>
-								</div><br/>
-								{ this.state.leadconduit_event_id.length > 0 && 
-									<div> Click here to see this lead in LeadConduit:<a href={ `https://next.leadconduit.com/events/${this.state.leadconduit_event_id}` } target="_blank">My Lead</a></div>	
-								}
-						</div>
-					</div>
-				</div>
-			</div>
+								<FormControl name="sports_team" className="input" type="text" onChange={this.handleUpdateSportsTeam}></FormControl>
+							<br />
+							<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleSubmit} disabled={!this.state.posting_url}>Submit</Button>
+							</FormGroup>
+						</Form>
+						</div>	
+					</Col>
+				</Row>
+			</Grid>
 		);
 	}
 }

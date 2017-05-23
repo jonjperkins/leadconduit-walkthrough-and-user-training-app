@@ -5,9 +5,7 @@ class Chapter2 extends Component {
 	render() {
 		return(
 			<div>
-				<div className="content-header">
-					<h1>2. Flows</h1>
-				</div>
+
 				<div className="content-body">
 					<p>A LeadConduit flow is the 'piping' between web forms, enhancements, and delivery destinations. Data from multiple web forms can be sent to a LeadConduit flow, and the flow can then filter and enhance the data before piping the desired lead information to one or more delivery destinations.</p>
 					<p>LeadConduit flows give you the power to decide which data gets sent to your system and whether you'd like to enhance that data using virtually any web service available to you. As a result, LeadConduit is incredibly flexible. </p>

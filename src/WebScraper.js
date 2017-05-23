@@ -70,7 +70,9 @@ class WebScraper extends Component {
     			} else if (phone_count.length < 2) {
     				phone_count.push('phone_2')
     				return item = 'phone_2'
-    			} 
+    			} else if (phone_count.length <3) {
+    				return item = 'phone_3'
+    			}
     			return item = undefined
     			
     		}
@@ -81,7 +83,7 @@ class WebScraper extends Component {
 
 			if ((item === 'apt') || (item === 'apartment') || (item === 'apt.') || (item === 'ste') || (item === 'suite') || (item === 'ste.') && address_count.length > 1) {
 				address_count.push('address_2')
-				return item = 'address 2'
+				return item = 'address_2'
 			} 
     		
     		if (/(address)/.test(item)) {
@@ -95,14 +97,17 @@ class WebScraper extends Component {
     			return item = undefined
     			
     		}
-    		// if (address_count.length > 1) {
-    		// 	if ((item === 'apt') || (item === 'apartment') || (item === 'apt.') || (item === 'ste') || (item === 'suite') || (item === 'ste.')) {
-    		// 		address_count.push('address_2')
-    		// 		return item = 'address 2'
-    		// 	} 
-    		// }
 
-    		return undefined
+    		// can't currently collect trustedform with GET req
+    		if (/(xxTrustedFormCertUrl)/.test(item)) {
+    			return item = 'trustedform_cert_url'
+    		}
+
+    		if (/(age)/.test(item)) {
+    			return item = 'age'
+    		}
+
+    		return item = undefined
 			
 		});
 		console.log('initial match array: ' + initial_match_array);
@@ -118,7 +123,8 @@ class WebScraper extends Component {
 
 		var fuse_results = initial_match_array.map(function(item, index) {
 			if (item === undefined) {
-				var fuse_candidates = [{"field_name": "company_main_phone"},{"field_name": "first_name"}, {"field_name": "last_name"}, {"field_name": "email"}, {"field_name": "company.name"}, {"field_name": "postal_code"}, {"field_name": "account"}, {"field_name": "account_type"}, {"field_name": "pass"}, {"field_name": "phone_1"}, {"field_name": "phone_2"}, {"field_name": "tos"}, {"field_name": "browser"}, {"field_name": "location"}, {"field_name": "type"}]
+				console.log('undefined!')
+				var fuse_candidates = [{"field_name": "company_main_phone"},{"field_name": "first_name"}, {"field_name": "last_name"}, {"field_name": "email"}, {"field_name": "company.name"}, {"field_name": "postal_code"}, {"field_name": "account"}, {"field_name": "account_type"}, {"field_name": "pass"}, {"field_name": "phone_1"}, {"field_name": "phone_2"}, {"field_name": "tos"}, {"field_name": "browser"}, {"field_name": "location"}, {"field_name": "type"}, {"field_name": "montly_salary"}, {"field_name": "annual_salary"}]
 				var options = {
 					shouldSort: true,
 		  			threshold: 0.5,
@@ -134,11 +140,14 @@ class WebScraper extends Component {
 				console.log('before search: ')
 				console.log(original_state_array[index])
 				var fuse_search = fuse.search(original_state_array[index])
-				if (item !== undefined) {
+				console.log('trying to set fuzz field name')
+				// item = fuse_search[0].field_name
+				if (fuse_search.length > 1) {
 					item = fuse_search[0].field_name
 				} else {
 					item = 'custom_field'
 				}
+				console.log(item);
 
 			}
 			return item
@@ -187,8 +196,8 @@ class WebScraper extends Component {
 					<div className="outer">
 						<div className="form-style-6">
 							<form action={this.state.posting_url} method="POST">
-								<div id="red"><strong>Posting URL:</strong></div>
-								<input name="postingUrl" className="input" type="text" placeholder="Paste your Posting URL here!" required onChange={this.handleUpdatePostingUrl}></input>
+								<div id="red"><strong>Web Form Location:</strong></div>
+								<input name="postingUrl" className="input" type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></input>
 							</form>
 							<button onClick={this.handleSubmit} className="disable submit-button button">Submit</button>
 							<div>   
@@ -209,7 +218,10 @@ class WebScraper extends Component {
 							}
 								<ul className='fields_ul'>
 									{Object.entries(this.state.match_object).map(([key, value]) => {
-										return <li className="fields" key={key}>{key} -> LeadConduit field: {value}</li>
+										return <div>
+											   <li className="fields" key={key}>{key}</li> 
+											   <p style={{color: 'red'}}>{value}</p>
+											   </div>
 									})}
 								</ul>
 							</div>

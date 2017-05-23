@@ -6,7 +6,7 @@ class Header extends Component {
 		return (
 			<nav>
 				<div className='fixed-nav-bar'>
-					<img id='ap-logo' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/images/activeprospect-logo.svg' />
+					<img id='ap-logo' src={require('../images/logo.png')} />
 				</div>
 			</nav>
 		)

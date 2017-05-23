@@ -7,25 +7,58 @@
   margin-top: -40px;
   margin-left: -250px;
   left: 250px;
-  width: 250px;
-  border-right: solid #EFEDEC 1px;
-  background: #F8F8F9;
+  width: 280px;
+  border-right: solid #E9ECEC 1px;
+  background: white;
   position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.4s ease 0s;
-  box-shadow: 5px 1px 3px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.24);
+  
 }
 
 .sidebar-content {
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
-  margin: 20px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .sidebar-content li {
+  padding: 6px 6px 6px 6px;
   list-style-type: none;
+  padding-left: 15px;
+}
+
+.sidebar-content li a {
+  display:inline-block;
+  padding-left: 200px;
+  margin-left: -200px;
+  padding-right: 250px;
+  margin-right: -250px;
+  padding-top: 6px;
+  margin-top: -6px;
+  padding-bottom: 6px;
+  margin-bottom: -6px;
+
+}
+
+.activePage {
+  background-color: #F2F2F2;
+}
+
+.activePage:not(.nohover):hover {
+  background-color: #F2F2F2;
+}
+
+.sidebar-content li:hover {
+ background-color: #FAFAFA;
+}
+
+.sidebar-content li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.1em;
+  letter-spacing: .02em;
 }
 
 #page-content-wrapper {
@@ -50,7 +83,9 @@
 .content-body {
   margin-top: 80px;
   font-size: 1.3em;
-  padding: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 20px;
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
 }
 
@@ -68,16 +103,23 @@
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 40px;
-  background-color: #F8F8F9;
-  box-shadow: 5px 1px 3px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.24);
+  height: 80px;
+  background-color: #233238;
+  border-bottom: solid #F8F8F9 2px;
+ 
 }
 
 #ap-logo {
   width: auto;
-  max-width: 120px;
+  max-width: 230px;
   height: auto;
-  max-height: 120px;
+  max-height: 200px;
   margin-top: 6px;
-  margin-left: 50px;
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 3em;
+  letter-spacing: .02em;
+  margin-bottom: 30px
 }

@@ -1,195 +1,95 @@
-.outer{
-    margin: 100px,100px,100px,100px;
+.outer {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: solid #F8F9F9 1px;
 }
 
-.form-style-6{
-    font: 95% Arial, Helvetica, sans-serif;
-    max-width: 400px;
-    margin: 10px auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    padding: 16px;
-    background: #F7F7F7;
-    font-size: .65em ;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-.form-style-6 h1{
-    background: #43D1AF;
-    padding: 20px 0;
-    font-weight: 300;
-    text-align: center;
-    color: #fff;
-    margin: -16px -16px 16px -16px;
-}
-.form-style-6 input[type="text"],
-.form-style-6 input[type="date"],
-.form-style-6 input[type="datetime"],
-.form-style-6 input[type="email"],
-.form-style-6 input[type="number"],
-.form-style-6 input[type="search"],
-.form-style-6 input[type="time"],
-.form-style-6 input[type="url"],
-.form-style-6 textarea,
-.form-style-6 select 
-{
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    border: 1px solid #ccc;
-    padding: 3%;
-    color: #555;
-    font: 95% Arial, Helvetica, sans-serif;
-}
-.form-style-6 input[type="text"]:focus,
-.form-style-6 input[type="date"]:focus,
-.form-style-6 input[type="datetime"]:focus,
-.form-style-6 input[type="email"]:focus,
-.form-style-6 input[type="number"]:focus,
-.form-style-6 input[type="search"]:focus,
-.form-style-6 input[type="time"]:focus,
-.form-style-6 input[type="url"]:focus,
-.form-style-6 textarea:focus,
-.form-style-6 select:focus
-{
-    box-shadow: 0 0 5px #43D1AF;
-    padding: 3%;
-    border: 1px solid #43D1AF;
+.inner {
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
 }
 
-.form-style-6 input[type="submit"],
-.form-style-6 input[type="button"]{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    padding: 3%;
-    background: #43D1AF;
-    border-bottom: 2px solid #30C29E;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;    
-    color: #fff;
-}
-
-.form-style-6 input[type="submit"]:hover,
-.form-style-6 input[type="button"]:hover {
-    background: black;
-}
-
-#red {
-    color: #BE2403;
-    padding-bottom: 5px;
-}
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 5%;
-}
-
-.submit-button {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-}
-
-.submit-button:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.disabled:hover {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
+.results {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: solid #F8F9F9 1px;
 }
 
 .bad_lead {
-    font: small "Courier New", Courier, monospace;
-    color: red;
-    font-weight: bold;
-    font-size: 1.05em;
-    letter-spacing: .1em
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-right: 70px;
+  margin-top: 10px;
+  background-color: #E94848;
+  color: white;
+  border-radius: 10px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  text-decoration: none;
 }
 
 .good_lead {
-    font: small "Courier New", Courier, monospace;
-    color: green;
-    font-weight: bold;
-    font-size: 1.05em;
-    letter-spacing: .1em
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  margin-right: 70px;
+  margin-top: 10px;
+  background-color: #7BD08E;
+  color: white;
+  border-radius: 10px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  text-decoration: none;
 }
 
-.lc_response {
-    font: 95% Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 5px;
+#bad_lead {
+	color: #E94848;
+	font-weight: bold;
 }
 
-#response_box {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+#good_lead {
+	color: #7BD08E;
+	font-weight: bold;
 }
 
-.field_name_box{
-    font: 95% Arial, Helvetica, sans-serif;
-    max-width: 400px;
-    margin: 10px auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    padding: 16px;
-    background: #74CF43;
-    font-size: .65em ;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.outer-results {
+  margin-top: 15px;
+  margin-right: 20px;
+  background-color: white;
+  border: solid #E8E9E9 1px;
 }
 
-.fields_ul {
-    list-style: none;
-    list-style-position: inside;
-    margin: 0px;
-    padding: 0px;
+.response {
+	color: #B9BABA;
+	margin-left: 70px;
+	padding-top: 20px;
+	margin-right: 10px;
+	padding-bottom: 20px;
+	text-decoration: none;
+	font-size: .8em;
 }
 
-.fields {
-    list-style: none;
-    list-style-position: inside;
-    border: none;
-    color: white;
-    padding: 8px 8px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    border-radius: 5%;
-    background-color: #70b3c1; 
-    color: white;
-    text-decoration: none; 
-    border-radius: 2%;
-    
+.response_text {
+	color: white;
+	font-weight: bold;
+	font-size: 1.1em;}
+
+.response-bad-lead {
+
+}
+
+#outcome {
+	font-size: 1.4em;
+}
+
+.response-text {
+	color: black;
+}
+
+.lc_link {
+	margin-top: 10px;
+	margin-right: 30px;
 }

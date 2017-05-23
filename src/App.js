@@ -7,6 +7,7 @@ import Chapter2 from './Chapter2';
 import Test from './Test';
 import WebScraper from './WebScraper';
 import './App.css';
+import CustomNavLink from './CustomNavLink';
 
 class App extends Component {
   render() {
@@ -21,13 +22,12 @@ class App extends Component {
 						<div id='sidebar-wrapper'>
 							<div className="sidebar-content">
 								<Sidebar>
-									<div>
-										<li><Link to='/chapter1'>1. The Homepage</Link></li>
-										<li><Link to='/chapter2'>2. Flows</Link></li>
+										<CustomNavLink activeClassName='activePage' to="/chapter1" label="Homepage"></CustomNavLink>
+										<CustomNavLink activeClassName='activePage' to="/chapter2" label="Flows"></CustomNavLink> 
+										
 										<br/>
-										<li><Link to='/test'><strong>Test Your Flow</strong></Link></li>
-										<li><Link to='/webscraper'><strong>Field Finder</strong></Link></li>
-									</div>		
+										<CustomNavLink activeClassName='activePage' to="/test" label="Test Your Flow"></CustomNavLink> 
+										<CustomNavLink activeClassName='activePage' to="/webscraper" label="Field Finder"></CustomNavLink> 
 								</Sidebar>
 							</div>
 						</div>
