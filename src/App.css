@@ -1,3 +1,89 @@
+@media screen and (max-width: 2200px) {
+    .app-content-body > .content-body {
+      padding-left: 450px;
+      padding-right: 450px;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .app-content-body > .content-body {
+      padding-left: 375px;
+      padding-right: 375px;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .app-content-body > .content-body {
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .app-content-body > .content-body {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .app-content-body > .content-body {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .fixed-nav-bar > .menu-button {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper-ancestor > #sidebar-wrapper {
+      margin-left: -500px;
+    }
+    .wrapper-ancestor > #page-content-wrapper {
+      margin-left: -250px;
+    }
+    .content-body > .outer-results {
+      margin-right: 0px;
+    }
+    .app-content-body > .content-body {
+      padding: 50px;   
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper-ancestor > #sidebar-wrapper {
+      margin-left: -500px;
+    }
+    .wrapper-ancestor > #page-content-wrapper {
+      margin-left: -250px;
+    }
+    .content-body > .outer-results {
+      margin-right: 0px;
+    }
+    .app-content-body > .content-body {
+      padding: 0px;   
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .fixed-nav-bar > .menu-button {
+      font-size: 10px;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+    .fixed-nav-bar > #ap-logo {
+      max-width: 175px;
+      margin-top: 12px;
+      margin-left: 10px;
+    }
+}
+
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -7,7 +93,7 @@
   margin-top: -40px;
   margin-left: -250px;
   left: 250px;
-  width: 280px;
+  width: 250px;
   border-right: solid #E9ECEC 1px;
   background: white;
   position: fixed;
@@ -16,6 +102,20 @@
   z-index: 1000;
   transition: all 0.4s ease 0s;
   
+}
+
+#sidebar-wrapper-small-screen {
+  margin-top: -40px;
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  border-right: solid #E9ECEC 1px;
+  background: white;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
 }
 
 .sidebar-content {
@@ -62,7 +162,7 @@
 }
 
 #page-content-wrapper {
-  width: 100%;
+
 }
 
 .content-header {
@@ -87,6 +187,7 @@
   padding-right: 150px;
   padding-top: 20px;
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  width: 100%;
 }
 
 .content-body img {
@@ -118,8 +219,28 @@
   margin-left: 20px;
 }
 
+.menu-button {
+  float: right;
+  background-color: white;
+  border: none;
+  color: #F98129;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 19px;
+  margin-right: 30px;
+  border-radius: 6px;
+  font-weight: bold;
+
+}
+
+
+
 .title {
   font-size: 3em;
   letter-spacing: .02em;
   margin-bottom: 30px
 }
+

@@ -7,6 +7,7 @@ class Header extends Component {
 			<nav>
 				<div className='fixed-nav-bar'>
 					<img id='ap-logo' src={require('../images/logo.png')} />
+					<button className="menu-button">MENU</button>
 				</div>
 			</nav>
 		)

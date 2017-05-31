@@ -81,19 +81,18 @@ class Test extends Component {
 				})
 			}
 		});
+		window.scrollTo(0, 0)
 	}
 	render() {
 		return(
-			<Grid className="content-body">	
-				<Row>
-					<Col xs={6} xsOffset={3} className="outer-results">
-						
+			<div className="content-body">	
+					<div className="outer-results">	
 						<div className="response">Response from LeadConduit:
 							{ this.state.response_message.length > 0 && 
 								<div className={this.state.response_styling}>
 									{ this.state.response_styling === 'bad_lead' 
-										? <span className="fail_text"><span id='outcome'>Failure</span>: {this.state.response_message}</span>
-										: <div><span id='outcome'>Success</span></div>
+										? <div className="outcome"><span className="fail_text"><span id='outcome'>Failure</span>: {this.state.response_message}</span></div>
+										: <div className="outcome"><span id='outcome'>Success</span></div>
 									}
 								</div>
 							}
@@ -103,8 +102,8 @@ class Test extends Component {
 								}
 							</div>
 						</div>	
-					</Col>
-					<Col xs={6} xsOffset={3} className="outer">
+					</div>
+					<div className="outer">
 						<div className="inner">
 						<Form action={this.state.posting_url} method='POST'>
 							<FormGroup>
@@ -129,9 +128,9 @@ class Test extends Component {
 							</FormGroup>
 						</Form>
 						</div>	
-					</Col>
-				</Row>
-			</Grid>
+					</div>
+				
+			</div>
 		);
 	}
 }

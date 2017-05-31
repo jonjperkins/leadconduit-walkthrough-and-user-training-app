@@ -10,6 +10,12 @@ import './App.css';
 import CustomNavLink from './CustomNavLink';
 
 class App extends Component {
+constructor() {
+	super();
+	this.state = {
+		sidebar_wrapper: ""
+	}
+  }
   render() {
   	return (
 		<div>
@@ -18,7 +24,7 @@ class App extends Component {
 			</div>
 			<div id='wrapper'>
 				<BrowserRouter>
-					<div>
+					<div className='wrapper-ancestor'>
 						<div id='sidebar-wrapper'>
 							<div className="sidebar-content">
 								<Sidebar>
@@ -32,7 +38,7 @@ class App extends Component {
 							</div>
 						</div>
 						<div id='page-content-wrapper'>
-							<div>
+							<div className="app-content-body">
 								<Route path='/chapter1' component={Chapter1}></Route>
 								<Route path='/chapter2' component={Chapter2}></Route>
 								<Route path='/test' component={Test}></Route>
