@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Test.css';
 import {score} from 'fuzzaldrin';
 const Fuse = require("fuse.js");
+import {FormControl, Button} from 'react-bootstrap';
 
 
 class WebScraper extends Component {
@@ -189,17 +190,14 @@ class WebScraper extends Component {
 	render() {
 		return(
 			<div>
-				<div className="content-header">
-					<h1>Field Finder</h1>
-				</div>
 				<div className="content-body">
 					<div className="outer">
-						<div className="form-style-6">
+						<div className="inner">
 							<form action={this.state.posting_url} method="POST">
-								<div id="red"><strong>Web Form Location:</strong></div>
-								<input name="postingUrl" className="input" type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></input>
+								<div id="red"><strong>Web Form URL:</strong></div>
+								<FormControl name="postingUrl" className="input" type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></FormControl>
 							</form>
-							<button onClick={this.handleSubmit} className="disable submit-button button">Submit</button>
+							<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleSubmit} className="disable submit-button button">Submit</Button>
 							<div>   
 								<ul className="fields_ul">
      								{this.state.response.map(function(item, index){
@@ -209,7 +207,7 @@ class WebScraper extends Component {
 							</div>
 							<div>
 							  { this.state.response.length > 0 ? 
-							  	<button onClick={this.handleFuzzFilter}>Click to find matches in LC</button> : <p></p>
+							  	<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleFuzzFilter}>Click to find matches in LC</Button> : <p></p>
 							  }
 							</div>
 							<div> 
@@ -219,8 +217,8 @@ class WebScraper extends Component {
 								<ul className='fields_ul'>
 									{Object.entries(this.state.match_object).map(([key, value]) => {
 										return <div>
-											   <li className="fields" key={key}>{key}</li> 
-											   <p style={{color: 'red'}}>{value}</p>
+											   	<li className="fields" key={key}>{key}</li> 
+											   	<p style={{color: 'red'}}>{value}</p>
 											   </div>
 									})}
 								</ul>
