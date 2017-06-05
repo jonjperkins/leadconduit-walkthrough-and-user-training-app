@@ -7,7 +7,7 @@ class Chapter5 extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
-					<h1 className="title">Matching Fields to Parameters</h1>
+					<h1 className="title">Fields and Form Parameters</h1>
 					<p> Configuring your flow fields to collect the parameters sent from your 
 					web form to LeadConduit requires you to be exact.</p>
 	 				<p>Remember the parameters our web form will send to LeadConduit:</p>

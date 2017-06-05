@@ -189,13 +189,13 @@ class WebScraper extends Component {
 	}*/
 	render() {
 		return(
-			<div>
+			
 				<div className="content-body">
 					<div className="outer">
 						<div className="inner">
 							<form action={this.state.posting_url} method="POST">
-								<div id="red"><strong>Web Form URL:</strong></div>
-								<FormControl name="postingUrl" className="input" type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></FormControl>
+								<div><strong>Web Form URL:</strong></div>
+								<FormControl name="postingUrl" className="input" style={{ marginBottom: "10px" }} type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></FormControl>
 							</form>
 							<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleSubmit} className="disable submit-button button">Submit</Button>
 							<div>   
@@ -226,7 +226,7 @@ class WebScraper extends Component {
 						</div>
 					</div>
 				</div>
-			</div>
+			
 		);
 	}
 }
