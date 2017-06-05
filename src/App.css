@@ -100,6 +100,11 @@
       margin-left: 10px;
       margin-right: 10px;   
     }
+    .fixed-nav-bar > #ap-logo {
+      max-width: 175px;
+      margin-top: 12px;
+      margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -255,7 +260,7 @@
 
 #ap-logo {
   width: auto;
-  max-width: 230px;
+  max-width: 200px;
   height: auto;
   max-height: 200px;
   margin-top: 6px;
@@ -266,7 +271,7 @@
   float: right;
   background-color: white;
   border: none;
-  color: #F98129;
+  color: #f58025;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -280,7 +285,7 @@
 
 .close-menu-button {
   float: right;
-  background-color: #F98129;
+  background-color: #f58025;
   border: none;
   color: white;
   padding: 2px 20px;
@@ -299,5 +304,50 @@
   width: 100%;
 
 }
+
+.next-button {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    background-color: #f58025;
+    color: white;
+    padding: 8px 14px;
+    border: solid #f58025 1px;
+    float: right;
+}
+
+.next-button:hover {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    background-color: white;
+    color: #f58025;
+    padding: 8px 14px;
+    border: solid #f58025 1px;
+    float: right;
+    transition: all 0.4s ease 0s;
+}
+
+.previous-button {
+    margin-top: 30px;
+    display: inline-block;
+    border: solid #f58025 1px;
+    background-color: white;
+    color: #f58025;
+    padding: 8px 14px;
+    margin-bottom: 50px;
+}
+
+.previous-button:hover {
+    margin-top: 30px;
+    display: inline-block;
+    border: solid #233238 1px;
+    background-color: white;
+    color: #233238;
+    padding: 8px 14px;
+    margin-bottom: 50px;
+    transition: all 0.4s ease 0s;
+}
+
 
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ChapterStyles.css';
+import { Link } from 'react-router-dom';
 
 class Chapter2 extends Component {
 	render() {
@@ -11,6 +12,8 @@ class Chapter2 extends Component {
 					<p>LeadConduit flows give you the power to decide which data gets sent to your system and whether you'd like to enhance that data using virtually any web service available to you. As a result, LeadConduit is incredibly flexible. </p>
 					<p>Once we're done with this tutorial, you'll have a template for building your own flows and the tools necessary to harness the flexibility and power of LeadConduit for your business.</p>
 					<p>Now that you're excited (right?), let's dive in and start building our first flow!</p>					
+				<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter1">Back</Link>
+				<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter3">Next</Link>
 				</div>
 			</div>
 		);

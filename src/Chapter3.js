@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ChapterStyles.css';
+import { Link } from 'react-router-dom';
 
 class Chapter3 extends Component {
 	render() {
@@ -34,6 +35,8 @@ class Chapter3 extends Component {
 					button in the upper right-hand corner of the screen. If the ‘Save’ button isn’t clickable, 
 					then there haven’t been any changes made to your flow since your last save.</p>
 					<img src={require('../images/saveflow.gif')} />
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter2">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter4">Next</Link>
 				</div>
 			</div>
 		);

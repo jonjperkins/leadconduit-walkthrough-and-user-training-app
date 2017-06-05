@@ -30,6 +30,7 @@
   border-radius: 10px;
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
   text-decoration: none;
+  transition: all 0.6s ease 0s;
 }
 
 .good_lead {
@@ -42,6 +43,7 @@
   border-radius: 10px;
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
   text-decoration: none;
+  transition: all 0.6s ease 0s;
 }
 
 #bad_lead {
@@ -80,9 +82,6 @@
   font-weight: bold;
   font-size: 1.1em;}
 
-.response-bad-lead {
-
-}
 .outcome {
   text-align: center;
 }

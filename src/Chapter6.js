@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ChapterStyles.css';
+import { Link } from 'react-router-dom';
 
 class Chapter6 extends Component {
 	render() {
@@ -38,13 +39,15 @@ class Chapter6 extends Component {
 					<img src={require('../images/createcustomsource.gif')} />
 					<p>You'll notice there are several options available when creating a source (e.g. Advanced options and recommending the source as a standard source). 
 					Our recommendation is to use the Standard Inbound Integration for any custom sources you create, unless you have a specific need for one of the 
-					<a href="https://support.activeprospect.com/hc/en-us/sections/115000574726-Inbound-Source-Integrations">more advanced inbound integrations</a>.</p>
+					<a href="https://support.activeprospect.com/hc/en-us/sections/115000574726-Inbound-Source-Integrations" target="_blank">more advanced inbound integrations</a>.</p>
 					<p>If your 'Source' tab screen looks like the image below, then you've successfully created your first source! <strong>WELL DONE!</strong></p>
 					<img src={require('../images/successfulsourceadd.png')} />
 					<p>If you need to edit the name of your custom source, you can do so by clicking the Libraries menu on the Navigation bar, and selecting Sources. Find the source you 
 					want to edit, and make the desired changes.</p>
 					<img src={require('../images/editsource.gif')} />
-					<p>You can read more about <a href="https://support.activeprospect.com/hc/en-us/articles/202062469-LeadConduit-Adding-a-Source">adding sources</a> in our knowledge base.</p>
+					<p>You can read more about <a href="https://support.activeprospect.com/hc/en-us/articles/202062469-LeadConduit-Adding-a-Source" target="_blank">adding sources</a> in our knowledge base.</p>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter5">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="#">Next</Link>
 				</div>
 			</div>
 		);
