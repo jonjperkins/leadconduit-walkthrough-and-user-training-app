@@ -37,6 +37,7 @@ class WebScraper extends Component {
 				this.setState({ response: array_of_fields })
 				console.log(array_of_fields);
 				console.log(typeof array_of_fields);
+				this.handleFuzzFilter();
 			})
 		});
 	}
@@ -192,38 +193,45 @@ class WebScraper extends Component {
 			
 				<div className="content-body">
 					<div className="outer">
-						<div className="inner">
+						<div className="form-finder-inner">
 							<form action={this.state.posting_url} method="POST">
 								<div><strong>Web Form URL:</strong></div>
 								<FormControl name="postingUrl" className="input" style={{ marginBottom: "10px" }} type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></FormControl>
 							</form>
 							<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleSubmit} className="disable submit-button button">Submit</Button>
-							<div>   
-								<ul className="fields_ul">
-     								{this.state.response.map(function(item, index){
-       									return <li className="fields" key={index}>{item}</li>
-     								})}
-   								</ul>
-							</div>
-							<div>
-							  { this.state.response.length > 0 ? 
-							  	<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleFuzzFilter}>Click to find matches in LC</Button> : <p></p>
-							  }
-							</div>
-							<div> 
-							{ Object.keys(this.state.match_object).length > 0 && 
-								<p>LeadConduit Field Suggestions</p>
-							}
-								<ul className='fields_ul'>
-									{Object.entries(this.state.match_object).map(([key, value]) => {
-										return <div>
-											   	<li className="fields" key={key}>{key}</li> 
-											   	<p style={{color: 'red'}}>{value}</p>
-											   </div>
-									})}
-								</ul>
-							</div>
 						</div>
+					</div>
+					<div>   
+							{/* <ul className="fields_ul">
+ 								{this.state.response.map(function(item, index){
+   									return <li className="fields" key={index}>{item}</li>
+ 								})}
+							</ul>
+					
+						<div>
+						  { this.state.response.length > 0 ? 
+						  	<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleFuzzFilter}>Click to find matches in LC</Button> : <p></p>
+						  }
+						</div>*/}
+						
+						{ Object.keys(this.state.match_object).length > 0 && 
+							<p>LeadConduit Field Suggestions</p>
+						}
+							
+								{Object.entries(this.state.match_object).map(([key, value]) => {
+									if ( value !== key ) {
+										return  <div className="fields-div" key={key}>
+										   			<div className="leadconduit-field">{value}</div>
+										   			<div className="input-field"><span className="source-field">{key}</span></div>
+										   		</div>
+										}
+										else {
+												return <div className="fields-div" key={key}>
+										   			<div className="leadconduit-standard-field"><span className="leadconduit-standard-color">{value}</span></div>
+										   		</div>
+										}
+								})}
+							
 					</div>
 				</div>
 			
