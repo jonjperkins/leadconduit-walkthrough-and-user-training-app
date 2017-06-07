@@ -221,6 +221,7 @@ class WebScraper extends Component {
 								{Object.entries(this.state.match_object).map(([key, value]) => {
 									if ( value !== key ) {
 										return  <div className="fields-div" key={key}>
+													<div className="set">Set</div>
 										   			<div className="leadconduit-field">{value}</div>
 										   			<div className="input-field"><span className="source-field">{key}</span></div>
 										   		</div>

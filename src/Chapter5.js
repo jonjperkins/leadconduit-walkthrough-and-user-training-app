@@ -3,6 +3,9 @@ import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class Chapter5 extends Component {
+	componentDidMount () {
+  		window.scrollTo(0, 0)
+	}
 	render() {
 		return(
 			<div className="ancestor">

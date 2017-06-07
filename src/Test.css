@@ -194,3 +194,10 @@
   padding: 6px;
   border-radius: 5px;
 }
+
+.set {
+  display: inline-block;
+  float: left;
+  font-size: .7em;
+  margin-top: 15px;
+}
