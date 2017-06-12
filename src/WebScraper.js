@@ -3,6 +3,7 @@ import './Test.css';
 import {score} from 'fuzzaldrin';
 const Fuse = require("fuse.js");
 import {FormControl, Button} from 'react-bootstrap';
+import UrlSearch from './UrlSearch';
 
 
 class WebScraper extends Component {
@@ -12,7 +13,10 @@ class WebScraper extends Component {
 			posting_url: "",
 			response_styling: "",
 			response: [],
-			match_object: []
+			match_object: [],
+			url_search: true,
+			fields_to_add: false,
+			inbound_mappings: false
 		}
 		this.handleUpdatePostingUrl = this.handleUpdatePostingUrl.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -164,6 +168,7 @@ class WebScraper extends Component {
 		}
 		this.setState({match_object: match_result})
 		console.log(this.state.match_object)
+		this.setState({url_search: false, fields_to_add: true})
 
 
 
@@ -188,20 +193,52 @@ class WebScraper extends Component {
 		});
 		console.log(results);
 	}*/
+	backToSearchUrl() {
+		this.setState({url_search: true, fields_to_add: false, inbound_mappings: false})
+	}
+	forwardToInboundMappings() {
+		this.setState({fields_to_add: false, inbound_mappings: true, url_search: false})
+	}
+	backToFields() {
+		this.setState({fields_to_add: true, inbound_mappings: false, url_searach: false})
+	}
 	render() {
 		return(
 			
-				<div className="content-body">
-					<div className="outer">
-						<div className="form-finder-inner">
-							<form action={this.state.posting_url} method="POST">
-								<div><strong>Web Form URL:</strong></div>
-								<FormControl name="postingUrl" className="input" style={{ marginBottom: "10px" }} type="text" placeholder="Paste your web form's URL here" required onChange={this.handleUpdatePostingUrl}></FormControl>
-							</form>
-							<Button bsStyle="primary center-block" bsSize="large" onClick={this.handleSubmit} className="disable submit-button button">Submit</Button>
-						</div>
-					</div>
-					<div>   
+				<div className="field-finder-content-body">
+					{ this.state.fields_to_add
+						? <div>
+							<div className="field-mapping-toggle">
+								<Button className="field-mapping-button" bsStyle="primary" onClick={this.forwardToInboundMappings.bind(this)}>Show Mappings</Button>
+						  		<h5 className="startover" onClick={this.backToSearchUrl.bind(this)}>Start Over</h5>
+						  	</div>
+						  	<h1>Add These Fields</h1>
+						  </div>
+
+						  
+						: ''
+					}
+					{ this.state.inbound_mappings
+						? <div>
+							<div className="field-mapping-toggle">
+								<Button className="field-mapping-button" bsStyle="primary" onClick={this.backToFields.bind(this)}>Show Fields</Button>
+								<h5 className="startover" onClick={this.backToSearchUrl.bind(this)}>Start Over</h5>
+							</div>
+							<h1>Add These Inbound Mappings</h1>
+							<h6>What are <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping" target="_blank">inbound field mappings</a>?</h6>
+						  	<br/>
+						  </div>
+						: ''
+					}
+					{ this.state.url_search 
+						?   <div className="outer">
+								<UrlSearch onClick={this.handleSubmit.bind(this)} onChange={this.handleUpdatePostingUrl.bind(this)} posting_url={this.state.posting_url} />
+							</div>
+						: <div></div>
+					}
+					
+					
+						 
 							{/* <ul className="fields_ul">
  								{this.state.response.map(function(item, index){
    									return <li className="fields" key={index}>{item}</li>
@@ -214,26 +251,24 @@ class WebScraper extends Component {
 						  }
 						</div>*/}
 						
-						{ Object.keys(this.state.match_object).length > 0 && 
-							<p>LeadConduit Field Suggestions</p>
-						}
+						
 							
 								{Object.entries(this.state.match_object).map(([key, value]) => {
-									if ( value !== key ) {
-										return  <div className="fields-div" key={key}>
-													<div className="set">Set</div>
-										   			<div className="leadconduit-field">{value}</div>
-										   			<div className="input-field"><span className="source-field">{key}</span></div>
-										   		</div>
-										}
-										else {
-												return <div className="fields-div" key={key}>
+									if ( this.state.fields_to_add === true ) {
+										return 	<div className="fields-div" key={key}>
 										   			<div className="leadconduit-standard-field"><span className="leadconduit-standard-color">{value}</span></div>
 										   		</div>
 										}
+									if  ( this.state.inbound_mappings === true && (value !== key) ) {
+										return  <div className="fields-div" key={key}>
+											<div className="set">Set</div>
+								   			<div className="leadconduit-field">{value}</div>
+								   			<div className="input-field"><span className="source-field">{key}</span></div>
+								   		</div>
+									}
 								})}
 							
-					</div>
+					
 				</div>
 			
 		);
