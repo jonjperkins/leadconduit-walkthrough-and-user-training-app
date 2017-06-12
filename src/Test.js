@@ -110,6 +110,7 @@ class Test extends Component {
 							
 								<div id="red"><strong>Posting URL:</strong></div>
 								<FormControl name="postingUrl" className="input" type="text" autoFocus placeholder="Paste your Posting URL here!" required onChange={this.handleUpdatePostingUrl}></FormControl>
+								<h6>Find the Posting URL in your <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">posting instructions</a>.</h6>
 								<hr />
 								First Name:
 								<FormControl name="first_name" className="input" type="text" onChange={this.handleUpdateFirstName}></FormControl>
