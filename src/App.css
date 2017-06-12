@@ -7,6 +7,10 @@
       margin-left: 50px;
       margin-right: 50px;
     }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 450px;
+      padding-right: 450px;
+    }
 }
 
 @media screen and (max-width: 2000px) {
@@ -17,6 +21,10 @@
     .ancestor > .chapter-content-body {
       margin-left: 50px;
       margin-right: 50px;
+    }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 375px;
+      padding-right: 375px;
     }
 }
 
@@ -29,6 +37,10 @@
       margin-left: 50px;
       margin-right: 50px;
     }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 300px;
+      padding-right: 300px;
+    }
 }
 
 @media screen and (max-width: 1500px) {
@@ -39,6 +51,10 @@
     .ancestor > .chapter-content-body {
       margin-left: 50px;
       margin-right: 50px;
+    }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 200px;
+      padding-right: 200px;
     }
 }
 
@@ -51,6 +67,10 @@
     .ancestor > .chapter-content-body {
       padding-left: 0px;
       padding-right: 0px;
+    }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 150px;
+      padding-right: 150px;
     }
 }
 
@@ -79,6 +99,9 @@
     .ancestor > .chapter-content-body {
       margin-left: 50px;
       margin-right: 50px;  
+    }
+    .app-content-body > .field-finder-content-body {
+      padding: 50px;
     }
 
 }
