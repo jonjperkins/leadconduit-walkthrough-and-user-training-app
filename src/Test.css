@@ -54,6 +54,19 @@
   transition: all 0.6s ease 0s;
 }
 
+.error {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-right: 70px;
+  margin-top: 10px;
+  background-color: #F1E74B;
+  color: white;
+  border-radius: 10px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  text-decoration: none;
+  transition: all 0.6s ease 0s;
+}
+
 #bad_lead {
   color: #E94848;
   font-weight: bold;

@@ -48,6 +48,9 @@ class Test extends Component {
 		this.setState({ sports_team: event.target.value });
 	}
 	handleSubmit(data){
+	var string=this.state.posting_url
+	var	substring=(/app.leadconduit.com\/flows/)
+	if (substring.test(string)){
 		var request = new Request(this.state.posting_url, {
 			method: 'POST', 
 			headers: new Headers({
@@ -75,14 +78,17 @@ class Test extends Component {
 					}
 				})
 			}
-			if (response.status >= 400) {
-				response.json().then(json => {
-				this.setState({ response: "Error" })
-				})
+			else {
+				this.setState({response_message: "Oops. Something went wrong. Please make sure you\'re pasting your LeadConduit flow's Posting Url in its entirety.", response_styling: "bad_lead"})
 			}
 		});
 		window.scrollTo(0, 0)
 	}
+	else {
+		this.setState({response_message: "The value pasted below is not a valid LeadConduit Posting Url. Please check to make sure you have pasted a valid LeadConduit Posting Url in its entirety.", response_styling: "bad_lead"})
+		window.scrollTo(0, 0)
+	}
+}
 	render() {
 		return(
 			<div className="content-body">	
