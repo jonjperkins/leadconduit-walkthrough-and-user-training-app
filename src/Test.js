@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row, Form, FormGroup, FormControl, Button, Grid} from 'react-bootstrap';
+import TestFormResponse from './TestFormResponse';
 import './Test.css';
 
 class Test extends Component {
@@ -93,21 +94,10 @@ class Test extends Component {
 		return(
 			<div className="content-body">	
 					<div className="outer-results">	
-						<div className="response">Response from LeadConduit:
-							{ this.state.response_message.length > 0 && 
-								<div className={this.state.response_styling}>
-									{ this.state.response_styling === 'bad_lead' 
-										? <div className="outcome"><span className="fail_text"><span id='outcome'>Failure</span>: {this.state.response_message}</span></div>
-										: <div className="outcome"><span id='outcome'>Success</span></div>
-									}
-								</div>
-							}
-							<div>
-								{ this.state.leadconduit_event_id.length > 0 && 
-									<div className="lc_link"> Click here to see this lead in LeadConduit: <a href={ `https://next.leadconduit.com/events/${this.state.leadconduit_event_id}` } target="_blank"><span id={this.state.response_styling}>My Lead</span></a></div>	
-								}
-							</div>
-						</div>	
+						<TestFormResponse 
+							response_message={this.state.response_message} 
+							response_styling={this.state.response_styling}	
+							leadconduit_event_id={this.state.leadconduit_event_id} />
 					</div>
 					<div className="outer">
 						<div className="inner">
