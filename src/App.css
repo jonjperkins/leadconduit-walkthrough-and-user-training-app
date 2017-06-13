@@ -644,4 +644,9 @@
   float: right;
 }
 
+.input-search-results {
+  color: #E94848;
+  transition: all 0.6s ease 0s;
+}
+
 

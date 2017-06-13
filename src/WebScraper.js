@@ -16,7 +16,8 @@ class WebScraper extends Component {
 			match_object: [],
 			url_search: true,
 			fields_to_add: false,
-			inbound_mappings: false
+			inbound_mappings: false,
+			error_message: ' '
 		}
 		this.handleUpdatePostingUrl = this.handleUpdatePostingUrl.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,6 +42,10 @@ class WebScraper extends Component {
 				this.setState({ response: array_of_fields })
 				console.log(array_of_fields);
 				console.log(typeof array_of_fields);
+				if (array_of_fields[0] === '') {
+					this.setState({error_message: "The URL you pasted did not return any input fields. Check your URL and try again."})
+					return false;
+				}
 				this.handleFuzzFilter();
 			})
 		});
@@ -194,7 +199,7 @@ class WebScraper extends Component {
 		console.log(results);
 	}*/
 	backToSearchUrl() {
-		this.setState({url_search: true, fields_to_add: false, inbound_mappings: false})
+		this.setState({url_search: true, fields_to_add: false, inbound_mappings: false, error_message: ''})
 	}
 	forwardToInboundMappings() {
 		this.setState({fields_to_add: false, inbound_mappings: true, url_search: false})
@@ -232,7 +237,11 @@ class WebScraper extends Component {
 					}
 					{ this.state.url_search 
 						?   <div className="outer">
-								<UrlSearch onClick={this.handleSubmit.bind(this)} onChange={this.handleUpdatePostingUrl.bind(this)} posting_url={this.state.posting_url} />
+								<UrlSearch 
+									error_message={this.state.error_message}
+									onClick={this.handleSubmit.bind(this)}
+									onChange={this.handleUpdatePostingUrl.bind(this)}
+									posting_url={this.state.posting_url} />
 							</div>
 						: <div></div>
 					}
@@ -254,6 +263,14 @@ class WebScraper extends Component {
 						
 							
 								{Object.entries(this.state.match_object).map(([key, value]) => {
+									console.log('match object length: ' + this.state.response.length);
+									if (this.state.fields_to_add === true && this.state.response[0] === '') {
+										return 	<div className="outer-results">
+													<div className="response">
+														<h2>No results to display.</h2>
+													</div>
+												</div>
+									}
 									if ( this.state.fields_to_add === true ) {
 										return 	<div className="fields-div" key={key}>
 										   			<div className="leadconduit-standard-field"><span className="leadconduit-standard-color">{value}</span></div>
