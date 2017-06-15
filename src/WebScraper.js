@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './Test.css';
-import {score} from 'fuzzaldrin';
-const Fuse = require("fuse.js");
 import {FormControl, Button} from 'react-bootstrap';
 import UrlSearch from './UrlSearch';
 
@@ -244,49 +242,6 @@ class WebScraper extends Component {
 		console.log('PHHONE count: ' + phone_count)
 		console.log('regex matches: ' + final_array);
 		this.setState({regex_matches: final_array})
-		// var results = initial_match_array.map(function(item) {
-		// 	var candidates = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type']
-		// 	var fuzzed = score(candidates, item);
-		// 	console.log(fuzzed)
-		// 	return fuzzed[0];
-		// });
-		// console.log('fuzz matches:');
-		// console.log(results);
-
-		// var fuse_results = initial_match_array.map(function(item, index) {
-		// 	if (item === undefined) {
-		// 		console.log('undefined!')
-		// 		var fuse_candidates = [{"field_name": "company_main_phone"},{"field_name": "first_name"}, {"field_name": "last_name"}, {"field_name": "email"}, {"field_name": "company.name"}, {"field_name": "postal_code"}, {"field_name": "account"}, {"field_name": "account_type"}, {"field_name": "pass"}, {"field_name": "phone_1"}, {"field_name": "phone_2"}, {"field_name": "tos"}, {"field_name": "browser"}, {"field_name": "location"}, {"field_name": "type"}, {"field_name": "montly_salary"}, {"field_name": "annual_salary"}]
-		// 		var options = {
-		// 			shouldSort: true,
-		//   			threshold: 0.5,
-		//   			location: 0,
-		//   			distance: 100,
-		//   			maxPatternLength: 32,
-		//   			minMatchCharLength: 1,
-		//   			keys: [
-		//   				"field_name"
-		//   			]
-		// 		};
-		// 		var fuse = new Fuse(fuse_candidates, options)
-		// 		console.log('before search: ')
-		// 		console.log(original_state_array[index])
-		// 		var fuse_search = fuse.search(original_state_array[index])
-		// 		console.log('trying to set fuzz field name')
-		// 		// item = fuse_search[0].field_name
-		// 		if (fuse_search.length > 1) {
-		// 			item = fuse_search[0].field_name
-		// 		} else {
-		// 			item = 'custom_field'
-		// 		}
-		// 		console.log(item);
-
-		// 	}
-		// 	return item
-				
-		// })
-		// console.log('fuse results' + fuse_results);
-
 
 // * THIS IS WHERE WE CREATE THE FINAL OBJECT FOR DISPLAY IN THE UI *
 
@@ -299,29 +254,6 @@ class WebScraper extends Component {
 		console.log(this.state.match_object)
 		this.setState({url_search: false, fields_to_add: true})
 
-
-
-	// 	console.log('fuse match too:');
-	// 	console.log(match_result);
-
-	}
-	/*handleFuzzFilter(){
-		var candidates = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type']
-		var options = {
-			shouldSort: true,
-		  	threshold: 0.6,
-		  	location: 0,
-		  	distance: 100,
-		  	maxPatternLength: 32,
-		  	minMatchCharLength: 1
-		}
-		var fuse = new Fuse(candidates, options)
-		var results = this.state.response.map(function(item) {
-			var fuzzed = fuse.search(item);
-			return fuzzed[0];
-		});
-		console.log(results);
-	}*/
 	backToSearchUrl() {
 		this.setState({url_search: true, fields_to_add: false, inbound_mappings: false, error_message: ''})
 	}
