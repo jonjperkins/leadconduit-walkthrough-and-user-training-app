@@ -15,6 +15,7 @@ import Test from './Test';
 import WebScraper from './WebScraper';
 import './App.css';
 import CustomNavLink from './CustomNavLink';
+import 'babel-polyfill';
 
 class App extends Component {
 	constructor() {
