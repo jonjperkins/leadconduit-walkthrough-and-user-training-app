@@ -26,7 +26,7 @@ class WebScraper extends Component {
 		this.setState({ posting_url: event.target.value });
 	}
 	handleSubmit(data){
-		var request = new Request('http://localhost:8080/', {
+		var request = new Request('http://leadconduit-node-server.herokuapp.com/', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
