@@ -253,7 +253,7 @@ class WebScraper extends Component {
 		this.setState({match_object: match_result})
 		console.log(this.state.match_object)
 		this.setState({url_search: false, fields_to_add: true})
-
+	}
 	backToSearchUrl() {
 		this.setState({url_search: true, fields_to_add: false, inbound_mappings: false, error_message: ''})
 	}
