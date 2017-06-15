@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Homepage from './Homepage';
@@ -58,18 +58,20 @@ class App extends Component {
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
-									<Route path='/' exact true component={Homepage}></Route>
-									<Route path='/intro' component={Intro}></Route>
-									<Route path='/signingin' component={SigningIn}></Route>
-									<Route path='/chapter1' component={Chapter1}></Route>
-									<Route path='/chapter2' component={Chapter2}></Route>
-									<Route path='/chapter3' component={Chapter3}></Route>
-									<Route path='/chapter4' component={Chapter4}></Route>
-									<Route path='/chapter5' component={Chapter5}></Route>
-									<Route path='/chapter6' component={Chapter6}></Route>
-									<Route path='/test' component={Test}></Route>
-									<Route path='/webscraper' component={WebScraper}></Route>
-									<Route path="*" component={Homepage} />
+									<Switch>
+										<Route path='/' exact true component={Homepage}></Route>
+										<Route path='/intro' component={Intro}></Route>
+										<Route path='/signingin' component={SigningIn}></Route>
+										<Route path='/chapter1' component={Chapter1}></Route>
+										<Route path='/chapter2' component={Chapter2}></Route>
+										<Route path='/chapter3' component={Chapter3}></Route>
+										<Route path='/chapter4' component={Chapter4}></Route>
+										<Route path='/chapter5' component={Chapter5}></Route>
+										<Route path='/chapter6' component={Chapter6}></Route>
+										<Route path='/test' component={Test}></Route>
+										<Route path='/webscraper' component={WebScraper}></Route>
+										<Route component={Homepage} />
+									</Switch>
 								</div>	
 							</div>
 						</div>
