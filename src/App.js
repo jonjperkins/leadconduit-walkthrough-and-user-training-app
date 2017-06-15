@@ -69,6 +69,7 @@ class App extends Component {
 									<Route path='/chapter6' component={Chapter6}></Route>
 									<Route path='/test' component={Test}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
+									<Route path="*" component={Homepage} />
 								</div>	
 							</div>
 						</div>
