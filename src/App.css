@@ -1,3 +1,5 @@
+/* Media Queries */
+
 @media screen and (max-width: 2200px) {
     .app-content-body > .content-body {
       padding-left: 450px;
@@ -157,6 +159,15 @@
     }
 }
 
+/* Body */
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+/* Sidebar */
+
 .active-sidebar-small-screen {
   margin-top: -40px;
   margin-left: -250px;
@@ -168,11 +179,6 @@
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
-  transition: all 0.4s ease 0s;
-}
-
-#wrapper {
-  padding-left: 250px;
   transition: all 0.4s ease 0s;
 }
 
@@ -188,7 +194,6 @@
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.4s ease 0s;
-  
 }
 
 .sidebar-content {
@@ -235,9 +240,7 @@
   letter-spacing: .02em;
 }
 
-#page-content-wrapper {
-
-}
+/* Main Content */
 
 .content-header {
   position: fixed;
@@ -284,6 +287,9 @@
   letter-spacing: .04em;
   margin-bottom: 30px
 }
+
+/* Navbar */
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
@@ -343,6 +349,8 @@
 
 }
 
+/* Next & Previous Buttons */
+
 .next-button {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -387,6 +395,8 @@
     transition: all 0.4s ease 0s;
 }
 
+/* Field Finder */
+
 .field-finder-content-body {
   margin-top: 80px;
   font-size: 1.3em;
@@ -405,117 +415,6 @@
     padding: 4px 7px;
     border-radius: 3px;
     border: #C43631;
-}
-
-
-
-
-
-.outer {
-  margin-top: 30px;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border: solid #F8F9F9 1px;
-}
-
-.inner {
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 60px;
-  padding-top: 30px;
-  font-family: "Whitney A","Whitney B",Arial,sans-serif;
-}
-
-.form-finder-inner {
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  font-family: "Whitney A","Whitney B",Arial,sans-serif;
-}
-
-.results {
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border: solid #F8F9F9 1px;
-}
-
-.bad_lead {
-  padding-bottom: 30px;
-  padding-top: 30px;
-  margin-right: 70px;
-  margin-top: 10px;
-  background-color: #E94848;
-  color: white;
-  border-radius: 10px;
-  font-family: "Whitney A","Whitney B",Arial,sans-serif;
-  text-decoration: none;
-  transition: all 0.6s ease 0s;
-}
-
-.good_lead {
-  padding-bottom: 30px;
-  padding-top: 30px;
-  margin-right: 70px;
-  margin-top: 10px;
-  background-color: #7BD08E;
-  color: white;
-  border-radius: 10px;
-  font-family: "Whitney A","Whitney B",Arial,sans-serif;
-  text-decoration: none;
-  transition: all 0.6s ease 0s;
-}
-
-#bad_lead {
-  color: #E94848;
-  font-weight: bold;
-}
-
-#good_lead {
-  color: #7BD08E;
-  font-weight: bold;
-}
-
-#error_lead {
-  color: yellow;
-  font-weight: bold;
-}
-
-.outer-results {
-  margin-top: 15px;
-  background-color: white;
-  border: solid #E8E9E9 1px;
-}
-
-.response {
-  color: #B9BABA;
-  margin-left: 70px;
-  padding-top: 20px;
-  margin-right: 10px;
-  padding-bottom: 20px;
-  text-decoration: none;
-  font-size: .8em;
-}
-
-.response_text {
-  color: white;
-  font-weight: bold;
-  font-size: 1.1em;}
-
-.outcome {
-  text-align: center;
-}
-#outcome {
-  font-size: 1.4em;
-}
-
-.response-text {
-  color: black;
-}
-
-.lc_link {
-  margin-top: 10px;
-  margin-right: 30px;
 }
 
 .input-matches {
@@ -649,4 +548,114 @@
   transition: all 0.6s ease 0s;
 }
 
+/* Test Form and Field Finder Shared */
 
+.outer {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: solid #F8F9F9 1px;
+}
+
+.inner {
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+}
+
+/* Form Tester */
+
+.form-finder-inner {
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+}
+
+.results {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: solid #F8F9F9 1px;
+}
+
+.bad_lead {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-right: 70px;
+  margin-top: 10px;
+  background-color: #E94848;
+  color: white;
+  border-radius: 10px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  text-decoration: none;
+  transition: all 0.6s ease 0s;
+}
+
+.good_lead {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-right: 70px;
+  margin-top: 10px;
+  background-color: #7BD08E;
+  color: white;
+  border-radius: 10px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  text-decoration: none;
+  transition: all 0.6s ease 0s;
+}
+
+#bad_lead {
+  color: #E94848;
+  font-weight: bold;
+}
+
+#good_lead {
+  color: #7BD08E;
+  font-weight: bold;
+}
+
+#error_lead {
+  color: yellow;
+  font-weight: bold;
+}
+
+.outer-results {
+  margin-top: 15px;
+  background-color: white;
+  border: solid #E8E9E9 1px;
+}
+
+.response {
+  color: #B9BABA;
+  margin-left: 70px;
+  padding-top: 20px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.response_text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;}
+
+.outcome {
+  text-align: center;
+}
+
+#outcome {
+  font-size: 1.4em;
+}
+
+.response-text {
+  color: black;
+}
+
+.lc_link {
+  margin-top: 10px;
+  margin-right: 30px;
+}

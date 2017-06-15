@@ -17,11 +17,12 @@ class WebScraper extends Component {
 			url_search: true,
 			fields_to_add: false,
 			inbound_mappings: false,
-			error_message: ' '
+			error_message: '',
+			regex_matches: ''
 		}
 		this.handleUpdatePostingUrl = this.handleUpdatePostingUrl.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleFuzzFilter = this.handleFuzzFilter.bind(this);
+		this.handleMatchFields = this.handleMatchFields.bind(this);
 	}
 	handleUpdatePostingUrl(event) {
 		this.setState({ posting_url: event.target.value });
@@ -43,86 +44,206 @@ class WebScraper extends Component {
 				console.log(array_of_fields);
 				console.log(typeof array_of_fields);
 				if (array_of_fields[0] === '') {
-					this.setState({error_message: "The URL you pasted did not return any input fields. Check your URL and try again."})
+					this.setState({error_message: "The URL you submitted did not return any input fields. Please check your URL and try again."})
 					return false;
 				}
-				this.handleFuzzFilter();
+				this.handleMatchFields();
 			})
 		});
 	}
-	handleFuzzFilter(){
-		var candidates = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type', 'gender', 'address_1', 'address_2']
+	handleMatchFields(){
+		//var candidates = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type', 'gender', 'address_1', 'address_2']
 		var original_state_array = this.state.response
 		var phone_count = []
 		var address_count = []
+		var standard_fields = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type', 'gender', 'address_1', 'address_2']
+		var array_for_regex_step =[]
+		var used_standard_fields = []
+		var final_array = []
 
-		var initial_match_array = original_state_array.map(function(item) {
+		// * CHECK FOR EXACT MATCHES AND PRIORITY MATCHES * //
+
+		original_state_array.map(function(input_item, final_index) {
+			input_item = input_item.toLowerCase()
+			standard_fields.map(function(standard_field, reg_index) {
+				if ((standard_field === input_item) && (final_array.indexOf(input_item) === -1)) {
+					final_array.splice(final_index, 0, standard_field);
+					array_for_regex_step.splice(final_index, 0, '')
+					if (input_item === 'phone_1') {
+						phone_count.push('phone_1');
+						used_standard_fields.push('phone_1')
+					}
+					if (input_item === 'phone_2') {
+						phone_count.push('phone_2');
+						used_standard_fields.push('phone_2')
+					}
+					if (input_item === 'phone_3') {
+						phone_count.push('phone_3');
+						used_standard_fields.push('phone_3')
+					}
+					if (input_item === 'address_1') {
+						address_count.push('address_1')
+						used_standard_fields.push('address_1')
+					}
+					if (input_item === 'address_2') {
+						address_count.push('address_2')
+						used_standard_fields.push('address_2')
+					}
+				}
+				// else if (((input_item === 'apt') || (input_item === 'apartment') || (input_item === 'apartment_number') || (input_item === 'apt_no') || (input_item === 'apartment_no') || (input_item === 'apt_number') || (input_item === 'apartmentnumber') || (input_item === 'apt_num') || (input_item === 'apt.') || (input_item === 'ste') || (input_item === 'suite') || (input_item === 'ste.')) && used_standard_fields.indexOf('address_2') === -1) {
+				// 	final_array.splice(final_index, 0, 'address_2');
+				// 	array_for_regex_step.splice(final_index, 0, '');
+				// 	address_count.push('address_2');
+				// 	used_standard_fields.push('address_2');
+				// }
+				else {
+					if (final_array.indexOf(input_item) === -1 && array_for_regex_step.indexOf(input_item) === -1 && standard_field !== input_item) {
+						array_for_regex_step.splice(final_index, 0, input_item)
+						final_array.splice(final_index, 0, '');
+					}
+				}
+
+			})
+		});
+
+		console.log('final_array: ' + final_array);
+		console.log('regex_array: ' + array_for_regex_step);
+
+		// * CHECK FOR REGEX AND 2ND PRIORITY MATCHES * //
+
+		var final_array = array_for_regex_step.map(function(item, index) {
 			console.log('phone count: ' + phone_count.length)
 			item = item.toLowerCase()
+			if (item === ''){
+				used_standard_fields.push(item);
+				return final_array[index];
+			}
 			if ((item === "fname") || (item === "firstname") || ( item === 'first.name') || (item === 'first-name') || (item === 'first_name')) {
-				return item = 'first_name'
+				item = 'first_name'
+				if (final_array.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'first_name'		
+				}
 			}
-			if ((item === 'lname') || (item === 'lastname') || (item === 'last.name') || (item === 'last-name')) {
-				return item = 'last_name'
+			if ((item === 'lname') || (item === 'lastname') || (item === 'last.name') || (item === 'last-name') || (item === 'last_name')) {
+				item = 'last_name'
+				if (final_array.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'last_name'
+				}
 			}
-			if ((item === 'email') || (item === 'emailaddress') || (item === 'email.address') || (item === 'email_address')) {
-				return item = 'email'
+			if ((item === 'email') || (item === 'emailaddress') || (item === 'email.address') || (item === 'email_address') || (item === 'email-address') || (item === 'e-mail-address') || (item === 'e-mail_address') || (item === 'e-mail') || (item === 'e_mail')) {
+				item = 'email'
+				if (final_array.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'email'
+				}
 			}
-			if ((item === 'zip') || (item === 'zipcode') || (item === 'zip_code') || (item === 'zip.code') || (item === 'zip-code') || (item === 'postcode') || (item === 'postalcode') || (item === 'postal.code')) {
-				return item = 'postal_code'
+			if ((/(zip|zipcode|postalcode|postcode|postal)/.test(item)) || (item === 'zip') || (item === 'zipcode') || (item === 'zip_code') || (item === 'zip.code') || (item === 'zip-code') || (item === 'postcode') || (item === 'postalcode') || (item === 'postal.code')) {
+				item = 'postal_code'
+				if (final_array.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'postal_code'
+				}
 			}
-			if (/(zip|zipcode|postalcode|postcode)/.test(item)) {
-    			return item = 'postal_code'
-    		}
+			// if (/(zip|zipcode|postalcode|postcode|postal)/.test(item)) {
+   //  			item = 'postal_code'
+   //  			if (final_array.indexOf(item)) {
+			// 		return 'custom_field'
+			// 	} else {
+			// 		return 'Postal Code'
+			// 	}
+   //  		}
     		if (/(phone)/.test(item)) {
-    			if (phone_count.length < 1) {
+    			if (phone_count.length < 1 && final_array.indexOf('phone_1') === -1) {
     				phone_count.push('phone_1')
+    				used_standard_fields.push(item);
     				return item = 'phone_1'
-    			} else if (phone_count.length < 2) {
+    			} else if (phone_count.length < 2 && final_array.indexOf('phone_2') === -1) {
     				phone_count.push('phone_2')
+    				used_standard_fields.push(item);
     				return item = 'phone_2'
-    			} else if (phone_count.length <3) {
+    			} else if (phone_count.length < 3 && final_array.indexOf('phone_3') === -1) {
+    				phone_count.push('phone_3')
+    				used_standard_fields.push(item);
     				return item = 'phone_3'
+    			} else {
+    			return item = 'custom_field'
     			}
-    			return item = undefined
-    			
     		}
     		if (/(gender)/.test(item)) {
-    			return item = 'gender'
+    			item = 'gender'
+    			if (used_standard_fields.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'gender'
+				}
+    			
 
     		}
 
-			if ((item === 'apt') || (item === 'apartment') || (item === 'apt.') || (item === 'ste') || (item === 'suite') || (item === 'ste.') && address_count.length > 1) {
-				address_count.push('address_2')
-				return item = 'address_2'
+			if (((item === 'apt') || (item === 'apartment') || (item === 'apartment_number') || (item === 'apt_no') || (item === 'apartment_no') || (item === 'apt_number') || (item === 'apartmentnumber') || (item === 'apt_num') || (item === 'apt.') || (item === 'ste') || (item === 'suite') || (item === 'ste.')) && (address_count.length > 1) ) {
+				item = 'address_2'
+				if (used_standard_fields.indexOf(item) > -1) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'address_2'	
+				}
 			} 
     		
-    		if (/(address)/.test(item)) {
-    			if (address_count.length < 1) {
+    		if (/(address)/.test(item) && !/(email)/.test(item)) {
+    			//check to make sure it didn't get put in with the matching step, then check if address_count length
+    			if (used_standard_fields.indexOf('address_1') === -1 && final_array.indexOf('address_1') === -1 ) {
     				address_count.push('address_1')
+    				used_standard_fields.push('address_1');
     				return item = 'address_1'
-    			} else if (address_count.length < 2 ) {
-    				address_count.push('address_2')
-    				return item = 'address_2'
     			} 
-    			return item = undefined
+    			if (used_standard_fields.indexOf('address_2') === -1 && final_array.indexOf('address_2') === -1 ) {
+    				address_count.push('address_2')
+    				used_standard_fields.push('address_2');
+    				return item = 'address_2'
+    			}
+    			else {
+    				return item = 'custom_field'
+    			}
     			
     		}
 
     		// can't currently collect trustedform with GET req
     		if (/(xxTrustedFormCertUrl)/.test(item)) {
+    			used_standard_fields.push(item);
     			return item = 'trustedform_cert_url'
     		}
 
-    		if (/(age)/.test(item)) {
-    			return item = 'age'
+    		if (/(age)/.test(item) && !/(page)/.test(item)) {
+    			item = 'age'
+    			if (used_standard_fields.indexOf(item) >= 0) {
+					return 'custom_field'
+				} else {
+					used_standard_fields.push(item);
+					return 'age'
+				}
+    		}
+    		else {
+    			return 'custom_field';
     		}
 
-    		return item = undefined
-			
+    		
 		});
-		console.log('initial match array: ' + initial_match_array);
-
+		console.log('ADDRESS count ' + address_count)
+		console.log('PHHONE count: ' + phone_count)
+		console.log('regex matches: ' + final_array);
+		this.setState({regex_matches: final_array})
 		// var results = initial_match_array.map(function(item) {
 		// 	var candidates = ['first_name', 'last_name', 'email', 'company.name', 'postal_code', 'account', 'account_type', 'pass', 'phone_1', 'phone_2', 'tos', 'browser', 'location', 'type']
 		// 	var fuzzed = score(candidates, item);
@@ -132,44 +253,47 @@ class WebScraper extends Component {
 		// console.log('fuzz matches:');
 		// console.log(results);
 
-		var fuse_results = initial_match_array.map(function(item, index) {
-			if (item === undefined) {
-				console.log('undefined!')
-				var fuse_candidates = [{"field_name": "company_main_phone"},{"field_name": "first_name"}, {"field_name": "last_name"}, {"field_name": "email"}, {"field_name": "company.name"}, {"field_name": "postal_code"}, {"field_name": "account"}, {"field_name": "account_type"}, {"field_name": "pass"}, {"field_name": "phone_1"}, {"field_name": "phone_2"}, {"field_name": "tos"}, {"field_name": "browser"}, {"field_name": "location"}, {"field_name": "type"}, {"field_name": "montly_salary"}, {"field_name": "annual_salary"}]
-				var options = {
-					shouldSort: true,
-		  			threshold: 0.5,
-		  			location: 0,
-		  			distance: 100,
-		  			maxPatternLength: 32,
-		  			minMatchCharLength: 1,
-		  			keys: [
-		  				"field_name"
-		  			]
-				};
-				var fuse = new Fuse(fuse_candidates, options)
-				console.log('before search: ')
-				console.log(original_state_array[index])
-				var fuse_search = fuse.search(original_state_array[index])
-				console.log('trying to set fuzz field name')
-				// item = fuse_search[0].field_name
-				if (fuse_search.length > 1) {
-					item = fuse_search[0].field_name
-				} else {
-					item = 'custom_field'
-				}
-				console.log(item);
+		// var fuse_results = initial_match_array.map(function(item, index) {
+		// 	if (item === undefined) {
+		// 		console.log('undefined!')
+		// 		var fuse_candidates = [{"field_name": "company_main_phone"},{"field_name": "first_name"}, {"field_name": "last_name"}, {"field_name": "email"}, {"field_name": "company.name"}, {"field_name": "postal_code"}, {"field_name": "account"}, {"field_name": "account_type"}, {"field_name": "pass"}, {"field_name": "phone_1"}, {"field_name": "phone_2"}, {"field_name": "tos"}, {"field_name": "browser"}, {"field_name": "location"}, {"field_name": "type"}, {"field_name": "montly_salary"}, {"field_name": "annual_salary"}]
+		// 		var options = {
+		// 			shouldSort: true,
+		//   			threshold: 0.5,
+		//   			location: 0,
+		//   			distance: 100,
+		//   			maxPatternLength: 32,
+		//   			minMatchCharLength: 1,
+		//   			keys: [
+		//   				"field_name"
+		//   			]
+		// 		};
+		// 		var fuse = new Fuse(fuse_candidates, options)
+		// 		console.log('before search: ')
+		// 		console.log(original_state_array[index])
+		// 		var fuse_search = fuse.search(original_state_array[index])
+		// 		console.log('trying to set fuzz field name')
+		// 		// item = fuse_search[0].field_name
+		// 		if (fuse_search.length > 1) {
+		// 			item = fuse_search[0].field_name
+		// 		} else {
+		// 			item = 'custom_field'
+		// 		}
+		// 		console.log(item);
 
-			}
-			return item
+		// 	}
+		// 	return item
 				
-		})
-		console.log('fuse results' + fuse_results);
+		// })
+		// console.log('fuse results' + fuse_results);
+
+
+// * THIS IS WHERE WE CREATE THE FINAL OBJECT FOR DISPLAY IN THE UI *
 
 		var response = this.state.response.length
 		var match_result = {}
 		for (var i = 0; i < response; i++) {
-		    match_result[this.state.response[i]] = fuse_results[i];
+		    match_result[this.state.response[i]] = final_array[i];
 		}
 		this.setState({match_object: match_result})
 		console.log(this.state.match_object)
