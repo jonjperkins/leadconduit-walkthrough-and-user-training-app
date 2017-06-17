@@ -50,7 +50,7 @@ class Chapter6 extends Component {
 					<img src={require('../images/editsource.gif')} />
 					<p>You can read more about <a href="https://support.activeprospect.com/hc/en-us/articles/202062469-LeadConduit-Adding-a-Source" target="_blank">adding sources</a> in our knowledge base.</p>
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter5">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="#">Next</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter7">Next</Link>
 				</div>
 			</div>
 		);

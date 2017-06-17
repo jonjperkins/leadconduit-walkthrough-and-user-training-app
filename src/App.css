@@ -288,6 +288,12 @@
   margin-bottom: 30px
 }
 
+.smallsave {
+  max-height: 200px;
+  max-width: 200px;
+  float: right;
+}
+
 /* Navbar */
 
 .fixed-nav-bar {
