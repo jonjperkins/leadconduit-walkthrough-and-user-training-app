@@ -40,9 +40,9 @@ class Chapter13 extends Component {
 					have anywhere to deliver your leads at this point. Once you decide where you’d like to deliver your leads (Salesforce, Velocify, etc.), you can use this 
 					guide and our Knowledge Base article on deliveries to configure your delivery step.</p>
 					<p>For this tutorial, here's the url we’ll be delivering to:</p>
-					<ul>
-						<li>http://www.mocky.io/v2/5900f11b1200000317c7b71f</li>
-					</ul>
+					<br/>
+					<h5><em>http://www.mocky.io/v2/5900f11b1200000317c7b71f</em></h5>
+					<br/>
 					<p>To get started click the 'Add a Delivery' button again. Scroll to the very bottom and create a custom delivery. Give it a name, select a type of 
 					'CRM' and click 'Save and add to flow'.</p>
 					<img src={require('../images/createcustomdelivery.gif')} />

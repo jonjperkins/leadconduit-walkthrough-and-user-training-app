@@ -10,7 +10,8 @@ class Chapter11 extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
-					<h1 className="title">Marketplace Integrations & Enhancements</h1>
+					<h1>Marketplace Integrations & Enhancements</h1>
+					<br/>
 					<p>Adding an enhancement step in your flow allows you to take the data sent into your flow and add 
 					something to it or verify the information is accurate.</p>
 					<p>Here are a just a few examples of enrichment data you can add to your leads in LeadConduit:</p>
