@@ -38,7 +38,7 @@ class FieldsPartners extends Component {
 					<img src={require('../images/AddEditFields.png')} />
 					<p>Clicking that button will take you to a page where you can update the fields in the flow. Beside each field name, 
 					you'll now see a check-box where a green check mark indicates that the field is currently in use in your flow.  </p>
-					<p>Uncheck all of the checkboxes you don’t need. Then update your changes by clicking the <strong>Update Fields</strong> 
+					<p>Uncheck all of the checkboxes you don’t need. Then update your changes by clicking the <strong>Update Fields </strong> 
 					button and <strong>Saving</strong> your work. </p>
 					<img id="webform-example" src={require('../images/editingfields.gif')} />
 					<br />
@@ -53,7 +53,7 @@ class FieldsPartners extends Component {
 					<p>Check the box beside the field names you want to add to your flow. Update your fields and save your flow.</p> 
 					<img id="webform-example" src={require('../images/search_fields.gif')} />
 					<p>Fields with a <strong>green checkmark</strong> are already added to your flow (or about to be added once you update), and fields with a 
-					<strong>green circle</strong> are being used in another flow in your account.</p>
+					<strong> green circle</strong> are being used in another flow in your account.</p>
 					<br />
 					<h2>Custom Fields</h2>
 					<p>If you simply can’t find a field that works, you can create a custom field for you flow.</p>
@@ -66,7 +66,7 @@ class FieldsPartners extends Component {
 					<p>After you create your suffix, you'll be prompted with a window where you can create your custom field. </p>
 					<img id="webform-example" src={require('../images/custom_field_modal.png')} />
 					<p>Once you fill out the information, click the <strong>Create</strong> button. You'll be taken back to the update fields page 
-					where you will click the blue <strong>Update Fields</strong>button once again.</p>
+					where you will click the blue <strong>Update Fields</strong> button once again.</p>
 					<p>Custom Fields are shown in a darker blue than LeadConduit Standard Fields, so they are easy to distinguish at a glance.</p>
 					<img id="webform-example" src={require('../images/final_field_page.png')} />
 					<p>Remember to <strong>update</strong> your fields and <strong>save</strong> your work.</p>

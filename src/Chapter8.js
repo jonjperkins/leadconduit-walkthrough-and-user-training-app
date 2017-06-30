@@ -36,7 +36,7 @@ class Chapter8 extends Component {
 					the lead is old enough to consent to a contract (we're trying to sell them something), the lead is a fan of Chicago or Dallas-based sports teams, and we have a phone number 
 					or an email (we just need to have at least one way to get in touch with each lead). </p>
 					<p>Here's how we'd set that up:</p>
-					<img src={require('../images/addrules2.gif')} />
+					
 					<p><strong>*PRO-TIP:</strong> Don't forget to save your work! <strong>*</strong></p>
 					<p>And here's how our final source rules will look:</p>
 					<img src={require('../images/acceptancecriteria.png')} />
