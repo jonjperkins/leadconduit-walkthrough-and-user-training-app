@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
-import AngleDown from 'react-icons/lib/fa/angle-down';
 
 class QSCreateFlow extends Component {
 	constructor() {
@@ -25,14 +24,14 @@ class QSCreateFlow extends Component {
 						<br/>
 						<ol>
 							<li>Sign-in to LeadConduit.</li>
-							<h5> <strong onClick={this.expand1.bind(this)} className="more-button">More</strong><AngleDown /></h5>
+							<h5> <strong onClick={this.expand1.bind(this)} className="more-button">More</strong></h5>
 								<h5 className={this.state.expand_1 ? "show" : "hide"}>To log in and launch LeadConduit, navigate to
 								<a href="sso.activeprospect.com" target="_blank"> sso.activeprospect.com</a>. For more information see 
 								<a href="https://support.activeprospect.com/hc/en-us/articles/115002511123-Logging-In-Launching-Products" target="_blank"> this article</a>.</h5>
 							<li>Click on the ‘Flows’ tab in LeadConduit. From here, you can click ‘Edit’ 
 							on an existing flow, or <strong>create a new flow</strong> by clicking the ‘New Flow’ button 
 							in the upper left corner.</li>
-							<h5> <strong onClick={this.expand2.bind(this)} className="more-button">More</strong><AngleDown /></h5>
+							<h5> <strong onClick={this.expand2.bind(this)} className="more-button">More</strong></h5>
 							<p className={this.state.expand_2 ? "show" : "hide"}>
 								<img src={require('../images/createnewflow.gif')} />
 							</p>

@@ -25,6 +25,7 @@ import Intro2 from './Intro2';
 import Test from './Test';
 import WebScraper from './WebScraper';
 import SourcesPartners from './SourcePartners';
+import FieldsPartners from './FieldsPartners';
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
 import IsThisAWebform from './IsThisAWebform';
@@ -183,6 +184,7 @@ class App extends Component {
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources-partners" label="Sources"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields-partners" label="Fields"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<br />
@@ -244,6 +246,7 @@ class App extends Component {
 								{/* Partner Routes */}
 									<Route path='/introandflowcreation' component={IntroAndFlowCreation}></Route>
 									<Route path='/sources-partners' component={SourcesPartners}></Route>
+									<Route path='/fields-partners' component={FieldsPartners}></Route>
 									<Route path='/introandflowcreationtest' component={IntroAndFlowCreationTest}></Route>
 
 

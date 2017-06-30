@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
-import AngleDown from 'react-icons/lib/fa/angle-down';
 
 class QSSources extends Component {
 	constructor() {
@@ -29,7 +28,7 @@ class QSSources extends Component {
 							<br/>
 							<ol>
 								<li>Click on the ‘Sources’ tab, and then ‘Add/Edit Sources’ in the upper right corner.</li>
-								<h5> <strong onClick={this.expand1.bind(this)} className="more-button">More</strong><AngleDown /></h5>
+								<h5> <strong onClick={this.expand1.bind(this)} className="more-button">More</strong></h5>
 								<p className={this.state.expand_1 ? "show" : "hide"}>
 								<img src={require('../images/qsaddsource.gif')} />
 							</p>
@@ -37,13 +36,13 @@ class QSSources extends Component {
 								can scroll down the page to see the complete list of sources. Check the boxes for any existing 
 								sources you wish to use in the flow, or click ‘Create New Source’ at the top of the screen to 
 								add a source that does not appear in the list.</li>
-								<h5> <strong onClick={this.expand2.bind(this)} className="more-button">More</strong><AngleDown /></h5>
+								<h5> <strong onClick={this.expand2.bind(this)} className="more-button">More</strong></h5>
 								<p className={this.state.expand_2 ? "show" : "hide"}>
 								<img src={require('../images/qscreatesourcebutton.gif')} />
 								</p>
 								<li>Add a name and description for the new source and expand the ‘Advanced’ tab to add integrations, 
 								then click ‘Create’.</li>
-								<h5> <strong onClick={this.expand3.bind(this)} className="more-button">More</strong><AngleDown /></h5>
+								<h5> <strong onClick={this.expand3.bind(this)} className="more-button">More</strong></h5>
 								<p className={this.state.expand_3 ? "show" : "hide"}>
 								<img src={require('../images/qscreatecustomsource.gif')} />
 								</p>

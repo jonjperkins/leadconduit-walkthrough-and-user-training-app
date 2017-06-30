@@ -41,7 +41,7 @@ class Chapter4 extends Component {
 					<p>At first glance, you can see that we don’t need all of the fields LeadConduit provided by default 
 					for this new flow. Our form only has user inputs for six categories of information. So, let's start by 
 					deleting the fields we won't need. Select the gray 'Add/Edit Fields' button in the top right corner.</p>
-					<img id="webform-example" src={require('../images/addeditfields.png')} />
+					<img id="webform-example" src={require('../images/AddEditFields.png')} />
 					<p>Clicking that button will take you to a page where you can update the fields in the flow. Beside each 
 					field name, you'll now see a check-box where a green check mark indicates that the field is currently in 
 					use in your flow.</p>
