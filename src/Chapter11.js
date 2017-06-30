@@ -28,8 +28,8 @@ class Chapter11 extends Component {
 						<li>Mailing addresses</li>
 					</ul>
 					<p>For our tutorial, we'll walk through setting up enhancements to verify phone and email data. To see a 
-					full list of available enhancement services, you can visit this page: 
-					<a href="http://docs.leadconduit.com/" target="_blank">http://docs.leadconduit.com/</a>.</p>
+					full list of available enhancement services, you can visit this page:  
+					<a href="http://docs.leadconduit.com/" target="_blank"> http://docs.leadconduit.com/</a>.</p>
 					
 					<p><h3><strong>Let’s add our first enhancement:</strong></h3></p>
 					<p> Switch over to your 'Steps' tab in your flow and select the option to add an enhancement. This will 
