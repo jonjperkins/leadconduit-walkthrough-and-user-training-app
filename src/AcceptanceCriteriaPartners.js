@@ -28,7 +28,7 @@ class AcceptanceCriteriaPartners extends Component {
 								<li>'SC'</li>
 								<li>'NC'</li>
 							</ul>
-						<li><strong>Phone_1</strong> OR email is not blank</li>
+						<li><strong>Phone_1</strong> OR <strong>email</strong> is not blank</li>
 					</ol>
 					<p>Here's how we'd set that up:</p>
 					<img src={require('../images/setacceptancecriteria.gif')} />

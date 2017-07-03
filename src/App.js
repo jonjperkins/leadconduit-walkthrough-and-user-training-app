@@ -28,6 +28,11 @@ import SourcesPartners from './SourcePartners';
 import FieldsPartners from './FieldsPartners';
 import InboundMappingPartners from './InboundMappingPartners';
 import AcceptanceCriteriaPartners from './AcceptanceCriteriaPartners';
+import PostingInstructionsPartners from './PostingInstructionsPartners';
+import NonWizardEnhancements from './NonWizardEnhancements';
+import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
+import LeadDelivery from './LeadDelivery';
+
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
 import IsThisAWebform from './IsThisAWebform';
@@ -189,6 +194,10 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields-partners" label="Fields"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-mapping-partners" label="Inbound Field Mapping"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria-partners" label="Acceptance Criteria"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions-partners" label="Posting Instructions"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<br />
@@ -254,7 +263,10 @@ class App extends Component {
 									<Route path='/introandflowcreationtest' component={IntroAndFlowCreationTest}></Route>
 									<Route path='/inbound-mapping-partners' component={InboundMappingPartners}></Route>
 									<Route path='/acceptance-criteria-partners' component={AcceptanceCriteriaPartners}></Route>
-
+									<Route path='/posting-instructions-partners' component={PostingInstructionsPartners}></Route>
+									<Route path='/non-wizard-enhancements' component={NonWizardEnhancements}></Route>
+									<Route path='/non-wizard-filters-and-rules' component={NonWizardFiltersAndRules}></Route>
+									<Route path='/lead-delivery' component={LeadDelivery}></Route>
 								</div>	
 							</div>
 						</div>
