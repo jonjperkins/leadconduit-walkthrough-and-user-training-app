@@ -32,6 +32,8 @@ import PostingInstructionsPartners from './PostingInstructionsPartners';
 import NonWizardEnhancements from './NonWizardEnhancements';
 import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
 import LeadDelivery from './LeadDelivery';
+import OutboundFieldMappingPartners from './OutboundFieldMappingPartners';
+import ResponseParsingPartners from './ResponseParsingPartners';
 
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
@@ -198,6 +200,8 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping-partners" label="Outbound Field Mapping"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing-partners" label="Response Parsing"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<br />
@@ -267,6 +271,8 @@ class App extends Component {
 									<Route path='/non-wizard-enhancements' component={NonWizardEnhancements}></Route>
 									<Route path='/non-wizard-filters-and-rules' component={NonWizardFiltersAndRules}></Route>
 									<Route path='/lead-delivery' component={LeadDelivery}></Route>
+									<Route path='/outbound-field-mapping-partners' component={OutboundFieldMappingPartners}></Route>
+									<Route path='/response-parsing-partners' component={ResponseParsingPartners}></Route>
 								</div>	
 							</div>
 						</div>
