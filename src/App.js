@@ -8,7 +8,6 @@ import Intro from './Intro';
 import Chapter1 from './Chapter1';
 import Chapter2 from './Chapter2';
 import Chapter3 from './Chapter3';
-import Chapter4 from './Chapter4';
 import Chapter5 from './Chapter5';
 import Chapter6 from './Chapter6';
 import Chapter7 from './Chapter7';
