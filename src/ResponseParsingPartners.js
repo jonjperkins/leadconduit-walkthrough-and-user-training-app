@@ -21,10 +21,16 @@ class ResponseParsingPartners extends Component {
 					to deliver your leads - the work has already been done for you! Standard and rich integrations 
 					already have response parsing implemented on the backend, so if you’ve followed along with this 
 					guide and setup the appropriate filters for those deliveries - you’re good to go.</p>
+
 					<h2>Integrated Deliveries</h2>
 					<p>For integrated deliveries, you simply need to set up a filter after the delivery step to catch 
-					any leads that weren’t successful. This will help you report on these leads later on.</p>
+					any leads that weren’t successful. This will help you report on these leads later on. Select the 
+					<strong> MailChimp Outcome</strong> field from the flow fields dropdown menu on the far left input 
+					box. Set the operator to <strong>is not equal to</strong>, and choose <strong>success</strong> in 
+					the rightmost input box. Finally, select the <strong>MailChimp Reason</strong> field value as the 
+					message LeadConduit will respond with if the filter catches any failures, errors, or skips - any thing that's not a success.</p>
 					<img src={require('../images/velocifyfilter.png')} />
+
 					<h2>Custom Deliveries</h2>
 					<p>Our knowledge base has a superb article on <a href="https://support.activeprospect.com/hc/en-us/articles/217517686-LeadConduit-Response-Parsing" target="_blank">response parsing</a>.
 					It’s worth checking out before you get started here.</p>

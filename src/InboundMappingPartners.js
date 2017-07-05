@@ -9,7 +9,7 @@ class InboundMappingPartners extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
-					<h1 className="title">Inbound Mappings</h1>
+					<h1 className="title">Inbound Field Mapping</h1>
 					<p>When receiving leads from partners, you may run into a situation where the field you’re collecting 
 					will be named differently in LeadConduit than how the vendor will actually send the parameter. A 
 					prime example of this is a situation where (for whatever reason) your lead partner can only send a 

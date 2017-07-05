@@ -29,7 +29,7 @@ class FieldsPartners extends Component {
 	 				<img src={require('../images/DefaultFields.png')} />
 	 				<p>Since you’ve already performed your prep work, you’ll be able to determine whether or not you need 
 	 				all of these fields in your flow. Although it won’t hurt anything to leave these fields in your flow 
-	 				and not use them, when working with a lead partner it’s best to only list fields in your flow that you 
+	 				without using them, when working with a lead partner it’s best to only list fields in your flow that you 
 	 				actually want to collect. The fields in this list will show up in the posting instructions you’ll 
 	 				eventually send to your partner.</p>
 	 				<br />
