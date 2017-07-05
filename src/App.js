@@ -216,7 +216,6 @@ class App extends Component {
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter1" label="The Homepage"></CustomNavLink>
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter2" label="Flows"></CustomNavLink> 
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter3" label="Create Your Flow"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter4" label="Fields"></CustomNavLink>
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter5" label="Fields and Form Parameters"></CustomNavLink>
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter6" label="Lead Sources"></CustomNavLink>
 										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter7" label="Inbound Field Mapping"></CustomNavLink>
@@ -245,7 +244,6 @@ class App extends Component {
 									<Route path='/chapter1' component={Chapter1}></Route>
 									<Route path='/chapter2' component={Chapter2}></Route>
 									<Route path='/chapter3' component={Chapter3}></Route>
-									<Route path='/chapter4' component={Chapter4}></Route>
 									<Route path='/chapter5' component={Chapter5}></Route>
 									<Route path='/chapter6' component={Chapter6}></Route>
 									<Route path='/chapter7' component={Chapter7}></Route>
