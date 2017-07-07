@@ -25,7 +25,9 @@ import Test from './Test';
 import WebScraper from './WebScraper';
 import SourcesPartners from './SourcePartners';
 import FieldsPartners from './FieldsPartners';
+import FieldsWebForms from './FieldsWebForms';
 import InboundMappingPartners from './InboundMappingPartners';
+import InboundMappingsWebForms from './InboundMappingsWebForms';
 import AcceptanceCriteriaPartners from './AcceptanceCriteriaPartners';
 import PostingInstructionsPartners from './PostingInstructionsPartners';
 import NonWizardEnhancements from './NonWizardEnhancements';
@@ -33,7 +35,8 @@ import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
 import LeadDelivery from './LeadDelivery';
 import OutboundFieldMappingPartners from './OutboundFieldMappingPartners';
 import ResponseParsingPartners from './ResponseParsingPartners';
-
+import SourcesWebForms from './SourcesWebForms';
+import SourcesUnbounce from './SourcesUnbounce';
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
 import IsThisAWebform from './IsThisAWebform';
@@ -41,7 +44,7 @@ import IntroAndFlowCreation from './IntroAndFlowCreation';
 import './App.css';
 import CustomNavLink from './CustomNavLink';
 import 'babel-polyfill';
-import IntroAndFlowCreationTest from './IntroAndFlowCreationTest';
+
 
 class App extends Component {
 	constructor() {
@@ -167,27 +170,50 @@ class App extends Component {
 											<div className="lead-source-sidebar-div">
 												<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 												<CustomNavLink onClick={this.vendorSource.bind(this)} to="/IntroAndFlowCreation" label="Partner Leads"></CustomNavLink>
-    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
-    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="IntroAndFlowCreationTest" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
+    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="/IntroAndFlowCreation" label="Unbounce Webform"></CustomNavLink>
+    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="/IntroAndFlowCreation" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
+      											<br/>
+      											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources-webform" label="Sources"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields-webform" label="Fields"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-mapping-webforms" label="Inbound Field Mappings"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria-partners" label="Acceptance Criteria"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions-partners" label="Posting Instructions"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping-partners" label="Outbound Field Mapping"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing-partners" label="Response Parsing"></CustomNavLink>
       										</div>
       									}
       									{this.state.isUnbounceUser &&
 											<div className="lead-source-sidebar-div">
 												<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 												<CustomNavLink onClick={this.vendorSource.bind(this)} to="/IntroAndFlowCreation" label="Partner Leads"></CustomNavLink>
-    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Unbounce Webform"></CustomNavLink>
-    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="/IntroAndFlowCreationTest" label="Other Webform"></CustomNavLink>									
+    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="/IntroAndFlowCreation" className="active-source-type regular-css-bold" label="Unbounce Webform"></CustomNavLink>
+    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="/IntroAndFlowCreation" label="Other Webform"></CustomNavLink>									
       											<br />
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreationtest" label="Intro and Flow Creation Test"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources-unbounce" label="Sources"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields-webform" label="Fields"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-mapping-webforms" label="Inbound Field Mappings"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria-partners" label="Acceptance Criteria"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions-partners" label="Posting Instructions"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping-partners" label="Outbound Field Mapping"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing-partners" label="Response Parsing"></CustomNavLink>
       										</div>      									
       									}
       									{this.state.isUsingVendor &&
     										<div>
 												<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 												<CustomNavLink onClick={this.vendorSource.bind(this)} to="/IntroAndFlowCreation" className="active-source-type regular-css-bold" label="Partner Leads"></CustomNavLink>
-    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
-    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="IntroAndFlowCreationTest" label="Other Webform"></CustomNavLink>	
+    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="/IntroAndFlowCreation" label="Unbounce Webform"></CustomNavLink>
+    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="/IntroAndFlowCreation" label="Other Webform"></CustomNavLink>	
     											<br />
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
@@ -237,7 +263,7 @@ class App extends Component {
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
-									<Route path='/' exact true component={Intro}></Route>
+									<Route path='/' exact true component={IntroAndFlowCreation}></Route>
 									<Route path='/quickstart' component={QuickStart}></Route>
 									<Route path='/intro' component={Intro}></Route>
 									<Route path='/signingin' component={SigningIn}></Route>
@@ -260,9 +286,12 @@ class App extends Component {
 								{/* Partner Routes */}
 									<Route path='/introandflowcreation' component={IntroAndFlowCreation}></Route>
 									<Route path='/sources-partners' component={SourcesPartners}></Route>
+									<Route path='/sources-webform' component={SourcesWebForms}></Route>
+									<Route path='/sources-unbounce' component={SourcesUnbounce}></Route>
 									<Route path='/fields-partners' component={FieldsPartners}></Route>
-									<Route path='/introandflowcreationtest' component={IntroAndFlowCreationTest}></Route>
+									<Route path='/fields-webform' component={FieldsWebForms}></Route>
 									<Route path='/inbound-mapping-partners' component={InboundMappingPartners}></Route>
+									<Route path='/inbound-mapping-webforms' component={InboundMappingsWebForms}></Route>
 									<Route path='/acceptance-criteria-partners' component={AcceptanceCriteriaPartners}></Route>
 									<Route path='/posting-instructions-partners' component={PostingInstructionsPartners}></Route>
 									<Route path='/non-wizard-enhancements' component={NonWizardEnhancements}></Route>

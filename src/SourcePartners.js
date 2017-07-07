@@ -29,7 +29,7 @@ class SourcePartners extends Component {
 	 				set up specific sources for tracking and reporting purposes. For example, if multiple partners are sending 
 	 				leads into your flow, you’ll need a way to track which partner is sending what leads. Setting up sources 
 	 				helps you with that.</p>
-	 				<p>To begin adding your source, click the 'Add/Edit Sources' button at the top left of the 'Sources' tab.</p>
+	 				<p>To add your source, begin by clicking the <strong>Add/Edit Sources</strong> button at the top left of the Sources tab. </p>
 	 				<img src={require('../images/addsourcebutton.png')} /> 
 	 				<h2>Standard Sources</h2>
 	 				<p>After clicking this button, you’ll be in ‘source edit mode’ where you can choose from an extensive list of lead 
