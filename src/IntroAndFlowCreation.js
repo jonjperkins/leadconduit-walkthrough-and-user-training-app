@@ -38,7 +38,7 @@ class IntroAndFlowCreation extends Component {
 					<p>Whenever you make changes to your LeadConduit flow, you will need to <strong>save</strong> those changes to prevent them from being lost when you navigate away from 
 					the flow you're working on. You can save your flow by clicking the 'Save' button in the upper right-hand corner of the screen. If the ‘Save’ button 
 					isn’t clickable, then there haven’t been any changes made to your flow since your last save.</p>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/sources-partners">Next</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/sources">Next</Link>
 				</div>
 			</div>
 		);

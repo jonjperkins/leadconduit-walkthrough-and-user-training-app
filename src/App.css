@@ -341,6 +341,12 @@ img {
 .active-source-type a {
   color: #f58025 !important;
 }
+.sidebar-no-scroll {
+  font-size: .8em;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+  margin-top: 60px;
+  overflow: hidden;
+}
 
 /* Main Content */
 
@@ -403,6 +409,9 @@ img {
   padding-left: 12px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+.body-no-scroll {
+  overflow: hidden;
 }
 
 /* Navbar */
