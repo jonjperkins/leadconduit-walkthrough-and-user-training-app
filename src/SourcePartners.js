@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 class SourcePartners extends Component {
 	componentDidMount () {
   		window.scrollTo(0, 0)
+  		console.log("source partners mounted");
 	}
+	componentWillMount () {
+		this.props.onLoadEvent;
+	}
+
 	render() {
 		return(
 			<div className="ancestor">
@@ -58,8 +63,8 @@ class SourcePartners extends Component {
 					<img src={require('../images/editcustomsource.gif')} />
 					<p>You can read more about <a href="https://support.activeprospect.com/hc/en-us/sections/115000574726-Inbound-Source-Integrations" target="_blank">adding sources </a> 
 					in our knowledge base.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/signingin">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter2">Next</Link>			
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/introandflowcreationpartners">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/fields-partners">Next</Link>			
 				</div>
 			</div>
 		);

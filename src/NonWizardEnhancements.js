@@ -34,14 +34,14 @@ class NonWizardEnhancements extends Component {
 					<h2>Add Phone Validation</h2>
 					<p> Switch over to your 'Steps' tab in your flow and select the option to add an enhancement. This will 
 					bring up a menu of options to choose from. Scroll down and select the Telesign option.</p>
-					<img src={require('../images/telesign.gif')} />
+					<img className="img-background" src={require('../images/telesign.gif')} />
 					<p>When you select the bubble for Telesign, the section expands and alerts you to the pricing structure. 
 					It's important to take note of what using this service will cost you per lead. Once this enhancement is in 
 					your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
 					data will be appended to our lead.</p>
 					<br />
 					<h2>Add Email Validation</h2>
-					<p>Now it's your turn to implement a step. In this section of the tutorial, you’ll implement the the email 
+					<p>Now it's your turn to implement a step. In this section of the guide, you’ll implement the the email 
 					verification step with Webbula.</p>
 					<p>Whenever you’re using an enhancement integration for the first time, it’s best to visit our Knowledge 
 					base for an explanation of how that integration works. Enhancements behave differently from each other, 
@@ -50,10 +50,10 @@ class NonWizardEnhancements extends Component {
 					article <a href="https://support.activeprospect.com/hc/en-us/articles/204981955-Webbula-Email-Hygiene-Verification" target="_blank">here </a> 
 					to get familiar with what kind of information Webbula will send back to us.  When you’re ready, 
 					you can go ahead and add the Webbula step. If you get stuck, check out the video clip below for help.</p>
-					<img src={require('../images/addwebbula.gif')} />
+					<img className="img-background" src={require('../images/addwebbula.gif')} />
 					
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter10">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter12">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/posting-instructions">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/non-wizard-filters-and-rules">Next</Link>
 				</div>
 			</div>
 		);

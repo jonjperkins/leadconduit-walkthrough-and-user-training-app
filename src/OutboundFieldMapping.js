@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class OutboundFieldMappingPartners extends Component {
+class OutboundFieldMapping extends Component {
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -50,7 +50,7 @@ class OutboundFieldMappingPartners extends Component {
 					you to press enter or click on the field name from the dropdown list.</p>
 					<p>Next, select the box or drop down arrow on the right-side. Find the integration field name you want to map this 
 					value to, and select it. </p>
-					<img src={require('../images/customfieldintegration.gif')} />
+					<img className="img-background" src={require('../images/customfieldintegration.gif')} />
 					
 					<h3>Custom Input Variables</h3>
 					<p><strong>Scenario</strong>: You would like to utilize one of the custom input variables in the integration.</p>
@@ -61,7 +61,7 @@ class OutboundFieldMappingPartners extends Component {
 					(e.g. subscribed, unsubscribed), you’ll need to consult the <a href="http://docs.leadconduit.com/integrations" target="_blank">integration docs </a> 
 					first to confirm that the integration can accept this value. Then, you can map the value just like you did in the section above. 
 					In this example, your lead partner is sending a value for <strong>status</strong> that you want to send to the MailChimp status field.</p>
-					<img src={require('../images/custominputvariables.png')} />
+					<img className="img-background" src={require('../images/custominputvariables.png')} />
 					
 					<h3>Hardcoded Values</h3>
 					<p><strong>Scenario</strong>: You’re using an outbound delivery integration and you’d like to hardcode a value in place of using 
@@ -73,7 +73,7 @@ class OutboundFieldMappingPartners extends Component {
 					<p>When hardcoding a value, you want to make sure that you are <strong>not</strong> seeing the colored background that you normally 
 					want to see. The colored background really represents the value associated with that field which we don’t want to 
 					pass along in this scenario. So a successful mapping looks like this:</p>
-					<img src={require('../images/hardcodedintegrationvalue.png')} />
+					<img className="img-background" src={require('../images/hardcodedintegrationvalue.png')} />
 					
 					<h3>System Variables and Appended Data</h3>
 					<p>System variables are a type of data that only exist once a lead enters into a LeadConduit flow. The 
@@ -85,12 +85,12 @@ class OutboundFieldMappingPartners extends Component {
 					<p>There are a variety of situations that require manually mapping the fields for the destination where you want to 
 					send your leads. Get more familiar with <a href="https://support.activeprospect.com/hc/en-us/articles/216009923-LeadConduit-Outbound-Field-Mapping" target="_blank">outbound field mapping </a>
 					by taking a look at the linked article in our knowledge base.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/signingin">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter2">Next</Link>			
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/lead-delivery">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/response-parsing">Next</Link>			
 				</div>
 			</div>
 		);
 	}
 }
 
-export default OutboundFieldMappingPartners;
+export default OutboundFieldMapping;

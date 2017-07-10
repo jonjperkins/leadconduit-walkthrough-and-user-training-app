@@ -31,8 +31,8 @@ img {
       padding-right: 375px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 375px;
@@ -46,8 +46,8 @@ img {
       padding-right: 300px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 175px;
+      margin-right: 175px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 300px;
@@ -61,8 +61,8 @@ img {
       padding-right: 200px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 200px;
@@ -73,12 +73,14 @@ img {
 
 @media screen and (max-width: 1200px) {
     .app-content-body > .content-body {
-      padding-left: 150px;
-      padding-right: 150px;
+      padding-left: 100px;
+      padding-right: 100px;
     }
     .ancestor > .chapter-content-body {
       padding-left: 0px;
       padding-right: 0px;
+      margin-right: 50px;
+      margin-left: 50px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 150px;
@@ -368,7 +370,7 @@ img {
 }
 
 .chapter-content-body {
-  margin-top: 80px;
+  margin-top: 60px;
   padding-top: 10px;
   font-size: 1.3em;
   margin-left: 100px;
@@ -378,8 +380,6 @@ img {
 
 .chapter-content-body img {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .title {
@@ -393,6 +393,16 @@ img {
   max-height: 200px;
   max-width: 200px;
   float: right;
+}
+
+.img-background {
+  background: #eaeff7;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* Navbar */
@@ -452,6 +462,8 @@ img {
   height: auto;
   width: 100%;
 }
+
+
 
 /* Homepage */
 

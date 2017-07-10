@@ -27,12 +27,12 @@ class NonWizardFiltersAndRules extends Component {
 					<a href="https://support.activeprospect.com/hc/en-us/articles/208124963-TeleSign-Using-Phone-Validation-in-LeadConduit"> Telesign</a>). 
 					For any lead where the response from Telesign is ‘Failure’, that lead should enter the Webbula step so we can 
 					verify email the address (given that we know we cannot call the lead).</p>
-					<img src={require('../images/webbularules.gif')} />
+					<img className="img-background" src={require('../images/webbularules.gif')} />
 					<p>At this point, a lead has entered the Telesign step, or both the Telesign and Webbula steps. We are ready to make a final determination 
 					on the fate of this lead. We’ll do this by adding a filter. </p>
-					<img src={require('../images/filter.gif')} />
+					<img className="img-background" className="img-background" src={require('../images/filter.gif')} />
 					<p>Here’s a snapshot of how our filter will look.</p>
-					<img src={require('../images/finalenhancementfilter.png')} />
+					<img className="img-background" src={require('../images/finalenhancementfilter.png')} />
 					<p>We’ve had to use a good bit of logic to set this all up. Here’s how it works:</p>
 					<ol>
 						<li>A lead enters our flow after meeting all of the acceptance criteria.</li>
@@ -49,8 +49,8 @@ class NonWizardFiltersAndRules extends Component {
 						flow and reject the lead. <strong>The logic here is that only leads with ‘bad’ phone number will enter the Webbula step, so if the 
 						Webbula outcome is ‘Failure’, then we know this is a bad lead because phone number <em>and</em> email are bad.</strong></li>
 					</ol>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter11">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter13">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/non-wizard-enhancements">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/lead-delivery">Next</Link>
 				</div>
 			</div>
 		);

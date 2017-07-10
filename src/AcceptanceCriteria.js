@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
-class AcceptanceCriteriaPartners extends Component {
+class AcceptanceCriteria extends Component {
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -15,7 +15,7 @@ class AcceptanceCriteriaPartners extends Component {
 					proper criteria it will be rejected, never entering your flow steps. Like inbound field mappings, Acceptance 
 					Criteria is source-specific - so you can set separate rules for each source if you like. </p>
 					<p>To the right of where we created inbound mappings for our source earlier, select <strong>Add Rules</strong>.</p>
-					<img src={require('../images/addrulesinbound.png')} />
+					<img className="img-background" src={require('../images/addrulesinbound.png')} />
 					<p>You'll be taken to a page where you can begin configuring your acceptance criteria. When you create a 
 					source rule, you’re effectively saying that a lead MUST have this data. Otherwise, we don't want it.</p>
 					<p>For example, we only want to accept leads where:</p>
@@ -31,13 +31,13 @@ class AcceptanceCriteriaPartners extends Component {
 						<li><strong>Phone_1</strong> OR <strong>email</strong> is not blank</li>
 					</ol>
 					<p>Here's how we'd set that up:</p>
-					<img src={require('../images/setacceptancecriteria.gif')} />
+					<img className="img-background" src={require('../images/setacceptancecriteria.gif')} />
 					<p>Don't forget to <strong>save</strong> your work!</p>
 					<p>If you set up the previous rules correctly, here's how your final acceptance criteria rules would look:</p>
-					<img src={require('../images/finalacceptancecriteria.png')} />
+					<img className="img-background" src={require('../images/finalacceptancecriteria.png')} />
 					<p>In order for a lead to pass through the initial source rules to the flow's steps, it must pass <strong>ALL</strong> or <strong>ANY</strong> (depending on what you select) of the rules set up for the source. 
 					Within the larger rule, you can set up smaller rule sets which will give you a lot of power in determining what leads should make it into your flow's steps.</p>
-					<img src={require('../images/acceptancerulesets.png')} />
+					<img className="img-background" src={require('../images/acceptancerulesets.png')} />
 					<p>Notice the purple sections above. These are rule sets. For each rule set, LeadConduit looks to see if <strong>ANY</strong> or <strong>ALL </strong> 
 					(depending on what you select) of the rules are true. In this case, we'll accept a lead into our flow's steps if it has 
 					at least a first name <strong>OR</strong> last name, <strong>and</strong> a phone number <strong>OR</strong> email - assuming all other rules pass as well.</p>
@@ -49,12 +49,12 @@ class AcceptanceCriteriaPartners extends Component {
 						<li><a href="https://support.activeprospect.com/hc/en-us/articles/115001385643-LeadConduit-Rules" target="_blank">LeadConduit Rules</a></li>
 						<li><a href="https://support.activeprospect.com/hc/en-us/articles/211164783-LeadConduit-Acceptance-Criteria" target="_blank">Acceptance Criteria</a></li>
 					</ul>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter7">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter9">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/inbound-field-mapping">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/posting-instructions">Next</Link>
 				</div>
 			</div>
 		);
 	}
 }
 
-export default AcceptanceCriteriaPartners;
+export default AcceptanceCriteria;

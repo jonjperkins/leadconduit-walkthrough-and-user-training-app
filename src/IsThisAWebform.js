@@ -13,7 +13,7 @@ class IsThisAWebform extends Component {
 								<h1>Lead Source.</h1>
 								<h4>Is the source of your leads a <strong>webform</strong>?</h4>
 								<button className="wizard-yes-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformYes}>Yes</button>
-								<Link to="/"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link>
+								<Link to="/IntroAndFlowCreation"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link>
 								<button className="wizard-back-button" style={{ textDecoration: 'none' }} onClick={this.props.handleStartOver}>Back</button>
 							</div>
 						</div>

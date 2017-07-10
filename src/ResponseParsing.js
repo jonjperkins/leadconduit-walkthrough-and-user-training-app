@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
-class ResponseParsingPartners extends Component {
+class ResponseParsing extends Component {
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -29,7 +29,7 @@ class ResponseParsingPartners extends Component {
 					box. Set the operator to <strong>is not equal to</strong>, and choose <strong>success</strong> in 
 					the rightmost input box. Finally, select the <strong>MailChimp Reason</strong> field value as the 
 					message LeadConduit will respond with if the filter catches any failures, errors, or skips - any thing that's not a success.</p>
-					<img src={require('../images/velocifyfilter.png')} />
+					<img className="img-background" src={require('../images/velocifyfilter.png')} />
 
 					<h2>Custom Deliveries</h2>
 					<p>Our knowledge base has a superb article on <a href="https://support.activeprospect.com/hc/en-us/articles/217517686-LeadConduit-Response-Parsing" target="_blank">response parsing</a>.
@@ -55,22 +55,22 @@ class ResponseParsingPartners extends Component {
 					<p>For this example, set your Outcome Search Term to look for: <strong>“Success”: true</strong>. If LeadConduit 
 					sees this in the response (word for word and letter for letter - case sensitive), we’ll know the 
 					lead was delivered successfully.</p>
-					<img src={require('../images/responseparsing.png')} />
+					<img className="img-background" src={require('../images/responseparsing.png')} />
 					<p>Once the parsing is configured, LeadConduit will look for this message in each attempted lead delivery. 
 					<em>If and only if</em> <strong>“Success”: true</strong> is found anywhere in the response message, LeadConduit 
 					will consider the <strong>delivery outcome</strong> to be a <strong>Success</strong>.</p>
 					<p>The final configuration involves setting up a filter to catch any leads that are not marked as a success.</p>
-					<img src={require('../images/customdeliveryfilter.png')} />
+					<img className="img-background" src={require('../images/customdeliveryfilter.png')} />
 					<p>With the response parsing and companion filter in place, LeadConduit now knows how to detect and fail leads 
 					that are not successfully delivered to your custom destination.</p>
 					<p><strong>Note</strong>: You’ll want to take another look at this article so that you can also configure 
 					your response parsing to capture the text of any failure or error messages.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter3">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter5">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/outbound-field-mapping">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/testing-basics">Next</Link>
 				</div>
 			</div>
 		);
 	}
 }
 
-export default ResponseParsingPartners;
+export default ResponseParsing;

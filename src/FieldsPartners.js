@@ -70,8 +70,8 @@ class FieldsPartners extends Component {
 					<p>Custom Fields are shown in a darker blue than LeadConduit Standard Fields, so they are easy to distinguish at a glance.</p>
 					<img id="webform-example" src={require('../images/final_field_page.png')} />
 					<p>Remember to <strong>update</strong> your fields and <strong>save</strong> your work.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/signingin">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter2">Next</Link>			
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/fields-partners">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/inbound-mapping-partners">Next</Link>			
 				</div>
 			</div>
 		);

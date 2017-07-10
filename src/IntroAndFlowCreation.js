@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class IntroAndFlowCreation extends Component {
 	componentDidMount () {
   		window.scrollTo(0, 0)
+  		
 	}
 	render() {
 		return(
@@ -14,7 +15,7 @@ class IntroAndFlowCreation extends Component {
 						to meet the unique needs of your business. Lead flows allow you to capture, enhance, filter and deliver 
 						leads to any combination of systems according to custom logic you define. You can imagine a flow looking 
 						something like this:</p>
-					<img src={require('../images/flowdiagram.png')} />
+					<img className="img-background" src={require('../images/flowdiagram.png')} />
 	 				<p>In LeadConduit, a lead’s life-cycle begins at capture and ends with delivery to the system of your 
 	 				choice - but only if that lead is qualified.</p>
 	 				<p><strong>Capture:</strong> Whether it’s from an internal form or a 3rd party lead vendor, LeadConduit captures leads 
@@ -30,15 +31,14 @@ class IntroAndFlowCreation extends Component {
 	 				<h2> Create Your Flow </h2>
 	 				<p>LeadConduit can do a lot, and the first step towards harnessing its power is <a href="https://support.activeprospect.com/hc/en-us/articles/115002511123-Logging-In-Launching-Products" target="_blank">signing-in</a>. 
 	 				Once you’re signed-in, launch the LeadConduit app and select the ‘Flows’ button from the navigation bar.</p>
-					<img src={require('../images/flow_button.png')} />
+					<img className="img-background" src={require('../images/flow_button.png')} />
 					<p>Select the ‘New Flow’ button and you’ll be taken to flow editor page for this new flow. Give your flow a name, and press the ‘Save’ button. </p>
-					<img src={require('../images/createandnameflow.gif')} />
+					<img className="img-background" src={require('../images/createandnameflow.gif')} />
 					<p>You've just created your first flow - <em>great job!</em></p>
 					<p>Whenever you make changes to your LeadConduit flow, you will need to <strong>save</strong> those changes to prevent them from being lost when you navigate away from 
 					the flow you're working on. You can save your flow by clicking the 'Save' button in the upper right-hand corner of the screen. If the ‘Save’ button 
 					isn’t clickable, then there haven’t been any changes made to your flow since your last save.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/signingin">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter2">Next</Link>			
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/sources-partners">Next</Link>
 				</div>
 			</div>
 		);
