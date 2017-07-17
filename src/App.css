@@ -10,14 +10,29 @@ img {
 
 /* Media Queries */
 
+@media screen and (max-width: 3000px) {
+    .app-content-body > .content-body {
+      padding-left: 450px;
+      padding-right: 450px;
+    }
+    .ancestor > .chapter-content-body {
+      margin-left: 550px;
+      margin-right: 550px;
+    }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 450px;
+      padding-right: 450px;
+    }
+}
+
 @media screen and (max-width: 2200px) {
     .app-content-body > .content-body {
       padding-left: 450px;
       padding-right: 450px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 450px;
+      margin-right: 450px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 450px;
@@ -31,8 +46,8 @@ img {
       padding-right: 375px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 200px;
-      margin-right: 200px;
+      margin-left: 350;
+      margin-right: 350;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 375px;
@@ -46,8 +61,8 @@ img {
       padding-right: 300px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 175px;
-      margin-right: 175px;
+      margin-left: 275px;
+      margin-right: 275px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 300px;
@@ -61,8 +76,8 @@ img {
       padding-right: 200px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 100px;
-      margin-right: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 200px;
@@ -79,8 +94,25 @@ img {
     .ancestor > .chapter-content-body {
       padding-left: 0px;
       padding-right: 0px;
-      margin-right: 50px;
-      margin-left: 50px;
+      margin-right: 150px;
+      margin-left: 150px;
+    }
+    .app-content-body > .field-finder-content-body {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .app-content-body > .content-body {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    .ancestor > .chapter-content-body {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 100px;
+      margin-left: 100px;
     }
     .app-content-body > .field-finder-content-body {
       padding-left: 150px;
@@ -277,6 +309,7 @@ img {
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
+  background-color: #f9fafc;
   transition: all 0.4s ease 0s;
 }
 
@@ -292,6 +325,7 @@ img {
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
+  background-color: #f9fafc;
   transition: all 0.4s ease 0s;
 }
 
@@ -385,7 +419,7 @@ img {
 .chapter-content-body {
   margin-top: 60px;
   padding-top: 10px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 50px;
@@ -409,13 +443,14 @@ img {
 }
 
 .img-background {
-  background: #eaeff7;
+  background: #f9fafc;
   padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 12px;
   padding-left: 12px;
   margin-bottom: 20px;
   margin-top: 20px;
+  border: 1px solid #E9ECEC;
 }
 .body-no-scroll {
   overflow: hidden;
