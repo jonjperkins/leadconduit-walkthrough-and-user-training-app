@@ -256,6 +256,13 @@ img {
   margin-bottom: 50px;
 }
 
+.smaller-h6 {
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
+
+
 /* Sidebar */
 
 .active-sidebar-small-screen {
@@ -798,6 +805,7 @@ img {
   margin-top: 15px;
   background-color: white;
   border: solid #E8E9E9 1px;
+  margin-bottom: 50px;
 }
 
 .response {
@@ -1000,6 +1008,46 @@ text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-/* Walkthrough Stuff */
+/* Testing Tool */
 
-
+.inner-test-tool {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-family: "Whitney A","Whitney B",Arial,sans-serif;
+}
+.field-response {
+  margin-left: 100px;
+  padding-top: 20px;
+  margin-right: 100px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: .8em;
+}
+.smaller-title {
+  font-size: 2em;
+  letter-spacing: .03em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.even-smaller-title {
+  font-size: 1em;
+  letter-spacing: .01em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.transition {
+  transition: all 0.6s ease 0s;
+}
+.outer-test-tool {
+  margin-top: 30px;
+  background-color: white;
+  border: solid #D7DFE7 2px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+.button-margin {
+  padding-bottom: 20px;
+}
