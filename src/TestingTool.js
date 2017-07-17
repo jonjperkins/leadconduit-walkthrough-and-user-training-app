@@ -34,7 +34,7 @@ class TestingTool extends Component {
 		this.handleFetchInputFields = this.handleFetchInputFields.bind(this);
 	}
 	handleFetchInputFields() {
-		var request = new Request('http://localhost:8080/test-tool', {
+		var request = new Request('http://leadconduit-node-server.herokuapp.com/test-tool', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
