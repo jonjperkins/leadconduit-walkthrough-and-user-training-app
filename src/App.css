@@ -16,12 +16,12 @@ img {
       padding-right: 450px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 550px;
-      margin-right: 550px;
+      margin-left: 450px;
+      margin-right: 450px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 450px;
-      padding-right: 450px;
+    .chapter-content-body > .test-form {
+      padding-left: 150px;
+      padding-right: 150px;
     }
 }
 
@@ -31,12 +31,12 @@ img {
       padding-right: 450px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 450px;
-      margin-right: 450px;
+      margin-left: 350px;
+      margin-right: 350px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 450px;
-      padding-right: 450px;
+    .chapter-content-body > .test-form {
+      padding-left: 150px;
+      padding-right: 150px;
     }
 }
 
@@ -46,12 +46,12 @@ img {
       padding-right: 375px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 350;
-      margin-right: 350;
+      margin-left: 250;
+      margin-right: 250;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 375px;
-      padding-right: 375px;
+    .chapter-content-body > .test-form {
+      padding-left: 200px;
+      padding-right: 200px;
     }
 }
 
@@ -61,12 +61,12 @@ img {
       padding-right: 300px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 275px;
-      margin-right: 275px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 300px;
-      padding-right: 300px;
+    .chapter-content-body > .test-form {
+      padding-left: 150px;
+      padding-right: 150px;
     }
 }
 
@@ -76,12 +76,12 @@ img {
       padding-right: 200px;
     }
     .ancestor > .chapter-content-body {
-      margin-left: 200px;
-      margin-right: 200px;
+      margin-left: 150px;
+      margin-right: 150px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 200px;
-      padding-right: 200px;
+    .chapter-content-body > .test-form {
+      padding-left: 150px;
+      padding-right: 150px;
     }
 }
 
@@ -97,9 +97,9 @@ img {
       margin-right: 150px;
       margin-left: 150px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 150px;
-      padding-right: 150px;
+    .chapter-content-body > .test-form {
+      padding-left: 50px;
+      padding-right: 50px;
     }
 }
 
@@ -114,9 +114,9 @@ img {
       margin-right: 100px;
       margin-left: 100px;
     }
-    .app-content-body > .field-finder-content-body {
-      padding-left: 150px;
-      padding-right: 150px;
+    .chapter-content-body > .test-form {
+      padding-left: 50px;
+      padding-right: 50px;
     }
 }
 
@@ -146,7 +146,7 @@ img {
       margin-left: 50px;
       margin-right: 50px;  
     }
-    .app-content-body > .field-finder-content-body {
+    .chapter-content-body > .test-form {
       padding: 50px;
     }
 
@@ -174,7 +174,7 @@ img {
       margin-top: 10px;
       margin-left: 10px;
     }
-    .app-content-body > .field-finder-content-body {
+    .chapter-content-body > .test-form {
       padding-left: 0px;
       padding-right: 0px;
       padding-top: 0px;

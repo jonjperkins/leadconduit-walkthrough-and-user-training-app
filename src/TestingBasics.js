@@ -51,8 +51,8 @@ class TestingBasics extends Component {
 					way to verify the status of your test leads is by accessing an individual lead from the <strong>Recent Leads</strong> 
 					section on the main page of the flow you’re testing.</p>
 					<img className="img-background" src={require('../images/recentleads.png')} />
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/chapter9">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/chapter11">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/response-parsing">Back</Link>
+					<Link className="next-button" style={{ textDecoration: 'none' }} to="/testing-tool">Next</Link>
 				</div>
 			</div>
 		);

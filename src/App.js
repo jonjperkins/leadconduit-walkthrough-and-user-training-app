@@ -200,6 +200,7 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
       											
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
@@ -229,7 +230,8 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
-      											
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
+
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
@@ -258,6 +260,7 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
       											
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
