@@ -19,7 +19,8 @@ class TestingTool extends Component {
 			step_2: false,
 			step_3: false,
 			posting_url_errors: '',
-			errors: ''
+			errors: '',
+			flow_name: ''
 		}
 
 		this.handleUpdatePostingUrl = this.handleUpdatePostingUrl.bind(this);
@@ -32,9 +33,10 @@ class TestingTool extends Component {
 		this.handleUpdateUsername = this.handleUpdateUsername.bind(this); 
 		this.handleUpdateAPIKey = this.handleUpdateAPIKey.bind(this);
 		this.handleFetchInputFields = this.handleFetchInputFields.bind(this);
+		this.handleFetchFlowName = this.handleFetchFlowName.bind(this);
 	}
 	handleFetchInputFields() {
-		var request = new Request('http://leadconduit-node-server.herokuapp.com/test-tool', {
+		var request = new Request('http://localhost:8080/test-tool', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
@@ -56,6 +58,28 @@ class TestingTool extends Component {
 					this.setState({ step_1: false, step_2: false, step_3: true })
 				}
 				
+			});
+		});
+		this.handleFetchFlowName();
+	}
+	handleFetchFlowName() {
+		var request = new Request('http://localhost:8080/flow-name', {
+			method: 'POST',
+			headers: new Headers({
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			}),
+			body: JSON.stringify({ posting_url: this.state.posting_url, api_key: this.state.api_key })
+		});
+		fetch(request)
+		.then((response) => {
+			response.text().then(text => {
+				this.setState({ flow_name: text})
+				//var flow_name = JSON.parse(stringified_fields_object)
+				//.log('flow name: ' + flow_name)
+				//.setState({ flow_name: flow_name})
+				//console.log(this.state.flow_name)
+							
 			});
 		});
 	}
@@ -197,7 +221,7 @@ class TestingTool extends Component {
 							<div className="outer-test-tool">
 								<form className="button-margin" ref={(form) => this.form = form}>
 									
-										<h1 className="smaller-title">Send a Test Lead</h1>
+										<h2 className="test-form-title"><strong>Send a test lead to</strong>: <em>{this.state.flow_name}</em></h2>
 										<div className="field-response">
 										{Object.entries(this.state.field_pairs).map(([key, value]) => {
 												

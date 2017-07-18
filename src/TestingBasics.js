@@ -11,6 +11,7 @@ class TestingBasics extends Component {
 			<div className="ancestor">
 				<div className="chapter-content-body">
 					<h1 className="title">Testing Basics</h1>
+					<h2>Testing Overview</h2>
 					<p>Once you've configured your flow, you need to test your flow. Why? Even the best flow 
 					builders forget things from time to time. You should test your flow to make sure you didn't 
 					configure anything that will allow undesirable leads to pass through your flow undetected.</p>
@@ -45,12 +46,32 @@ class TestingBasics extends Component {
 						web form to ensure you can POST leads to your flow properly. Review these leads for the same 
 						potential pitfalls listed above.</li>
 					</ol>
-					<p>In the next section, you’ll be able to send a test lead to your flow using our testing tool. The 
-					testing tool allows you to click a link and view the details of your test lead in LeadConduit. When 
-					testing in the wild, you can access lead details from a variety of entry points. However, the easiest 
-					way to verify the status of your test leads is by accessing an individual lead from the <strong>Recent Leads</strong> 
-					section on the main page of the flow you’re testing.</p>
+					<p>The easiest way to verify the status of your test leads is by accessing an individual lead from 
+					the Recent Leads section on the main page of the flow you’re testing.</p>
 					<img className="img-background" src={require('../images/recentleads.png')} />
+					<br />
+					<h2>Flow Testing Tool</h2>
+					<p>The LeadConduit Guide’s flow testing tool allows you to send test leads to one of your flows. In 
+					order to use the tool, you’ll need to collect some information.</p>
+					<ol>
+						<li> The <strong>API key</strong> associated with your ActiveProspect account.</li>
+						<ul>
+							<li>Navigate to <a href="https://sso.activeprospect.com/account">https://sso.activeprospect.com/account</a>, and 
+							click the Account Settings button in the upper right corner.</li>
+						</ul>
+						<li>The <strong>Posting URL</strong> for the flow you'd like to test.</li>
+						<ul>
+							<li>Visit this page to learn how to find your posting instructions: <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions">https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions</a>.</li>  
+						</ul>
+					</ol>
+					<p>The tool will prompt you to enter this information, and the data will persist until you navigate away from or 
+					refresh the flow testing tool page. If you return to the tool, you’ll need to re-enter the required information 
+					which you can use for the duration of your time on the page.</p>
+					<p>Once you enter the required information, you’ll be presented with a web form that represents all available fields 
+					in your flow. Fill out that form with the information you’d like to test, and click the <strong>Submit</strong> button. At the top of 
+					the page, you’ll see the color-coded outcome of your submission, as well as <strong>a link to the test lead in LeadConduit</strong>.  Effective 
+					problem solving in LeadConduit requires the ability to understand a lead event page, so we suggest clicking the test lead link to view the 
+					lifecycle of your lead through your flow.</p>
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/response-parsing">Back</Link>
 					<Link className="next-button" style={{ textDecoration: 'none' }} to="/testing-tool">Next</Link>
 				</div>

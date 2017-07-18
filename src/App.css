@@ -1072,6 +1072,16 @@ text-align: center;
   margin-bottom: 20px;
   text-align: center;
 }
+.test-form-title {
+  font-size: 1.4em;
+  letter-spacing: .02em;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom:15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
 .transition {
   transition: all 0.6s ease 0s;
 }
