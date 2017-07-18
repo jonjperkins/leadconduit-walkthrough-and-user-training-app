@@ -36,7 +36,7 @@ class TestingTool extends Component {
 		this.handleFetchFlowName = this.handleFetchFlowName.bind(this);
 	}
 	handleFetchInputFields() {
-		var request = new Request('http://leadconduit-tutorial.herokuapp.com/test-tool', {
+		var request = new Request('http://leadconduit-node-server.herokuapp.com/test-tool', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
@@ -63,7 +63,7 @@ class TestingTool extends Component {
 		this.handleFetchFlowName();
 	}
 	handleFetchFlowName() {
-		var request = new Request('http://leadconduit-tutorial.herokuapp.com/flow-name', {
+		var request = new Request('http://leadconduit-node-server.herokuapp.com/flow-name', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
