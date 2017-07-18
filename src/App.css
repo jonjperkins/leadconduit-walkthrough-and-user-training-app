@@ -292,6 +292,9 @@ img {
   margin-top: 7px;
   margin-bottom: 15px;
 }
+.app-content-body {
+
+}
 
 
 
@@ -1081,12 +1084,11 @@ text-align: center;
   margin-top: 30px;
 }
 .test-form-sub-title {
-  font-size: 1em;
-  letter-spacing: .04em;
+  font-size: 1.8em;
+  letter-spacing: .05em;
   margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom:15px;
-  margin-top: 30px;
+  margin-bottom:30px;
+  margin-top: 10px;
 }
 
 .transition {
@@ -1102,4 +1104,46 @@ text-align: center;
 }
 .button-margin {
   padding-bottom: 20px;
+}
+.test-next-button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #f58025;
+  color: white;
+  padding: 8px 14px;
+  border: solid #f58025 1px;
+  float: right;
+  border-radius: 2px;
+}
+.test-next-button:hover {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #f58025;
+  color: white;
+  padding: 8px 14px;
+  border: solid #f58025 1px;
+  float: right;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.test-back-button {
+  margin-top: 30px;
+  display: inline-block;
+  border: solid #233238 1px;
+  background-color: #233238;
+  color: white;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.test-back-button:hover {
+  margin-top: 30px;
+  display: inline-block;
+  border: solid #233238 1px;
+  background-color: #233238;
+  color: white;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

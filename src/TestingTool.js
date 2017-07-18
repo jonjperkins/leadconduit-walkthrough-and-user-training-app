@@ -166,48 +166,51 @@ class TestingTool extends Component {
 			<div className="ancestor">
 				<div className="chapter-content-body">
 					{this.state.step_1 && 
-						<div className="transition">
-						<div className="outer-test-tool margin-booster">
-							<div className="inner-test-tool form-background">
-								<h4> The LeadConduit testing tool requires you to enter a few pieces of information before 
-								you begin testing your flow. If you navigate away from or refresh this page, you'll need to 
-								re-enter this information. Click <strong>Next</strong> to get started.</h4>
-								<br />
-								<Button bsStyle="primary" bsSize="large" onClick={this.goToStep2.bind(this)}>Next</Button>
+						<div className="wizard-outer">
+							<div className="wizard-inner">
+								<div className="wizard-content">
+									<h1> Testing Tool.</h1>
+									<h4> The LeadConduit testing tool requires you to enter a few pieces of information before 
+									you begin testing your flow. If you navigate away from or refresh the testing tool page, you'll need to 
+									re-enter this information.</h4>
+									<button className="test-next-button" style={{ textDecoration: 'none' }} onClick={this.goToStep2.bind(this)}>Yes</button>
+									<button className="test-back-button" style={{ textDecoration: 'none', display: 'none' }} onClick={this.props.handleStartOver}>Back</button>
+								</div>
 							</div>	
-						</div>
 						</div>
 					}	
 					{this.state.step_2 &&
-						<div className="transition">
-						<div className="outer-test-tool margin-booster">
-							<div className="inner-test-tool form-background">
-							<Form>
-								<FormGroup>
-									<h3><strong>Enter the following pieces of information.</strong></h3>
-									<br />
-									<div>
-									<strong>API Key:</strong>
-									{this.state.errors.length > 0 &&
-										<h6 style={{color: "red"}}>{this.state.errors}</h6>
-									}
-									<FormControl name="api_key" className="input extra-margins" type="text" required onChange={this.handleUpdateAPIKey}></FormControl>
-									<h6 className="smaller-h6"><em>You can find your API key by clicking the <strong>Account Settings</strong> button in the top right corner of your <a href="https://sso.activeprospect.com/account" target="_blank">account page</a>.</em></h6>
-									<strong>Posting URL:</strong>
-									<FormControl name="postingUrl" className="input extra-margins" type="text" placeholder="The posting URL of the flow you want to test." required onChange={this.handleUpdatePostingUrl}></FormControl>
-									{(this.state.posting_url_errors !== '') &&
-									<h6 style={{color: "red"}}>{this.state.posting_url_errors}</h6>
-									}
-									<h6 className="smaller-h6"><em>Find the Posting URL in your <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">posting instructions</a>.</em></h6>	
-									<br />
-									<Button bsStyle="primary" style={{ textAlign: "right" }} bsSize="large" disabled={(!this.state.api_key || !this.state.posting_url || this.state.posting_url_errors )} onClick={this.handleFetchInputFields}>Next</Button>
-									<br />
-									</div>
-								</FormGroup>
-							</Form>
+
+						<div className="wizard-outer">
+							<div className="wizard-inner">
+								<div className="wizard-content">
+									<Form>
+										<FormGroup>
+											<h1> Required info.</h1>
+											<h4>Enter the following pieces of information.</h4>
+											<br />
+											<div>
+											<strong>API Key:</strong>
+											{this.state.errors.length > 0 &&
+												<h6 style={{color: "red"}}>{this.state.errors}</h6>
+											}
+											<FormControl name="api_key" className="input extra-margins" type="text" required onChange={this.handleUpdateAPIKey}></FormControl>
+											<h6 className="smaller-h6"><em>You can find your API key by clicking the <strong>Account Settings</strong> button in the top right corner of your <a href="https://sso.activeprospect.com/account" target="_blank">account page</a>.</em></h6>
+											<strong>Posting URL:</strong>
+											<FormControl name="postingUrl" className="input extra-margins" type="text" placeholder="The posting URL of the flow you want to test." required onChange={this.handleUpdatePostingUrl}></FormControl>
+											{(this.state.posting_url_errors !== '') &&
+											<h6 style={{color: "red"}}>{this.state.posting_url_errors}</h6>
+											}
+											<h6 className="smaller-h6"><em>Find the Posting URL in your <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">posting instructions</a>.</em></h6>	
+											</div>
+										</FormGroup>
+									</Form>
+									<button className="test-next-button" style={{ textDecoration: 'none' }} disabled={(!this.state.api_key || !this.state.posting_url || this.state.posting_url_errors )} onClick={this.handleFetchInputFields}>Next</button>
+									<button className="test-back-button" style={{ textDecoration: 'none', display: 'none' }}>Back</button>
+								</div>
 							</div>	
 						</div>
-						</div>
+
 					}
 					{this.state.step_3 &&
 
@@ -222,13 +225,15 @@ class TestingTool extends Component {
 							}
 							{!this.state.response_message &&
 								<div>
-									<h1 className="test-form-title">Send a test lead.</h1>
-									<h3 className="test-form-sub-title">{this.state.flow_name}</h3>
+									<h1 className="title">Send a test lead.</h1>
 								</div>
 							}
 							<div className="outer-test-tool">
 								<form className="button-margin" ref={(form) => this.form = form}>
 									<div className="field-response">
+										<h5 style={{color: "#f58025"}}>Flow name:</h5>
+										<h3 className="test-form-sub-title"><em>{this.state.flow_name}</em></h3>
+										<hr />
 										{Object.entries(this.state.field_pairs).map(([key, value]) => {
 												
 												return 	<FormGroup key={key}>
