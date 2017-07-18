@@ -173,7 +173,7 @@ class TestingTool extends Component {
 									<h4> The LeadConduit testing tool requires you to enter a few pieces of information before 
 									you begin testing your flow. If you navigate away from or refresh the testing tool page, you'll need to 
 									re-enter this information.</h4>
-									<button className="test-next-button" style={{ textDecoration: 'none' }} onClick={this.goToStep2.bind(this)}>Yes</button>
+									<button className="test-next-button" style={{ textDecoration: 'none' }} onClick={this.goToStep2.bind(this)}>Next</button>
 									<button className="test-back-button" style={{ textDecoration: 'none', display: 'none' }} onClick={this.props.handleStartOver}>Back</button>
 								</div>
 							</div>	
