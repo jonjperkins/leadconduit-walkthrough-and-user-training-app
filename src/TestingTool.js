@@ -36,7 +36,7 @@ class TestingTool extends Component {
 		this.handleFetchFlowName = this.handleFetchFlowName.bind(this);
 	}
 	handleFetchInputFields() {
-		var request = new Request('http://localhost:8080/test-tool', {
+		var request = new Request('http://leadconduit-tutorial.herokuapp.com/test-tool', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
@@ -63,7 +63,7 @@ class TestingTool extends Component {
 		this.handleFetchFlowName();
 	}
 	handleFetchFlowName() {
-		var request = new Request('http://localhost:8080/flow-name', {
+		var request = new Request('http://leadconduit-tutorial.herokuapp.com/flow-name', {
 			method: 'POST',
 			headers: new Headers({
 				'Accept': 'application/json',
@@ -212,17 +212,23 @@ class TestingTool extends Component {
 					{this.state.step_3 &&
 
 						<div className="test-form">
-							<div className="outer-results">	
-								<TestFormResponse 
-									response_message={this.state.response_message} 
-									response_styling={this.state.response_styling}	
-									leadconduit_event_id={this.state.leadconduit_event_id} />
-							</div>
+							{this.state.response_message &&
+								<div className="outer-results">	
+									<TestFormResponse 
+										response_message={this.state.response_message} 
+										response_styling={this.state.response_styling}	
+										leadconduit_event_id={this.state.leadconduit_event_id} />
+								</div>
+							}
+							{!this.state.response_message &&
+								<div>
+									<h1 className="test-form-title">Send a test lead.</h1>
+									<h3 className="test-form-sub-title">{this.state.flow_name}</h3>
+								</div>
+							}
 							<div className="outer-test-tool">
 								<form className="button-margin" ref={(form) => this.form = form}>
-									
-										<h2 className="test-form-title"><strong>Send a test lead to</strong>: <em>{this.state.flow_name}</em></h2>
-										<div className="field-response">
+									<div className="field-response">
 										{Object.entries(this.state.field_pairs).map(([key, value]) => {
 												
 												return 	<FormGroup key={key}>
