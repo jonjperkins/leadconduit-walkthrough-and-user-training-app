@@ -41,7 +41,7 @@ class App extends Component {
 			isWebformUser: false,
 			isUsingVendor: false,
 			isActive: false,
-			walkthrough: false
+			contentScroll: true
 		}
 	}
 	sidebarToggle() {
@@ -118,6 +118,12 @@ class App extends Component {
 						isUsingVendor: false,
 						onBeginPage: true });
 	}
+	toggleContentScroll() {
+		this.setState({ contentScroll: !this.state.contentScroll })
+		var type = ''
+		this.state.contentScroll ? type = "hidden" : type = "scroll"
+		document.body.style.overflow = type;
+	}
   	render() {
   		let wizardComponent = null;
   		if (this.state.onBeginPage === true) {
@@ -153,7 +159,7 @@ class App extends Component {
 					<div id={this.state.isSourceWizard ? 'hidden' : 'wrapper'} className={this.state.walkthrough ? 'intro-tour-overlay' : ''}>
 						<div className='wrapper-ancestor'>
 							<div className={this.state.isActive ? 'active-sidebar-small-screen' : 'sidebar-wrapper'}>
-								<div className="sidebar-content">
+								<div className="sidebar-content" onMouseEnter={this.toggleContentScroll.bind(this)} onMouseLeave={this.toggleContentScroll.bind(this)}>
 									<Sidebar>
 										{this.state.isWebformUser &&
 											<div className="lead-source-sidebar-div">

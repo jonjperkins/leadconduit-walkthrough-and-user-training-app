@@ -8,6 +8,8 @@ img {
 }
 
 
+
+
 /* Media Queries */
 
 @media screen and (max-width: 3000px) {
@@ -295,6 +297,9 @@ img {
 .app-content-body {
 
 }
+.no-scroll-content-body. {
+  content: hidden;
+}
 
 
 
@@ -315,6 +320,9 @@ img {
   background-color: #f9fafc;
   transition: all 0.4s ease 0s;
 }
+.active-sidebar-small-screen::-webkit-scrollbar { 
+    display: none; 
+}
 
 .sidebar-wrapper {
   margin-top: -40px;
@@ -330,6 +338,9 @@ img {
   z-index: 1000;
   background-color: #f9fafc;
   transition: all 0.4s ease 0s;
+}
+.sidebar-wrapper::-webkit-scrollbar { 
+    display: none; 
 }
 
 .sidebar-content {
