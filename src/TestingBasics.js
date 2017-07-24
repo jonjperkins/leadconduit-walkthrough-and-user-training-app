@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class TestingBasics extends Component {
@@ -48,7 +47,7 @@ class TestingBasics extends Component {
 					</ol>
 					<p>The easiest way to verify the status of your test leads is by accessing an individual lead from 
 					the Recent Leads section on the main page of the flow you’re testing.</p>
-					<img className="img-background" src={require('../images/recentleads.png')} />
+					<img className="img-background" src={require('../images/recentleads.png')} alt="Recent Leads" />
 					<br />
 					<h2>Flow Testing Tool</h2>
 					<p>The LeadConduit Guide’s flow testing tool allows you to send test leads to one of your flows. In 

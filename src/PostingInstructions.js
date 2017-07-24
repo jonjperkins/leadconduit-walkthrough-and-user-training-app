@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class PostingInstructions extends Component {
@@ -17,7 +16,7 @@ class PostingInstructions extends Component {
 					You'll be taken directly to the posting instructions page for that source in a new tab.</p>
 					<p>These posting instructions will stay up-to-date in real time as changes are made to your flow, and will always live at their unique URL. 
 					These do not require a login to access, and can be shared with your lead sources as necessary.</p>
-					<img className="img-background" src={require('../images/accessingpostinginstructions.gif')} />
+					<img className="img-background" src={require('../images/accessingpostinginstructions.gif')} alt="Access Instructions" />
 					<p>We won't talk about everything in the posting instructions, but here's a quick overview of what you can find inside:</p>
 					<ul>
 						<li>The ability for sources to directly upload leads to your flow via .csv files</li>
@@ -29,7 +28,7 @@ class PostingInstructions extends Component {
 					<p>Acceptance Criteria will appear on your posting docs so your sources know exactly what you will and will not accept with your lead data. Filters (which we'll discuss later) will not. </p>
 					<p>When performing inbound mappings on flow fields, both the field name and permissible mapped name will show up on the posting instructions. We’ll always prefer 
 					the LeadConduit standard parameter, but the mappings will allow you to post to either. Take a look.</p>
-					<img className="img-background" src={require('../images/postinginstructionsmappings.png')} />
+					<img className="img-background" src={require('../images/postinginstructionsmappings.png')} alt="Posting Mappings" />
 					<p>Sources can also test the response they’ll receive from LeadConduit based on the Acceptance Criteria. Filters will not appear in the posting docs, and will not 
 					apply to the interactive example at the bottom of the docs.</p>
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/acceptance-criteria">Back</Link>

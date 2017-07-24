@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './ChapterStyles.css';
 
 class TypeOfWebform extends Component {
 	render() {

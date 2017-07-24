@@ -1,33 +1,9 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
-import Homepage from './Homepage';
-import SigningIn from './SigningIn';
-import Intro from './Intro';
-import Chapter1 from './Chapter1';
-import Chapter2 from './Chapter2';
-import Chapter3 from './Chapter3';
-import Chapter5 from './Chapter5';
-import Chapter6 from './Chapter6';
-import Chapter7 from './Chapter7';
-import Chapter8 from './Chapter8';
-import Chapter9 from './Chapter9';
-import Chapter10 from './Chapter10';
-import Chapter11 from './Chapter11';
-import Chapter12 from './Chapter12';
-import Chapter13 from './Chapter13';
-import Chapter14 from './Chapter14';
-import Chapter15 from './Chapter15';
-import QuickStart from './QuickStart';
-import Intro2 from './Intro2';
-import Test from './Test';
 import TestingTool from './TestingTool';
 import WebScraper from './WebScraper';
-import SourcePartners from './SourcePartners';
-import FieldsPartners from './FieldsPartners';
-import FieldsWebForms from './FieldsWebForms';
-import FieldsUnbounce from './FieldsUnbounce';
 import AcceptanceCriteria from './AcceptanceCriteria';
 import PostingInstructions from './PostingInstructions';
 import NonWizardEnhancements from './NonWizardEnhancements';
@@ -35,8 +11,6 @@ import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
 import LeadDelivery from './LeadDelivery';
 import OutboundFieldMapping from './OutboundFieldMapping';
 import ResponseParsing from './ResponseParsing';
-import SourcesWebForms from './SourcesWebForms';
-import SourcesUnbounce from './SourcesUnbounce';
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
 import IsThisAWebform from './IsThisAWebform';
@@ -270,68 +244,18 @@ class App extends Component {
       											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>								
       										</div>								
       									}
-										{/*<CustomNavLink onClick={this.sidebarClose.bind(this)} className="bold" to="/quickstart" label="Quick Start"></CustomNavLink>									
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} className="bold" to="/intro" label="Full Tutorial"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/intro" label="Meet LeadConduit"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/signingin" label="Signing In"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter1" label="The Homepage"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter2" label="Flows"></CustomNavLink> 
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter3" label="Create Your Flow"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter5" label="Fields and Form Parameters"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter6" label="Lead Sources"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter7" label="Inbound Field Mapping"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter8" label="Acceptance Criteria"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter9" label="Posting Instructions"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter10" label="Steps"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter11" label="Marketplace Integrations & Enhancements"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter12" label="Filters and Step Rules"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter13" label="Lead Delivery"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter14" label="Outbound Field Mapping"></CustomNavLink>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/chapter15" label="Response Parsing"></CustomNavLink>
-
-										<br/>
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/test" label="Test Your Flow"></CustomNavLink> 
-										<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/webscraper" label="Field Finder"></CustomNavLink> 
-										*/}
+										
 									</Sidebar>
 								</div>
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
 
-									<Route path='/sources' render={() => <Sources isUsingVendor = {this.state.isUsingVendor} isWebformUser = {this.state.isWebformUser} isUnbounceUser = {this.state.isUnbounceUser} />}></Route>
-									<Route path='/fields' render={() => <Fields isUsingVendor = {this.state.isUsingVendor} isWebformUser = {this.state.isWebformUser} isUnbounceUser = {this.state.isUnbounceUser} />}></Route>
-									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping isUsingVendor = {this.state.isUsingVendor} isWebformUser = {this.state.isWebformUser} isUnbounceUser = {this.state.isUnbounceUser} />}></Route>
-									<Route path='/quickstart' component={QuickStart}></Route>
-									<Route path='/intro' component={Intro}></Route>
-									<Route path='/signingin' component={SigningIn}></Route>
-									<Route path='/chapter1' component={Chapter1}></Route>
-									<Route path='/chapter2' component={Chapter2}></Route>
-									<Route path='/chapter3' component={Chapter3}></Route>
-									<Route path='/chapter5' component={Chapter5}></Route>
-									<Route path='/chapter6' component={Chapter6}></Route>
-									<Route path='/chapter7' component={Chapter7}></Route>
-									<Route path='/chapter8' component={Chapter8}></Route>
-									<Route path='/chapter9' component={Chapter9}></Route>
-									<Route path='/chapter10' component={Chapter10}></Route>	
-									<Route path='/chapter11' component={Chapter11}></Route>
-									<Route path='/chapter12' component={Chapter12}></Route>
-									<Route path='/chapter13' component={Chapter13}></Route>		
-									<Route path='/chapter14' component={Chapter14}></Route>							
-									<Route path='/chapter15' component={Chapter15}></Route>	
-									<Route path='/test' component={Test}></Route>
+									<Route path='/sources' render={() => <Sources isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
+									<Route path='/fields' render={() => <Fields isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
+									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
-								{/* Partner Routes */}
 									<Route path='/introandflowcreation' component={IntroAndFlowCreation}></Route>
-									<Route path="/sources-partners" component={SourcePartners}></Route>
-									<Route path='/sources-webform' component={SourcesWebForms}></Route>
-									<Route path='/sources-unbounce' component={SourcesUnbounce}></Route>
-									<Route path='/fields-partners' component={FieldsPartners}></Route>
-									<Route path='/fields-webform' component={FieldsWebForms}></Route>
-									<Route path='/fields-unbounce' component={FieldsUnbounce}></Route>
-
-									
-
 									<Route path='/acceptance-criteria' component={AcceptanceCriteria}></Route>
 									<Route path='/posting-instructions' component={PostingInstructions}></Route>
 									<Route path='/non-wizard-enhancements' component={NonWizardEnhancements}></Route>

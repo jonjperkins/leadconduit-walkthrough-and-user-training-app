@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class NonWizardEnhancements extends Component {
@@ -34,7 +33,7 @@ class NonWizardEnhancements extends Component {
 					<h2>Add Phone Validation</h2>
 					<p> Switch over to your 'Steps' tab in your flow and select the option to add an enhancement. This will 
 					bring up a menu of options to choose from. Scroll down and select the Telesign option.</p>
-					<img className="img-background" src={require('../images/telesign.gif')} />
+					<img className="img-background" src={require('../images/telesign.gif')} alt="Telesign" />
 					<p>When you select the bubble for Telesign, the section expands and alerts you to the pricing structure. 
 					It's important to take note of what using this service will cost you per lead. Once this enhancement is in 
 					your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
@@ -50,7 +49,7 @@ class NonWizardEnhancements extends Component {
 					article <a href="https://support.activeprospect.com/hc/en-us/articles/204981955-Webbula-Email-Hygiene-Verification" target="_blank">here </a> 
 					to get familiar with what kind of information Webbula will send back to us.  When you’re ready, 
 					you can go ahead and add the Webbula step. If you get stuck, check out the video clip below for help.</p>
-					<img className="img-background" src={require('../images/addwebbula.gif')} />
+					<img className="img-background" src={require('../images/addwebbula.gif')} alt="Webbula" />
 					
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/posting-instructions">Back</Link>
 					<Link className="next-button" style={{ textDecoration: 'none' }} to="/non-wizard-filters-and-rules">Next</Link>

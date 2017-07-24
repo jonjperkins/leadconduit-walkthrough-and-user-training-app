@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row, Form, FormGroup, FormControl, ControlLabel, Button, Grid} from 'react-bootstrap';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import TestFormResponse from './TestFormResponse';
 var ReactDOM = require('react-dom');
 
@@ -120,20 +120,16 @@ class TestingTool extends Component {
 	}
 	createFormSubmissionBody() {
 		var dynamic_fields = ReactDOM.findDOMNode(this.form)
-		console.log(dynamic_fields.value);
-		console.log(dynamic_fields.length);
 		var form_submission_body = {}
 		for (var i = 0; i < dynamic_fields.length; i++) {
 			var name = dynamic_fields[i].name;
 			var value = dynamic_fields[i].value;
-			console.log("name: " + name + " , " + "value: " + value);
 			if (value === undefined) {
 				form_submission_body[name] = ''
 			}
 			else {
 			form_submission_body[name] = value
 			}	
-			console.log(form_submission_body)
 		}
 		var request = new Request(this.state.posting_url, {
 			method: 'POST', 
@@ -156,7 +152,7 @@ class TestingTool extends Component {
 				})
 			}
 			else {
-				this.setState({response_message: "Oops. Something went wrong. Please make sure you\'re pasting your LeadConduit flow's Posting Url in its entirety.", response_styling: "bad_lead"})
+				this.setState({response_message: "Oops. Something went wrong. Please make sure you're pasting your LeadConduit flow's Posting Url in its entirety.", response_styling: "bad_lead"})
 			}
 		});
 		window.scrollTo(0, 0)

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class LeadDelivery extends Component {
@@ -25,11 +24,11 @@ class LeadDelivery extends Component {
 					<h2>Email Delivery</h2>
 					<p>Delivering leads to your email address is a fairly easy way to get started. On the <strong>Steps</strong> page (where you added enhancements earlier in the guide), click the <strong>Add Delivery</strong> button. 
 					Scroll down and select the <strong>Email Delivery</strong> option. This will add an email delivery step to your flow.</p>
-					<img className="img-background" src={require('../images/email_delivery.gif')} />
+					<img className="img-background" src={require('../images/email_delivery.gif')} alt="Email Delivery" />
 					<p>Select the <strong>Edit Field Mappings</strong> button on this step and enter the email address where you'd like the leads delivered. Comma-separate multiple addresses if 
 					more than one person wants to receive these leads. If you add another mapping, you'll be able to further configure your email address with things
 					like <strong>Subject</strong> and <strong>Sender Name</strong>. </p>
-					<img className="img-background" src={require('../images/emailrequirements.png')} />
+					<img className="img-background" src={require('../images/emailrequirements.png')} alt="Email Requirements" />
 					<p>As long as you provide an email address, LeadConduit will send qualified leads to that address with all of the information 
 					collected during the lead’s journey through the flow.</p>
 					<br/>
@@ -43,9 +42,9 @@ class LeadDelivery extends Component {
 					Scroll through the list of integrated delivery destinations, select <strong>MailChimp</strong>, and click <strong>OK</strong>. 
 					You’ll be taken to a screen that asks for your MailChimp API key. If you aren’t sure what that is or where to find it, click 
 					on the <strong>How do I find my API key?</strong> link. Once you have your API key, paste it into the input box and click <strong>Next</strong>.</p>
-					<img className="img-background" src={require('../images/addmailchimp.gif')} /> 
+					<img className="img-background" src={require('../images/addmailchimp.gif')} alt="Add MailChimp" /> 
 					<p>You’ll then be prompted to select from a group of mailing lists associated with your account. Select the proper list and click <strong>OK</strong>.</p>
-					<img className="img-background" src={require('../images/selectmailchimplist.png')} />
+					<img className="img-background" src={require('../images/selectmailchimplist.png')} alt="Select MailChimp List" />
 					<p>The MailChimp delivery is now set up and ready to add email addresses to your list! If you’re also collecting data like <strong>First Name</strong>, 
 					<strong>Last Name</strong>, or <strong>IP Address</strong>, the MailChimp delivery integration will automatically send those values as well (as long as you’re using the 
 					standard fields associated with this data). If you wanted to send other data to your list (e.g. mailchimp_status), you 
@@ -57,9 +56,9 @@ class LeadDelivery extends Component {
 					of your leads will appear successful in the LeadConduit user interface. Further, if you want to check out all of your events 
 					or report on good and bad leads, you need filters marking these leads appropriately. </p>
 					<p>Add a filter after the MailChimp step that will reject the lead and stop the flow if the MailChimp delivery outcome <strong><em>is not equal to</em> Success</strong>. </p>
-					<img className="img-background" src={require('../images/mailchimpfilter.gif')} />
+					<img className="img-background" src={require('../images/mailchimpfilter.gif')} alt="MailChimp Filter" />
 					<p>This is how your final filter should look:</p>
-					<img className="img-background" src={require('../images/emailrequirements.png')} />
+					<img className="img-background" src={require('../images/emailrequirements.png')} alt="Email Reqs" />
 					<p>Now when a lead enters your flow and isn’t successfully added to the relevant MailChimp list, you’ll be notified visually on 
 					your <strong>dashboard</strong>, and the <strong>events page</strong>.</p>
 					<br/>
@@ -70,14 +69,14 @@ class LeadDelivery extends Component {
 					and select an standard integration like Velocify. Once you make this selection, the step will be added to the end of your flow. 
 					Select your integration and click the <strong>Edit Field Mappings</strong> button. If for some reason you don’t see these options, 
 					expand the step options by clicking on its gray header.</p>
-					<img className="img-background" src={require('../images/velocifyfields.png')} />
+					<img className="img-background" src={require('../images/velocifyfields.png')} alt="Velocify Fields" />
 					<p>With each standard integration, you’ll need to find the relevant required information associated with the delivery 
 					destination. For example, Velocify deliveries require that you find and map your <strong>Velocify Client</strong> and 
 					<strong>Velocify Campaign ID</strong>.</p>
-					<img className="img-background" src={require('../images/requiredvelocifyfields.png')} />
+					<img className="img-background" src={require('../images/requiredvelocifyfields.png')} alt="Required Velocify Fields" />
 					<p>Remember to <a href="https://support.activeprospect.com/hc/en-us/articles/115001382483-LeadConduit-Filters" target="_blank">add a filter </a>
 					after this delivery step.</p>
-					<img className="img-background" src={require('../images/velocifyfilter.png')} />
+					<img className="img-background" src={require('../images/velocifyfilter.png')} alt="Velocify Filter" />
 
 
 
@@ -98,7 +97,7 @@ class LeadDelivery extends Component {
 					learning purposes: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong>.</p>
 					<p>To get started click the <strong>Add a Delivery</strong> button. Scroll to the very bottom and create a 
 					<strong>custom delivery</strong>. Give it a name, select a type of <strong>CRM</strong> and click <strong>Save and add to flow</strong>.</p>
-					<img className="img-background" src={require('../images/createcustomdelivery.gif')} />
+					<img className="img-background" src={require('../images/createcustomdelivery.gif')} alt="Custom Delivery" />
 					<p>Next, you need to select your integration. This part might seem tricky if you don't have much experience with HTTP. 
 					But not to worry, there are a finite amount of ways to send data to an endpoint, and we've covered each of them in our 
 					<a href="https://support.activeprospect.com/hc/en-us/sections/201013939-LeadConduit-Flows" target="_blank"> LeadConduit knowledge base</a>.</p>
@@ -116,13 +115,13 @@ class LeadDelivery extends Component {
 					on <a href="https://support.activeprospect.com/hc/en-us/articles/216009923-LeadConduit-Outbound-Field-Mapping" target="_blank">outbound field mapping</a> is a helpful reference. 
 					This guide goes into more details regarding outbound mapping in later sections.</p>
 					<p>Select the <strong>Custom Form POST</strong> integration.</p>
-					<img className="img-background" src={require('../images/deliveryintegrationselection.png')} />
+					<img className="img-background" src={require('../images/deliveryintegrationselection.png')} alt="Integrations Selection" />
 					<p>Next, begin configuring your delivery by clicking the <strong>Add Field Mappings</strong> button. This 
 					is what you should see:</p>
-					<img className="img-background" src={require('../images/initialoutboundmapping.png')} />
+					<img className="img-background" src={require('../images/initialoutboundmapping.png')} alt="Outbound Mappings" />
 					<p>There's one field required and that's the URL we spoke about earlier. Here it is again: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong></p>
 					<p>Copy and paste that URL into the box.</p>
-					<img className="img-background" src={require('../images/mockendpointcustomdelivery.png')} />
+					<img className="img-background" src={require('../images/mockendpointcustomdelivery.png')} alt="Endpoint for Custom Delivery" />
 					<p>Your custom delivery now has a name, a method and format for sending leads, and a place to send those leads. </p>
 					<h2>Next Steps</h2>
 					<p>Depending on the type of integration you’re using, you may be finished setting up your lead delivery. There are still a few configuration options 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ChapterStyles.css';
 import { Link } from 'react-router-dom';
 
 class NonWizardFiltersAndRules extends Component {
@@ -27,12 +26,12 @@ class NonWizardFiltersAndRules extends Component {
 					<a href="https://support.activeprospect.com/hc/en-us/articles/208124963-TeleSign-Using-Phone-Validation-in-LeadConduit"> Telesign</a>). 
 					For any lead where the response from Telesign is ‘Failure’, that lead should enter the Webbula step so we can 
 					verify email the address (given that we know we cannot call the lead).</p>
-					<img className="img-background" src={require('../images/webbularules.gif')} />
+					<img className="img-background" src={require('../images/webbularules.gif')} alt="Webbula Rules" />
 					<p>At this point, a lead has entered the Telesign step, or both the Telesign and Webbula steps. We are ready to make a final determination 
 					on the fate of this lead. We’ll do this by adding a filter. </p>
-					<img className="img-background" className="img-background" src={require('../images/filter.gif')} />
+					<img className="img-background" src={require('../images/filter.gif')} alt="Filters Gif" />
 					<p>Here’s a snapshot of how our filter will look.</p>
-					<img className="img-background" src={require('../images/finalenhancementfilter.png')} />
+					<img className="img-background" src={require('../images/finalenhancementfilter.png')} alt="Final Enhancements" />
 					<p>We’ve had to use a good bit of logic to set this all up. Here’s how it works:</p>
 					<ol>
 						<li>A lead enters our flow after meeting all of the acceptance criteria.</li>

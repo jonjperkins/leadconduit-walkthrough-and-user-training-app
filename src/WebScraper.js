@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Test.css';
-import {FormControl, Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import UrlSearch from './UrlSearch';
 
 
