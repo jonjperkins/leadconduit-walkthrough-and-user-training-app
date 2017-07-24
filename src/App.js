@@ -22,6 +22,9 @@ import CustomNavLink from './CustomNavLink';
 import Sources from './Sources';
 import Fields from './Fields';
 import InboundFieldMapping from './InboundFieldMapping';
+import Reporting from './Reporting';
+import KnowledgeBase from './KnowledgeBase';
+import Conclusion from './Conclusion';
 
 import 'babel-polyfill';
 
@@ -175,7 +178,9 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-      											
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
@@ -205,7 +210,9 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
@@ -235,7 +242,9 @@ class App extends Component {
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-      											
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
+      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
       											<br />
       											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
       											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
@@ -265,6 +274,9 @@ class App extends Component {
 									<Route path='/response-parsing' component={ResponseParsing}></Route>
 									<Route path='/testing-basics' component={TestingBasics}></Route>
 									<Route path='/testing-tool' component={TestingTool}></Route>
+									<Route path='/reporting' component={Reporting}></Route>
+									<Route path='/knowledge-base' component={KnowledgeBase}></Route>
+									<Route path='/conclusion' component={Conclusion}></Route>
 									
 								</div>	
 							</div>
