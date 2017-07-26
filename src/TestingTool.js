@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import TestFormResponse from './TestFormResponse';
+import IconButton from './IconButton';
 var ReactDOM = require('react-dom');
 
 
@@ -161,6 +162,17 @@ class TestingTool extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/testing-basics" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/reporting" name="angle-right" />
+							</div>
+						</div>
+					</div>
+
 					{this.state.step_1 && 
 						<div className="wizard-outer">
 							<div className="wizard-inner">
@@ -175,8 +187,8 @@ class TestingTool extends Component {
 							</div>	
 						</div>
 					}	
-					{this.state.step_2 &&
 
+					{this.state.step_2 &&
 						<div className="wizard-outer">
 							<div className="wizard-inner">
 								<div className="wizard-content">
@@ -208,8 +220,8 @@ class TestingTool extends Component {
 						</div>
 
 					}
-					{this.state.step_3 &&
 
+					{this.state.step_3 &&
 						<div className="test-form">
 							{this.state.response_message &&
 								<div className="outer-results">	

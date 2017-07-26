@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class TestingBasics extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class TestingBasics extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/response-parsing" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/testing-tool" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Testing Basics</h1>
 					<h2>Testing Overview</h2>
 					<p>Once you've configured your flow, you need to test your flow. Why? Even the best flow 

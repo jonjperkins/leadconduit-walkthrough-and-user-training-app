@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class IntroAndFlowCreation extends Component {
 	componentDidMount () {
@@ -10,6 +11,13 @@ class IntroAndFlowCreation extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/sources" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Intro and Flow Creation</h1>
 					<p> The LeadConduit platform is a real-time data integration hub used to build sophisticated lead flows 
 						to meet the unique needs of your business. Lead flows allow you to capture, enhance, filter and deliver 

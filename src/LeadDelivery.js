@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class LeadDelivery extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class LeadDelivery extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Lead Delivery</h1>
 					<p>Now that your flow has filtered and enhanced your leads, it's time to deliver them somewhere! 
 					In this guide, we'll cover delivering our leads by:</p>

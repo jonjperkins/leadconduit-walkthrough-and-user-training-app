@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class AcceptanceCriteria extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class AcceptanceCriteria extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/posting-instructions" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Acceptance Criteria</h1>
 					<p>Acceptance Criteria functions as a gatekeeper for your flow. If a lead comes in and does not meet the 
 					proper criteria it will be rejected, never entering your flow steps. Like inbound field mappings, Acceptance 

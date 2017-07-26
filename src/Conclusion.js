@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class Conclusion extends Component {
 	componentDidMount () {
@@ -9,6 +10,13 @@ class Conclusion extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/knowledge-base" name="angle-left" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Conclusion</h1>
 					<p>Congratulations! You completed the Getting Started Guide - impressive! But before you go, we want to make 
 					sure you’re aware of the resources available to you going forward.</p>

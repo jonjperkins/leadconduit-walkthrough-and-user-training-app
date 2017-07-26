@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class KnowledgeBase extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class KnowledgeBase extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/reporting" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/conclusion" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Knowledge Base</h1>
 					<p>If you've clicked on some of the previous links during the tutorial, you may have already encountered the knowledge base. If 
 					you haven't yet, you can visit it <a href="https://support.activeprospect.com/hc/en-us">here</a>!</p>

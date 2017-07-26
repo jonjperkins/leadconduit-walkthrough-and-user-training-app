@@ -7,9 +7,6 @@ img {
   margin-bottom: 10px;
 }
 
-
-
-
 /* Media Queries */
 
 @media screen and (max-width: 3000px) {
@@ -294,14 +291,6 @@ img {
   margin-top: 7px;
   margin-bottom: 15px;
 }
-.app-content-body {
-
-}
-.no-scroll-content-body. {
-  content: hidden;
-}
-
-
 
 /* Sidebar */
 
@@ -396,12 +385,6 @@ img {
 .active-source-type a {
   color: #f58025 !important;
 }
-.sidebar-no-scroll {
-  font-size: .8em;
-  font-family: "Whitney A","Whitney B",Arial,sans-serif;
-  margin-top: 60px;
-  overflow: hidden;
-}
 
 /* Main Content */
 
@@ -465,9 +448,6 @@ img {
   margin-bottom: 20px;
   margin-top: 20px;
   border: 1px solid #E9ECEC;
-}
-.body-no-scroll {
-  overflow: hidden;
 }
 
 /* Navbar */
@@ -969,6 +949,7 @@ text-align: center;
 
 .wizard-outer {
   width: 100%;
+  margin-top: 30px;
 }
 .wizard-inner {
   display: table;
@@ -1157,4 +1138,31 @@ text-align: center;
   padding: 8px 14px;
   margin-bottom: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* Icon Button */
+
+.arrow-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.inner-arrow-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.back-arrow {
+  float: left;
+}
+
+.forward-arrow {
+float: right;
+}
+.arrow {
+  color: #E9ECEC;
+}
+.arrow:hover {
+  color: #233238;
 }

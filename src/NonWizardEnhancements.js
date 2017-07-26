@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class NonWizardEnhancements extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class NonWizardEnhancements extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/posting-instructions" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Marketplace Integrations & Enhancements</h1>
 					<br/>
 					<p>Adding an enhancement step in your flow allows you to take the data sent into your flow and add 

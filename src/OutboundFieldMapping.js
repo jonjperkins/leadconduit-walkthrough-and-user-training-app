@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class OutboundFieldMapping extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class OutboundFieldMapping extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/lead-delivery" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/response-parsing" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Outbound Field Mapping</h1>
 					<p>Outbound field mapping is nearly the same process as the inbound mapping discussed earlier 
 					in this guide. You’re configuring your flow to communicate effectively with an outside party. 

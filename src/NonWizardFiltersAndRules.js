@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class NonWizardFiltersAndRules extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class NonWizardFiltersAndRules extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/lead-delivery" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Filters and Step Rules</h1>
 					<p><strong>Filters</strong> function differently than step rules in that they help make a decision about whether 
 					or not the lead will be marked a success or a failure once the lead successfully enters your flow. 

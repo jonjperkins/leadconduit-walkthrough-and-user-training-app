@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class Reporting extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class Reporting extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/testing-tool" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/knowledge-base" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Reporting</h1>
 					<p> Your flow's reporting tab allows you to create public-facing reports you can share with 
 					lead sources. These reports live at unique URLs and will stay up-to-date in real time: no 

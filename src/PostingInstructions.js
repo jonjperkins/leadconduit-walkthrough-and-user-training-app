@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import IconButton from './IconButton';
 
 class PostingInstructions extends Component {
 	componentDidMount () {
@@ -9,6 +10,16 @@ class PostingInstructions extends Component {
 		return(
 			<div className="ancestor">
 				<div className="chapter-content-body">
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<IconButton class_name="arrow" to="/acceptance-criteria" name="angle-left" />
+							</div>
+							<div className="forward-arrow">
+								<IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" />
+							</div>
+						</div>
+					</div>
 					<h1 className="title">Posting Instructions</h1>
 					<p>When you create a flow and need a way to tell people how to send your lead data to your flow - send them the posting instructions.</p>
 					<p>Posting instructions are source-specific and can be accessed on your flow's homepage. To get there, save your work and close out of the 
