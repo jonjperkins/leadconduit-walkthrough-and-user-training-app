@@ -18,7 +18,6 @@ class TestingTool extends Component {
 			form_submission_body: '',
 			step_1: true,
 			step_2: false,
-			step_3: false,
 			posting_url_errors: '',
 			errors: '',
 			flow_name: ''
@@ -54,9 +53,9 @@ class TestingTool extends Component {
 				console.log(this.state.field_pairs.response)
 				
 				if (this.state.field_pairs.response === "none" ) {
-					this.setState({ step_1: false, step_2: true, step_3: false, field_pairs: {}, errors: "Please submit a valid API key."  })
+					this.setState({ step_1: true, step_2: false, field_pairs: {}, errors: "Please submit a valid API key."  })
 				} else {
-					this.setState({ step_1: false, step_2: false, step_3: true })
+					this.setState({ step_1: false, step_2: true })
 				}
 				
 			});
@@ -173,29 +172,15 @@ class TestingTool extends Component {
 						</div>
 					</div>
 
-					{this.state.step_1 && 
-						<div className="wizard-outer">
-							<div className="wizard-inner">
-								<div className="wizard-content">
-									<h1> Testing Tool.</h1>
-									<h4> The LeadConduit testing tool requires you to enter a few pieces of information before 
-									you begin testing your flow. If you navigate away from or refresh the testing tool page, you'll need to 
-									re-enter this information.</h4>
-									<button className="test-next-button" style={{ textDecoration: 'none' }} onClick={this.goToStep2.bind(this)}>Next</button>
-									<button className="test-back-button" style={{ textDecoration: 'none', display: 'none' }} onClick={this.props.handleStartOver}>Back</button>
-								</div>
-							</div>	
-						</div>
-					}	
-
-					{this.state.step_2 &&
+					{this.state.step_1 &&
 						<div className="wizard-outer">
 							<div className="wizard-inner">
 								<div className="wizard-content">
 									<Form>
 										<FormGroup>
-											<h1> Required info.</h1>
-											<h4>Enter the following pieces of information.</h4>
+											<h1> Testing Tool.</h1>
+											<h5>Enter the following information and click <strong>Next</strong>. We'll generate a web form 
+											on the next page based on the fields in your flow.</h5>
 											<br />
 											<div>
 											<strong>API Key:</strong>
@@ -221,7 +206,7 @@ class TestingTool extends Component {
 
 					}
 
-					{this.state.step_3 &&
+					{this.state.step_2 &&
 						<div className="test-form">
 							{this.state.response_message &&
 								<div className="outer-results">	

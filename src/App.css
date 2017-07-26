@@ -1119,6 +1119,19 @@ text-align: center;
   float: right;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.test-next-button:disabled {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #f58025;
+  color: white;
+  padding: 8px 14px;
+  border: solid #f58025 1px;
+  float: right;
+  border-radius: 2px;
+  opacity: 0.2;
+  cursor: not-allowed;
+}
 .test-back-button {
   margin-top: 30px;
   display: inline-block;

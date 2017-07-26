@@ -34,8 +34,8 @@ class Sources extends Component {
 			 				be a headache if you don't set up your sources properly.</p>
 			 				<br/>
 			 				<h2>Configure Your Source</h2>
-			 				<p>If you just created your flow, you should be on the 'Fields' tab. To work with our sources, we'll 
-			 				need to navigate to our 'Sources' tab.</p>
+			 				<p>If you just created your flow, you should be on the <strong>Fields</strong> tab. To work with our sources, we'll 
+			 				need to navigate to our <strong>Sources</strong> tab.</p>
 			 				<img className="img-background" src={require('../images/sourcetab.gif')} alt="Source Tab" />
 			 				<p>On the 'Sources' tab, you can see that LeadConduit added a default source for you. Your default 
 			 				source name will be your account name.</p>
