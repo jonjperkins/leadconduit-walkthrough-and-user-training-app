@@ -13,10 +13,10 @@ class Fields extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/sources" name="angle-left" />
+								<IconButton title="Previous: Sources" class_name="arrow" to="/sources" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-right" />
+								<IconButton title="Next: Inbound Field Mapping" class_name="arrow" to="/inbound-field-mapping" name="angle-right" />
 							</div>
 						</div>
 					</div>

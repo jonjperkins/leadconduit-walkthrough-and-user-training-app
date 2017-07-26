@@ -6,7 +6,7 @@ class IconButton extends Component {
 	render() {
 		return(
 				<Link to={this.props.to}>
-					<FontAwesome name={this.props.name} size="3x" className={this.props.class_name}/>
+					<FontAwesome title={this.props.title} name={this.props.name} size="3x" className={this.props.class_name}/>
 				</Link>
 		);
 	}

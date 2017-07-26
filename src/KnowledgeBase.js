@@ -13,10 +13,10 @@ class KnowledgeBase extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/reporting" name="angle-left" />
+								<IconButton title="Previous: Reporting" class_name="arrow" to="/reporting" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/conclusion" name="angle-right" />
+								<IconButton title="Next: Conclusion" class_name="arrow" to="/conclusion" name="angle-right" />
 							</div>
 						</div>
 					</div>

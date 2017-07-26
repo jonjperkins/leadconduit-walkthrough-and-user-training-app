@@ -13,10 +13,10 @@ class TestingBasics extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/response-parsing" name="angle-left" />
+								<IconButton title="Previous: Response Parsing" class_name="arrow" to="/response-parsing" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/testing-tool" name="angle-right" />
+								<IconButton title="Next: Testing Tool" class_name="arrow" to="/testing-tool" name="angle-right" />
 							</div>
 						</div>
 					</div>

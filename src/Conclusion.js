@@ -13,7 +13,7 @@ class Conclusion extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/knowledge-base" name="angle-left" />
+								<IconButton title="Previous: Knowledge Base" class_name="arrow" to="/knowledge-base" name="angle-left" />
 							</div>
 						</div>
 					</div>

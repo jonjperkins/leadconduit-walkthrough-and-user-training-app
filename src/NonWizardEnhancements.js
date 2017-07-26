@@ -13,10 +13,10 @@ class NonWizardEnhancements extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/posting-instructions" name="angle-left" />
+								<IconButton title="Previous: Posting Instructions" class_name="arrow" to="/posting-instructions" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" />
+								<IconButton title="Next: Filters and Rules" class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" />
 							</div>
 						</div>
 					</div>

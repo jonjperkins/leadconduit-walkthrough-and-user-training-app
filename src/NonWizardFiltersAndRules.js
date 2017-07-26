@@ -13,10 +13,10 @@ class NonWizardFiltersAndRules extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" />
+								<IconButton title="Previous: Enhancements & Marketplace Integrations" class_name="arrow" to="/non-wizard-enhancements" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/lead-delivery" name="angle-right" />
+								<IconButton title="Next: Lead Delivery" class_name="arrow" to="/lead-delivery" name="angle-right" />
 							</div>
 						</div>
 					</div>

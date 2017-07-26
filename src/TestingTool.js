@@ -165,10 +165,10 @@ class TestingTool extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/testing-basics" name="angle-left" />
+								<IconButton title="Previous: Testing Basics" class_name="arrow" to="/testing-basics" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/reporting" name="angle-right" />
+								<IconButton title="Next: Reporting" class_name="arrow" to="/reporting" name="angle-right" />
 							</div>
 						</div>
 					</div>

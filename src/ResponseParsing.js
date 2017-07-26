@@ -13,10 +13,10 @@ class ResponseParsing extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-left" />
+								<IconButton title="Previous: Outbound Field Mapping" class_name="arrow" to="/outbound-field-mapping" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/testing-basics" name="angle-right" />
+								<IconButton title="Next: Testing Basics" class_name="arrow" to="/testing-basics" name="angle-right" />
 							</div>
 						</div>
 					</div>

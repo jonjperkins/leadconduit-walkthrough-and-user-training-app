@@ -14,7 +14,7 @@ class IntroAndFlowCreation extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/sources" name="angle-right" />
+								<IconButton title="Next: Sources" class_name="arrow" to="/sources" name="angle-right" />
 							</div>
 						</div>
 					</div>

@@ -13,10 +13,10 @@ class LeadDelivery extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" />
+								<IconButton title="Previous: Filters and Rules" class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-right" />
+								<IconButton title="Next: Outbound Field Mapping" class_name="arrow" to="/outbound-field-mapping" name="angle-right" />
 							</div>
 						</div>
 					</div>

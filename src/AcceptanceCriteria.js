@@ -13,10 +13,10 @@ class AcceptanceCriteria extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-left" />
+								<IconButton title="Previous: Inbound Field Mapping" class_name="arrow" to="/inbound-field-mapping" name="angle-left" />
 							</div>
 							<div className="forward-arrow">
-								<IconButton class_name="arrow" to="/posting-instructions" name="angle-right" />
+								<IconButton title="Next: Posting Instructions" class_name="arrow" to="/posting-instructions" name="angle-right" />
 							</div>
 						</div>
 					</div>
