@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from './IconButton';
+import ReactTooltip from 'react-tooltip';
 
 class OutboundFieldMapping extends Component {
 	componentDidMount () {
@@ -13,10 +14,12 @@ class OutboundFieldMapping extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton title="Previous: Lead Delivery" class_name="arrow" to="/lead-delivery" name="angle-left" />
+								<a data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-left" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<IconButton title="Next: Response Parsing" class_name="arrow" to="/response-parsing" name="angle-right" />
+								<a data-tip="Response Parsing"><IconButton class_name="arrow" to="/response-parsing" name="angle-right" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
 					</div>

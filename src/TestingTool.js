@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import TestFormResponse from './TestFormResponse';
 import IconButton from './IconButton';
+import ReactTooltip from 'react-tooltip';
 var ReactDOM = require('react-dom');
 
 
@@ -164,10 +165,12 @@ class TestingTool extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton title="Previous: Testing Basics" class_name="arrow" to="/testing-basics" name="angle-left" />
+								<a data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-left" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<IconButton title="Next: Reporting" class_name="arrow" to="/reporting" name="angle-right" />
+								<a data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-right" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
 					</div>

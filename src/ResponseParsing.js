@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from './IconButton';
+import ReactTooltip from 'react-tooltip';
 
 class ResponseParsing extends Component {
 	componentDidMount () {
@@ -13,10 +14,12 @@ class ResponseParsing extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton title="Previous: Outbound Field Mapping" class_name="arrow" to="/outbound-field-mapping" name="angle-left" />
+								<a data-tip="Outbound Field Mapping"><IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-left" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<IconButton title="Next: Testing Basics" class_name="arrow" to="/testing-basics" name="angle-right" />
+								<a data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-right" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
 					</div>

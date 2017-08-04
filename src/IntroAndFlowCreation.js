@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from './IconButton';
+import ReactTooltip from 'react-tooltip';
 
 class IntroAndFlowCreation extends Component {
 	componentDidMount () {
-  		window.scrollTo(0, 0)
-  		
+  		window.scrollTo(0, 0) 		
 	}
 	render() {
 		return(
@@ -14,7 +14,8 @@ class IntroAndFlowCreation extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="forward-arrow">
-								<IconButton title="Next: Sources" class_name="arrow" to="/sources" name="angle-right" />
+								<a data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-right" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
 					</div>

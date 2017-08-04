@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from './IconButton';
+import ReactTooltip from 'react-tooltip';
 
 class Reporting extends Component {
 	componentDidMount () {
@@ -13,10 +14,12 @@ class Reporting extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<IconButton title="Previous: Testing Tool" class_name="arrow" to="/testing-tool" name="angle-left" />
+								<a data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-left" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<IconButton title="Next: Knowledge Base" class_name="arrow" to="/knowledge-base" name="angle-right" />
+								<a data-tip="Knowledge Base"><IconButton class_name="arrow" to="/knowledge-base" name="angle-right" /></a>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
 					</div>
