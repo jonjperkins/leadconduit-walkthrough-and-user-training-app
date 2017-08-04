@@ -209,23 +209,23 @@ class TestingTool extends Component {
 					{this.state.step_2 &&
 						<div className="test-form">
 							{this.state.response_message &&
-								<div className="outer-results">	
-									<TestFormResponse 
-										response_message={this.state.response_message} 
-										response_styling={this.state.response_styling}	
-										leadconduit_event_id={this.state.leadconduit_event_id} />
-								</div>
+								<TestFormResponse 
+									response_message={this.state.response_message} 
+									response_styling={this.state.response_styling}	
+									leadconduit_event_id={this.state.leadconduit_event_id} />
 							}
 							{!this.state.response_message &&
 								<div>
-									<h1 className="title">Send a test lead.</h1>
+									<br />
+									<h1>Send a test lead.</h1>
+									<h5>The response from your LeadConduit flow will appear here after you click submit below.</h5>
 								</div>
 							}
 							<div className="outer-test-tool">
 								<form className="button-margin" ref={(form) => this.form = form}>
 									<div className="field-response">
 										<h5 style={{color: "#f58025"}}>Flow name:</h5>
-										<h3 className="test-form-sub-title"><em>{this.state.flow_name}</em></h3>
+										<h3 className="test-form-sub-title"><strong>{this.state.flow_name}</strong></h3>
 										<hr />
 										{Object.entries(this.state.field_pairs).map(([key, value]) => {
 												

@@ -789,6 +789,8 @@ img {
   border: solid #F8F9F9 1px;
 }
 
+/*
+
 .bad_lead {
   padding-bottom: 30px;
   padding-top: 30px;
@@ -813,7 +815,9 @@ img {
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
   text-decoration: none;
   transition: all 0.6s ease 0s;
-}
+} 
+
+*/
 
 #bad_lead {
   color: #E94848;
@@ -850,14 +854,18 @@ img {
 .response_text {
   color: white;
   font-weight: bold;
-  font-size: 1.1em;}
-
-.outcome {
-  text-align: center;
+  font-size: 1.1em;
 }
 
-#outcome {
-  font-size: 1.4em;
+#bad_outcome {
+  font-size: 4.2em;
+  font-weight: bold;
+  color: #E94848;
+}
+#good_outcome {
+  font-size: 4.2em;
+  font-weight: bold;
+  color: #7BD08E;
 }
 
 .response-text {
@@ -867,6 +875,11 @@ img {
 .lc_link {
   margin-top: 10px;
   margin-right: 30px;
+}
+#error_message {
+  color: #E94848 !important;
+  font-size: 1.7em;
+  font-weight: bold;
 }
 
 /* QuickStart */
@@ -1048,9 +1061,9 @@ text-align: center;
   font-family: "Whitney A","Whitney B",Arial,sans-serif;
 }
 .field-response {
-  margin-left: 100px;
+  margin-left: 50px;
   padding-top: 20px;
-  margin-right: 100px;
+  margin-right: 50px;
   padding-bottom: 20px;
   text-decoration: none;
   font-size: .8em;
@@ -1087,7 +1100,7 @@ text-align: center;
   transition: all 0.6s ease 0s;
 }
 .outer-test-tool {
-  margin-top: 30px;
+  margin-top: 40px;
   background-color: white;
   border: solid #D7DFE7 2px;
   border-radius: 5px;
