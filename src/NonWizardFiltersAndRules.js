@@ -14,11 +14,11 @@ class NonWizardFiltersAndRules extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Enhancements & Marketplace Integrations"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></a>
+								<p data-tip="Enhancements & Marketplace Integrations"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-right" /></a>
+								<p data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

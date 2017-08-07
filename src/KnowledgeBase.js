@@ -14,11 +14,11 @@ class KnowledgeBase extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-left" /></a>
+								<p data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Conclusion"><IconButton class_name="arrow" to="/conclusion" name="angle-right" /></a>
+								<p data-tip="Conclusion"><IconButton class_name="arrow" to="/conclusion" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

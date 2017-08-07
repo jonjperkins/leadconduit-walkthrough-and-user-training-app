@@ -868,6 +868,11 @@ img {
   color: #7BD08E;
 }
 
+.test-flow-header {
+  font-size: 4.0em;
+  font-weight: bold;
+}
+
 .response-text {
   color: black;
 }

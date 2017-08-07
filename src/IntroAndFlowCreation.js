@@ -14,7 +14,7 @@ class IntroAndFlowCreation extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="forward-arrow">
-								<a data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-right" /></a>
+								<p data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

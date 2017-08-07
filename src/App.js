@@ -14,6 +14,7 @@ import ResponseParsing from './ResponseParsing';
 import Begin from './Begin';
 import TypeOfWebform from './TypeOfWebform';
 import IsThisAWebform from './IsThisAWebform';
+import Restart from './Restart';
 import IntroAndFlowCreation from './IntroAndFlowCreation';
 import TestingBasics from './TestingBasics';
 import './App.css';
@@ -50,6 +51,9 @@ class App extends Component {
 	}
 	sidebarClose() {
 		this.setState({ isActive: false });
+	}
+	restart() {
+		this.setState({ isSourceWizard: true });
 	}
 	begin() {
 		this.setState({ onWebformQuestionPage: true, 
@@ -145,17 +149,16 @@ class App extends Component {
   								handleBegin={this.begin.bind(this)} 
   								/>
   		}
-  		
-  		return (
+   		return (
 			<div>
 				<div>
 					<Header hideMenuButton={this.state.isSourceWizard} onClick={this.sidebarToggle.bind(this)} value={this.state.isActive} />
 				</div>
 				<HashRouter>
 					<div>
-					<div className={!this.state.isSourceWizard ? 'hidden' : 'wizard-content-body'}>
-						{wizardComponent}
-					</div>
+						<div className={!this.state.isSourceWizard ? 'hidden' : 'wizard-content-body'}>
+							{wizardComponent}
+						</div>
 					<div id={this.state.isSourceWizard ? 'hidden' : 'wrapper'} className={this.state.walkthrough ? 'intro-tour-overlay' : ''}>
 						<div className='wrapper-ancestor'>
 							<div className={this.state.isActive ? 'active-sidebar-small-screen' : 'sidebar-wrapper'}>
@@ -265,7 +268,7 @@ class App extends Component {
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
-
+									<Route path='/' exact true render={() => <Restart isSourceWizard={this.state.isSourceWizard} handleBegin={this.begin.bind(this)}/>}></Route>
 									<Route path='/sources' render={() => <Sources isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
 									<Route path='/fields' render={() => <Fields isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
 									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>

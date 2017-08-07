@@ -14,11 +14,11 @@ class ResponseParsing extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Outbound Field Mapping"><IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-left" /></a>
+								<p data-tip="Outbound Field Mapping"><IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-right" /></a>
+								<p data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

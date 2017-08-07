@@ -14,11 +14,11 @@ class TestingBasics extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Response Parsing"><IconButton class_name="arrow" to="/response-parsing" name="angle-left" /></a>
+								<p data-tip="Response Parsing"><IconButton class_name="arrow" to="/response-parsing" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-right" /></a>
+								<p data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

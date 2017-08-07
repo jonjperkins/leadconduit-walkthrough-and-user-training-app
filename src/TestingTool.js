@@ -165,11 +165,11 @@ class TestingTool extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-left" /></a>
+								<p data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-right" /></a>
+								<p data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
@@ -220,8 +220,8 @@ class TestingTool extends Component {
 							{!this.state.response_message &&
 								<div>
 									<br />
-									<h1>Send a test lead.</h1>
-									<h5>The response from your LeadConduit flow will appear here after you click submit below.</h5>
+									<h1 className="test-flow-header">Send a test lead.</h1>
+									<h4>The response from your LeadConduit flow will appear here after you click submit below.</h4>
 								</div>
 							}
 							<div className="outer-test-tool">

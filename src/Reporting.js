@@ -14,11 +14,11 @@ class Reporting extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-left" /></a>
+								<p data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Knowledge Base"><IconButton class_name="arrow" to="/knowledge-base" name="angle-right" /></a>
+								<p data-tip="Knowledge Base"><IconButton class_name="arrow" to="/knowledge-base" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

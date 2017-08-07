@@ -14,11 +14,11 @@ class InboundFieldMapping extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Fields"><IconButton class_name="arrow" to="/fields" name="angle-left" /></a>
+								<p data-tip="Fields"><IconButton class_name="arrow" to="/fields" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Acceptance Criteria"><IconButton class_name="arrow" to="/acceptance-criteria" name="angle-right" /></a>
+								<p data-tip="Acceptance Criteria"><IconButton class_name="arrow" to="/acceptance-criteria" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

@@ -14,11 +14,11 @@ class Fields extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<a data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-left" /></a>
+								<p data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<a data-tip="Inbound Field Mapping"><IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-right" /></a>
+								<p data-tip="Inbound Field Mapping"><IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
