@@ -25,7 +25,7 @@ class KnowledgeBase extends Component {
 					</div>
 					<h1 className="title">Knowledge Base</h1>
 					<p>If you've clicked on some of the previous links during the tutorial, you may have already encountered the knowledge base. If 
-					you haven't yet, you can visit it <a href="https://support.activeprospect.com/hc/en-us">here</a>!</p>
+					you haven't yet, you can visit it <a href="https://support.activeprospect.com/hc/en-us" target="_blank">here</a>!</p>
 					<p>Our knowledge base includes helpful articles for all of our products. Whenever you get stumped, this is the first 
 					place to look to see if you can find an article addressing what you'd like to do.</p>
 					<p><strong>Pro Tip</strong>: Use the search bar! This is how our team navigates our knowledge base, and I'm 

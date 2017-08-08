@@ -69,12 +69,12 @@ class TestingBasics extends Component {
 					<ol>
 						<li> The <strong>API key</strong> associated with your ActiveProspect account.</li>
 						<ul>
-							<li>Navigate to <a href="https://sso.activeprospect.com/account">https://sso.activeprospect.com/account</a>, and 
+							<li>Navigate to <a href="https://sso.activeprospect.com/account" target="_blank">https://sso.activeprospect.com/account</a>, and 
 							click the Account Settings button in the upper right corner.</li>
 						</ul>
 						<li>The <strong>Posting URL</strong> for the flow you'd like to test.</li>
 						<ul>
-							<li>Visit this page to learn how to find your posting instructions: <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions">https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions</a>.</li>  
+							<li>Visit this page to learn how to find your posting instructions: <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions</a>.</li>  
 						</ul>
 					</ol>
 					<p>The tool will prompt you to enter this information, and the data will persist until you navigate away from or 

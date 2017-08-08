@@ -26,14 +26,14 @@ class Conclusion extends Component {
 					<ol>
 						<li>Your ActiveProspect team is available to support you weekdays from 8:00 a.m. to 5:00 p.m. 
 						U.S. Central Time (excluding holidays).</li>
-						<li>Creating a profile for the <a href="https://support.activeprospect.com/hc/en-us">ActiveProspect Support Portal</a> is 
+						<li>Creating a profile for the <a href="https://support.activeprospect.com/hc/en-us" target="_blank">ActiveProspect Support Portal</a> is 
 						simple and provides you access to all current and previous Support Requests you’ve submitted.</li>
 						<li>You can also email support@activeprospect.com to start a support request. You will receive a response the same business day.</li>
 					</ol>
 					<br />
 					<h2>Knowledge Base</h2>
 					<ol>
-						<li>There’s a wealth of information available to you in the <a href="https://support.activeprospect.com/hc/en-us">Knowledge Base</a>, including 
+						<li>There’s a wealth of information available to you in the <a href="https://support.activeprospect.com/hc/en-us" target="_blank">Knowledge Base</a>, including 
 						how-to articles, general concepts, detailed questions & answers, and documented best practices. We’re continually adding to the Help 
 						Center, so we encourage you to look there first.</li>
 						<li>If you can’t find what you’re looking for Ask Support.</li>
@@ -47,14 +47,14 @@ class Conclusion extends Component {
 					<br/>
 					<h2>Status Update</h2>
 					<ol>
-						<li>Maintenance and downtime are posted on our <a href="http://status.activeprospect.com/">status page</a>. Be sure 
+						<li>Maintenance and downtime are posted on our <a href="http://status.activeprospect.com/" target="_blank">status page</a>. Be sure 
 						to sign up for automatic email or text notifications.</li>
 					</ol>
 					<br/>
 					<h2>Product Updates</h2>
 					<ol>
 						<li>New product features, best practices, and other tips and tricks are shared periodically. Be sure to sign 
-						up at this bottom of <a href="https://activeprospect.com/">this page</a> to receive emails.</li>
+						up at this bottom of <a href="https://activeprospect.com/" target="_blank">this page</a> to receive emails.</li>
 					</ol>
 
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/knowledge-base">Back</Link>
