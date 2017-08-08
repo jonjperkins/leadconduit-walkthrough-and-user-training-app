@@ -47,7 +47,7 @@ class InboundFieldMapping extends Component {
 							LeadConduit will interpret that as text/string to be sent in every flow submission.</p>
 							<img className="img-background" id="webform-example" src={require('../images/wronginbound.png')} alt="Wrong Inbound" />
 							<img className="img-background" id="webform-example" src={require('../images/correctinbound.png')} alt="Correct Inbound" />
-							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping">inbound field mapping </a>in our knowledge base.</p>
+							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping" target="_blank">inbound field mapping </a>in our knowledge base.</p>
 				
 						</div>
 					}
@@ -86,7 +86,7 @@ class InboundFieldMapping extends Component {
 							LeadConduit will interpret that as text/string to be sent in every flow submission.</p>
 							<img className="img-background" id="webform-example" src={require('../images/wronginbound.png')} alt="Wrong Inbound 2"/>
 							<img className="img-background" id="webform-example" src={require('../images/correctinbound.png')} alt="Correct Inbound 2" />
-							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping">inbound field mapping </a>in our knowledge base.</p>
+							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping" target="_blank">inbound field mapping </a>in our knowledge base.</p>
 						</div>
 					}	
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/fields">Back</Link>
