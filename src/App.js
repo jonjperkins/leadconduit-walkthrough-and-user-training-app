@@ -19,6 +19,7 @@ import IntroAndFlowCreation from './IntroAndFlowCreation';
 import TestingBasics from './TestingBasics';
 import './App.css';
 import CustomNavLink from './CustomNavLink';
+import ClientTestingPage from './ClientTestingPage';
 
 import Sources from './Sources';
 import Fields from './Fields';
@@ -27,6 +28,7 @@ import Reporting from './Reporting';
 import KnowledgeBase from './KnowledgeBase';
 import Conclusion from './Conclusion';
 
+import ReactTooltip from 'react-tooltip';
 import 'babel-polyfill';
 
 
@@ -282,11 +284,17 @@ class App extends Component {
 									<Route path='/outbound-field-mapping' component={OutboundFieldMapping}></Route>
 									<Route path='/response-parsing' component={ResponseParsing}></Route>
 									<Route path='/testing-basics' component={TestingBasics}></Route>
-									<Route path='/testing-tool' component={TestingTool}></Route>
+									<Route path='/testing-tool' exact true component={TestingTool}></Route>
 									<Route path='/reporting' component={Reporting}></Route>
 									<Route path='/knowledge-base' component={KnowledgeBase}></Route>
 									<Route path='/conclusion' component={Conclusion}></Route>
-									
+									<Route path='/testing-tool/:key/:flow/:source' render={props => (
+										<ClientTestingPage 
+											vendorSource={this.vendorSource.bind(this)} 
+											{...props}
+										/>
+									)}> 
+									</Route>								
 								</div>	
 							</div>
 						</div>
