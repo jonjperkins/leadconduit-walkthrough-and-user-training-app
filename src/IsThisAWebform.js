@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 class IsThisAWebform extends Component {
 	render() {
@@ -12,8 +13,10 @@ class IsThisAWebform extends Component {
 								<h1 className="wizard-spacer">Welcome to the LeadConduit Getting Started Guide.</h1>
 								<h1>Lead Source.</h1>
 								<h4>Is the source of your leads a <strong>webform</strong>?</h4>
-								<button className="wizard-yes-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformYes}>Yes</button>
-								<Link to="/IntroAndFlowCreation"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link>
+								<p data-tip="You are collecting leads from a web form."><button className="wizard-yes-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformYes}>Yes</button></p>
+									<ReactTooltip place="bottom" type="dark" effect="float" html={true}/>
+								<p data-tip="A lead partner, vendor, or publisher is generating these leads and sending them to you."><Link to="/IntroAndFlowCreation"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link></p>
+									<ReactTooltip place="bottom" type="dark" effect="float" html={true}/>
 								<button className="wizard-back-button" style={{ textDecoration: 'none' }} onClick={this.props.handleStartOver}>Back</button>
 							</div>
 						</div>
