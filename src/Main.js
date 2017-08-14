@@ -108,6 +108,9 @@ class Main extends Component {
 						isUsingVendor: false,
 						onBeginPage: false,
 						walkthrough: true });
+		ReactTooltip.hide()
+		console.log('hide tooltip')
+
 	}
 	unbounceWebForm() {
 		this.setState({ onWebformQuestionPage: false, 
@@ -118,6 +121,8 @@ class Main extends Component {
 						isUsingVendor: false,
 						onBeginPage: false,
 						walkthrough: true });
+		ReactTooltip.hide()
+		console.log('hide tooltip')
 	}
 	vendorSource() {
 		this.setState({ onWebformQuestionPage: false, 
@@ -128,7 +133,9 @@ class Main extends Component {
 						isUsingVendor: true,
 						onBeginPage: false,
 						walkthrough: true });
-		console.log("vendor source executed")
+		ReactTooltip.hide()
+		console.log('hide tooltip')
+
 	}
 	startOver() {
 		this.setState({ onWebformQuestionPage: false, 
