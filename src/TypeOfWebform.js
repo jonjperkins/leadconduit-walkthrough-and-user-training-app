@@ -15,6 +15,9 @@ class TypeOfWebform extends Component {
 								<Link to="/IntroAndFlowCreation"><button className="wizard-yes-button" onClick={this.props.handleUnbounceUser} style={{ textDecoration: 'none' }}>Yes</button></Link>
 								<Link to="/IntroAndFlowCreation"><button className="wizard-no-button" onClick={this.props.handleNonUnbounceUser}>No</button></Link>
 								<button className="wizard-back-button" style={{ textDecoration: 'none' }} onClick={this.props.handleBegin}>Back</button>
+								<div>
+									<p className="wizard-tooltip-text">What is <a href="https://unbounce.com/" target="_blank">Unbounce</a>?</p>
+								</div>
 							</div>
 						</div>
 					</div>

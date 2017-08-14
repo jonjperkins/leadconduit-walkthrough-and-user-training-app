@@ -109,8 +109,6 @@ class Main extends Component {
 						onBeginPage: false,
 						walkthrough: true });
 		ReactTooltip.hide()
-		console.log('hide tooltip')
-
 	}
 	unbounceWebForm() {
 		this.setState({ onWebformQuestionPage: false, 
@@ -122,7 +120,6 @@ class Main extends Component {
 						onBeginPage: false,
 						walkthrough: true });
 		ReactTooltip.hide()
-		console.log('hide tooltip')
 	}
 	vendorSource() {
 		this.setState({ onWebformQuestionPage: false, 
@@ -134,8 +131,6 @@ class Main extends Component {
 						onBeginPage: false,
 						walkthrough: true });
 		ReactTooltip.hide()
-		console.log('hide tooltip')
-
 	}
 	startOver() {
 		this.setState({ onWebformQuestionPage: false, 
