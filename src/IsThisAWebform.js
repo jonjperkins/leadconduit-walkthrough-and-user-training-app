@@ -15,7 +15,7 @@ class IsThisAWebform extends Component {
 								<h4>Is the source of your leads a <strong>webform</strong>?</h4>
 								<p data-tip="You are collecting leads from a web form."><button className="wizard-yes-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformYes}>Yes</button></p>
 									<ReactTooltip place="bottom" type="dark" effect="float" html={true}/>
-								<p data-tip="A lead partner, vendor, or publisher is generating these leads and sending them to you."><Link to="/IntroAndFlowCreation"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link></p>
+								<p data-tip="A lead partner is collecting and sending these leads to you, or you'll be sending these leads into LeadConduit by some method other than using a web form."><Link to="/IntroAndFlowCreation"><button className="wizard-no-button" style={{ textDecoration: 'none' }} onClick={this.props.handleWebformNo}>No</button></Link></p>
 									<ReactTooltip place="bottom" type="dark" effect="float" html={true}/>
 								<button className="wizard-back-button" style={{ textDecoration: 'none' }} onClick={this.props.handleStartOver}>Back</button>
 							</div>
