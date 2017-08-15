@@ -112,7 +112,7 @@ class LeadDelivery extends Component {
 					<p>To get started click the <strong>Add a Delivery</strong> button. Scroll to the very bottom and create a 
 					<strong>custom delivery</strong>. Give it a name, select a type of <strong>CRM</strong> and click <strong>Save and add to flow</strong>.</p>
 					<img className="img-background" src={require('../images/createcustomdelivery.gif')} alt="Custom Delivery" />
-					<p>Next, you need to select your integration. This part might seem tricky if you don't have much experience with HTTP. 
+					<p>Next, you need to select your integration. This part might seem tricky if you don’t have much experience with HTTP. 
 					But not to worry, there are a finite amount of ways to send data to an endpoint, and we've covered each of them in our 
 					<a href="https://support.activeprospect.com/hc/en-us/sections/201013939-LeadConduit-Flows" target="_blank"> LeadConduit knowledge base</a>.</p>
 					<p>For this guide, you will send a <strong>Custom Form POST</strong> to the mock CRM destination. Form POSTs 

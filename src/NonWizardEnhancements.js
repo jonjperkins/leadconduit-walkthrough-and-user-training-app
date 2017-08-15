@@ -49,12 +49,12 @@ class NonWizardEnhancements extends Component {
 					bring up a menu of options to choose from. Scroll down and select the Telesign option.</p>
 					<img className="img-background" src={require('../images/telesign.gif')} alt="Telesign" />
 					<p>When you select the bubble for Telesign, the section expands and alerts you to the pricing structure. 
-					It's important to take note of what using this service will cost you per lead. Once this enhancement is in 
+					It’s important to take note of what using this service will cost you per lead. Once this enhancement is in 
 					your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
 					data will be appended to our lead.</p>
 					<br />
 					<h2>Add Email Validation</h2>
-					<p>Now it's your turn to implement a step. In this section of the guide, you’ll implement the the email 
+					<p>Now it’s your turn to implement a step. In this section of the guide, you’ll implement the the email 
 					verification step with Webbula.</p>
 					<p>Whenever you’re using an enhancement integration for the first time, it’s best to visit our Knowledge 
 					base for an explanation of how that integration works. Enhancements behave differently from each other, 

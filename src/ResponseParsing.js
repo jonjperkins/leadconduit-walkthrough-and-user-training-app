@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import IconButton from './IconButton';
-import ReactTooltip from 'react-tooltip';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import IconButton from "./IconButton";
+import ReactTooltip from "react-tooltip";
 
 class ResponseParsing extends Component {
 	componentDidMount () {
@@ -41,16 +41,16 @@ class ResponseParsing extends Component {
 					<strong> MailChimp Outcome</strong> field from the flow fields dropdown menu on the far left input 
 					box. Set the operator to <strong>is not equal to</strong>, and choose <strong>success</strong> in 
 					the rightmost input box. Finally, select the <strong>MailChimp Reason</strong> field value as the 
-					message LeadConduit will respond with if the filter catches any failures, errors, or skips - any thing that's not a success.</p>
-					<img className="img-background" src={require('../images/velocifyfilter.png')} alt="Velocify Filter 2" />
+					message LeadConduit will respond with if the filter catches any failures, errors, or skips - any thing that’s not a success.</p>
+					<img className="img-background" src={require("../images/velocifyfilter.png")} alt="Velocify Filter 2" />
 
 					<h2>Custom Deliveries</h2>
 					<p>Our knowledge base has a superb article on <a href="https://support.activeprospect.com/hc/en-us/articles/217517686-LeadConduit-Response-Parsing" target="_blank">response parsing</a>.
 					It’s worth checking out before you get started here.</p>
 					<p>Whenever you send information to a destination, the server (which is basically just the place that 
-					houses all the info we're sending) will return a response to your LeadConduit flow. The server sends 
-					status codes (which we'll ignore for now), but it also sends messages that are human readable like 
-					'Success' or 'Accepted'. LeadConduit can search for these words to determine whether or not the lead 
+					houses all the info we’re sending) will return a response to your LeadConduit flow. The server sends 
+					status codes (which we’ll ignore for now), but it also sends messages that are human readable like 
+					<strong>Success</strong> or <strong>Accepted</strong>. LeadConduit can search for these words to determine whether or not the lead 
 					was successfully sent and accepted.</p>
 					<p>You can set up response parsing in your flow by expanding the delivery step you’re interested in 
 					setting up. Click the down-arrow button on the recipient box. Scroll down and select <strong>Outcome Search Term</strong>. 
@@ -68,18 +68,18 @@ class ResponseParsing extends Component {
 					<p>For this example, set your Outcome Search Term to look for: <strong>“Success”: true</strong>. If LeadConduit 
 					sees this in the response (word for word and letter for letter - case sensitive), we’ll know the 
 					lead was delivered successfully.</p>
-					<img className="img-background" src={require('../images/responseparsing.png')} alt="Response Parsing" />
+					<img className="img-background" src={require("../images/responseparsing.png")} alt="Response Parsing" />
 					<p>Once the parsing is configured, LeadConduit will look for this message in each attempted lead delivery. 
 					<em>If and only if</em> <strong>“Success”: true</strong> is found anywhere in the response message, LeadConduit 
 					will consider the <strong>delivery outcome</strong> to be a <strong>Success</strong>.</p>
 					<p>The final configuration involves setting up a filter to catch any leads that are not marked as a success.</p>
-					<img className="img-background" src={require('../images/customdeliveryfilter.png')} alt="Custom Delivery Filter 2"/>
+					<img className="img-background" src={require("../images/customdeliveryfilter.png")} alt="Custom Delivery Filter 2"/>
 					<p>With the response parsing and companion filter in place, LeadConduit now knows how to detect and fail leads 
 					that are not successfully delivered to your custom destination.</p>
 					<p><strong>Note</strong>: You’ll want to take another look at this article so that you can also configure 
 					your response parsing to capture the text of any failure or error messages.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/outbound-field-mapping">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/testing-basics">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: "none" }} to="/outbound-field-mapping">Back</Link>
+					<Link className="next-button" style={{ textDecoration: "none" }} to="/testing-basics">Next</Link>
 				</div>
 			</div>
 		);

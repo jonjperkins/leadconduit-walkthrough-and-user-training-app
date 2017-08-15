@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import IconButton from './IconButton';
-import ReactTooltip from 'react-tooltip';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import IconButton from "./IconButton";
+import ReactTooltip from "react-tooltip";
 
 class TestingBasics extends Component {
 	componentDidMount () {
@@ -25,8 +25,8 @@ class TestingBasics extends Component {
 					</div>
 					<h1 className="title">Testing Basics</h1>
 					<h2>Testing Overview</h2>
-					<p>Once you've configured your flow, you need to test your flow. Why? Even the best flow 
-					builders forget things from time to time. You should test your flow to make sure you didn't 
+					<p>Once you’ve configured your flow, you need to test your flow. Why? Even the best flow 
+					builders forget things from time to time. You should test your flow to make sure you didn’t 
 					configure anything that will allow undesirable leads to pass through your flow undetected.</p>
 					<p>In the next section of this guide, you can use our testing tool to test your flow. Whether 
 					you’re working with a web form you own, or receiving leads from a partner, it’s important to 
@@ -61,7 +61,7 @@ class TestingBasics extends Component {
 					</ol>
 					<p>The easiest way to verify the status of your test leads is by accessing an individual lead from 
 					the Recent Leads section on the main page of the flow you’re testing.</p>
-					<img className="img-background" src={require('../images/recentleads.png')} alt="Recent Leads" />
+					<img className="img-background" src={require("../images/recentleads.png")} alt="Recent Leads" />
 					<br />
 					<h2>Flow Testing Tool</h2>
 					<p>The LeadConduit Guide’s flow testing tool allows you to send test leads to one of your flows. In 
@@ -72,7 +72,7 @@ class TestingBasics extends Component {
 							<li>Navigate to <a href="https://sso.activeprospect.com/account" target="_blank">https://sso.activeprospect.com/account</a>, and 
 							click the Account Settings button in the upper right corner.</li>
 						</ul>
-						<li>The <strong>Posting URL</strong> for the flow you'd like to test.</li>
+						<li>The <strong>Posting URL</strong> for the flow you’d like to test.</li>
 						<ul>
 							<li>Visit this page to learn how to find your posting instructions: <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions</a>.</li>  
 						</ul>
@@ -85,8 +85,8 @@ class TestingBasics extends Component {
 					the page, you’ll see the color-coded outcome of your submission, as well as <strong>a link to the test lead in LeadConduit</strong>.  Effective 
 					problem solving in LeadConduit requires the ability to understand a lead event page, so we suggest clicking the test lead link to view the 
 					lifecycle of your lead through your flow.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/response-parsing">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/testing-tool">Next</Link>
+					<Link className="previous-button" style={{ textDecoration: "none" }} to="/response-parsing">Back</Link>
+					<Link className="next-button" style={{ textDecoration: "none" }} to="/testing-tool">Next</Link>
 				</div>
 			</div>
 		);
