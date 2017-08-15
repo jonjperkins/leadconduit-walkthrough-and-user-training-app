@@ -79,7 +79,7 @@ class Fields extends Component {
 							<p>The first time you create a Custom Field, you will be prompted to create a <a href="https://support.activeprospect.com/hc/en-us/articles/209693173-Custom-Fields" target="_blank"> custom suffix</a> 
 							that will be appended to all custom fields. Choose your custom suffix carefully as it 1) will be seen by vendors when you provide them their Posting Instructions and 
 							2) is problematic to change later.</p>
-							<p>After you create your suffix, you"ll be prompted with a window where you can create your custom field. </p>
+							<p>After you create your suffix, you’ll be prompted with a window where you can create your custom field. </p>
 							<img className="img-background" id="webform-example" src={require("../images/custom_field_modal.png")} alt="Custom Modal" />
 							<p>Once you fill out the information, click the <strong>Create</strong> button. You’ll be taken back to the update fields page 
 							where you will click the blue <strong>Update Fields</strong> button once again.</p>
@@ -131,7 +131,7 @@ class Fields extends Component {
 							<img className="img-background" src={require("../images/FieldsTab.png")} alt="Fields Tab 2" />
 							<img className="img-background" src={require("../images/AddEditFields.png")} alt="Edit Fields 2"/>
 							<p>Clicking that button will take you to a page where you can update the fields in the flow. Beside each field 
-							name, you"ll now see a check-box where a green check mark indicates that the field is currently in use in your flow. </p>
+							name, you’ll now see a check-box where a green check mark indicates that the field is currently in use in your flow. </p>
 							<p>Keep in mind that when searching for fields you can scroll through the list of fields or use the search bar. When using 
 							the search bar, make sure you use correct spelling and feel free to use shortened versions of the name you’re looking for 
 							(e.g. <strong>phone</strong> instead of <strong>company phone</strong>). </p>
@@ -147,9 +147,9 @@ class Fields extends Component {
 							<p>The first time you create a Custom Field, you will be prompted to create a <a href="https://support.activeprospect.com/hc/en-us/articles/209693173-Custom-Fields" target="_blank"> custom suffix</a> 
 							that will be appended to all custom fields. Choose your custom suffix carefully as it 1) will be seen by vendors when you provide them their Posting Instructions and 
 							2) is problematic to change later.</p>
-							<p>After you create your suffix, you"ll be prompted with a window where you can create your custom field. </p>
+							<p>After you create your suffix, you’ll be prompted with a window where you can create your custom field. </p>
 							<img className="img-background" id="webform-example" src={require("../images/custom_field_modal.png")} alt="Custom Modal 2" />
-							<p>Once you fill out the information, click the <strong>Create</strong> button. You"ll be taken back to the update fields page 
+							<p>Once you fill out the information, click the <strong>Create</strong> button. you’ll be taken back to the update fields page 
 							where you will click the blue <strong>Update Fields</strong> button once again.</p>
 							<p>Custom Fields are shown in a darker blue than LeadConduit Standard Fields, so they are easy to distinguish at a glance.</p>
 							<img className="img-background" id="webform-example" src={require("../images/final_field_page.png")} alt="Final Fields 2" />
@@ -206,7 +206,7 @@ class Fields extends Component {
 							<img className="img-background" src={require("../images/FieldsTab.png")} alt="Fields Tab 3" />
 							<img className="img-background" src={require("../images/AddEditFields.png")} alt="Edit Fields 3" />
 							<p>Clicking that button will take you to a page where you can update the fields in the flow. Beside each field 
-							name, you"ll now see a check-box where a green check mark indicates that the field is currently in use in your flow. </p>
+							name, you’ll now see a check-box where a green check mark indicates that the field is currently in use in your flow. </p>
 							<p>Keep in mind that when searching for fields you can scroll through the list of fields or use the search bar. When using 
 							the search bar, make sure you use correct spelling and feel free to use shortened versions of the name you’re looking for 
 							(e.g. <strong>phone</strong> instead of <strong>company phone</strong>). </p>
@@ -222,9 +222,9 @@ class Fields extends Component {
 							<p>The first time you create a Custom Field, you will be prompted to create a <a href="https://support.activeprospect.com/hc/en-us/articles/209693173-Custom-Fields" target="_blank"> custom suffix</a> 
 							that will be appended to all custom fields. Choose your custom suffix carefully as it 1) will be seen by vendors when you provide them their Posting Instructions and 
 							2) is problematic to change later.</p>
-							<p>After you create your suffix, you"ll be prompted with a window where you can create your custom field. </p>
+							<p>After you create your suffix, you’ll be prompted with a window where you can create your custom field. </p>
 							<img className="img-background" id="webform-example" src={require("../images/custom_field_modal.png")} alt="Custom Modal 3" />
-							<p>Once you fill out the information, click the <strong>Create</strong> button. You"ll be taken back to the update fields page 
+							<p>Once you fill out the information, click the <strong>Create</strong> button. you’ll be taken back to the update fields page 
 							where you will click the blue <strong>Update Fields</strong> button once again.</p>
 							<p>Custom Fields are shown in a darker blue than LeadConduit Standard Fields, so they are easy to distinguish at a glance.</p>
 							<img id="webform-example" src={require("../images/final_field_page.png")} alt="Final Fields 3" />
