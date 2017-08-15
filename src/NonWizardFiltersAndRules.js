@@ -39,14 +39,14 @@ class NonWizardFiltersAndRules extends Component {
 					pay phone, invalid, voicemail, or a restricted number (check out our Knowlege Base for more info on 
 					<a href="https://support.activeprospect.com/hc/en-us/articles/208124963-TeleSign-Using-Phone-Validation-in-LeadConduit"> Telesign</a>). 
 					For any lead where the response from Telesign is ‘Failure’, that lead should enter the Webbula step so we can 
-					verify email the address (given that we know we cannot call the lead).</p>
+					verify the email address since a Telesign failure indicates we cannot successfully call the lead.</p>
 					<img className="img-background" src={require('../images/webbularules.gif')} alt="Webbula Rules" />
 					<p>At this point, a lead has entered the Telesign step, or both the Telesign and Webbula steps. We are ready to make a final determination 
 					on the fate of this lead. We’ll do this by adding a filter. </p>
 					<img className="img-background" src={require('../images/filter.gif')} alt="Filters Gif" />
 					<p>Here’s a snapshot of how our filter will look.</p>
 					<img className="img-background" src={require('../images/finalenhancementfilter.png')} alt="Final Enhancements" />
-					<p>We’ve had to use a good bit of logic to set this all up. Here’s how it works:</p>
+					<p>We’ve used a decent amount of logic to set this up properly. Here’s how it works:</p>
 					<ol>
 						<li>A lead enters our flow after meeting all of the acceptance criteria.</li>
 						<li>Once in the flow, all leads will enter the <strong>Telesign</strong> step.</li>

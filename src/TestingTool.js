@@ -153,7 +153,7 @@ class TestingTool extends Component {
 				})
 			}
 			else {
-				this.setState({response_message: "Oops. Something went wrong. Please make sure you"re pasting your LeadConduit flow"s Posting Url in its entirety.", response_styling: "bad_lead"})
+				this.setState({response_message: "Oops. Something went wrong. Please make sure you’re pasting your LeadConduit flow’s Posting Url in its entirety.", response_styling: "bad_lead"})
 			}
 		});
 		window.scrollTo(0, 0)

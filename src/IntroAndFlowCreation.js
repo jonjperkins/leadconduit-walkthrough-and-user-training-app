@@ -44,9 +44,9 @@ class IntroAndFlowCreation extends Component {
 					<p>Select the ‘New Flow’ button and you’ll be taken to flow editor page for this new flow. Give your flow a name, and press the ‘Save’ button. </p>
 					<img className="img-background" src={require('../images/createandnameflow.gif')} alt="Create Name and Flow" />
 					<p>You’ve just created your first flow - <em>great job!</em></p>
-					<p>Whenever you make changes to your LeadConduit flow, you will need to <strong>save</strong> those changes to prevent them from being lost when you navigate away from 
-					the flow you're working on. You can save your flow by clicking the 'Save' button in the upper right-hand corner of the screen. If the ‘Save’ button 
-					isn’t clickable, then there haven’t been any changes made to your flow since your last save.</p>
+					<p>Whenever you make changes to your LeadConduit flow, you need to save those changes to prevent losing them when you navigate away from 
+					the flow you're working on. You can save your flow by clicking the <strong>Save</strong> button in the upper right-hand corner of the screen. If the Save button 
+					is not clickable, there haven’t been any changes made to your flow since your last save.</p>
 					<Link className="next-button" style={{ textDecoration: 'none' }} to="/sources">Next</Link>
 				</div>
 			</div>

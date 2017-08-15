@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Test.css';
 import {FormControl, Button} from 'react-bootstrap';
 
 class UrlSearch extends Component {
