@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class LeadDelivery extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -38,7 +48,8 @@ class LeadDelivery extends Component {
 					<h2>Email Delivery</h2>
 					<p>Delivering leads to your email address is a fairly easy way to get started. On the <strong>Steps</strong> page (where you added enhancements earlier in the guide), click the <strong>Add Delivery</strong> button. 
 					Scroll down and select the <strong>Email Delivery</strong> option. This will add an email delivery step to your flow.</p>
-					<img className="img-background" src={require('../images/email_delivery.gif')} alt="Email Delivery" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/email_delivery.gif') : require('../images/email_deliveryfalse.gif')} alt="Email Delivery" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>Select the <strong>Edit Field Mappings</strong> button on this step and enter the email address where you'd like the leads delivered. Comma-separate multiple addresses if 
 					more than one person wants to receive these leads. If you add another mapping, you'll be able to further configure your email address with things
 					like <strong>Subject</strong> and <strong>Sender Name</strong>. </p>
@@ -56,7 +67,8 @@ class LeadDelivery extends Component {
 					Scroll through the list of integrated delivery destinations, select <strong>MailChimp</strong>, and click <strong>OK</strong>. 
 					You’ll be taken to a screen that asks for your MailChimp API key. If you aren’t sure what that is or where to find it, click 
 					on the <strong>How do I find my API key?</strong> link. Once you have your API key, paste it into the input box and click <strong>Next</strong>.</p>
-					<img className="img-background" src={require('../images/addmailchimp.gif')} alt="Add MailChimp" /> 
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/addmailchimp.gif') : require('../images/addmailchimpfalse.gif')} alt="Add MailChimp" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>You’ll then be prompted to select from a group of mailing lists associated with your account. Select the proper list and click <strong>OK</strong>.</p>
 					<img className="img-background" src={require('../images/selectmailchimplist.png')} alt="Select MailChimp List" />
 					<p>The MailChimp delivery is now set up and ready to add email addresses to your list! If you’re also collecting data like <strong>First Name</strong>, 
@@ -70,7 +82,8 @@ class LeadDelivery extends Component {
 					of your leads will appear successful in the LeadConduit user interface. Further, if you want to check out all of your events 
 					or report on good and bad leads, you need filters marking these leads appropriately. </p>
 					<p>Add a filter after the MailChimp step that will reject the lead and stop the flow if the MailChimp delivery outcome <strong><em>is not equal to</em> Success</strong>. </p>
-					<img className="img-background" src={require('../images/mailchimpfilter.gif')} alt="MailChimp Filter" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/mailchimpfilter.gif') : require('../images/mailchimpfilterfalse.gif')} alt="MailChimp Filter" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>This is how your final filter should look:</p>
 					<img className="img-background" src={require('../images/emailrequirements.png')} alt="Email Reqs" />
 					<p>Now when a lead enters your flow and isn’t successfully added to the relevant MailChimp list, you’ll be notified visually on 
@@ -111,7 +124,7 @@ class LeadDelivery extends Component {
 					learning purposes: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong>.</p>
 					<p>To get started click the <strong>Add a Delivery</strong> button. Scroll to the very bottom and create a 
 					<strong>custom delivery</strong>. Give it a name, select a type of <strong>CRM</strong> and click <strong>Save and add to flow</strong>.</p>
-					<img className="img-background" src={require('../images/createcustomdelivery.gif')} alt="Custom Delivery" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/createcustomdelivery.gif') : require('../images/createcustomdeliveryfalse.gif')} alt="Custom Delivery" /></p>
 					<p>Next, you need to select your integration. This part might seem tricky if you don’t have much experience with HTTP. 
 					But not to worry, there are a finite amount of ways to send data to an endpoint, and we've covered each of them in our 
 					<a href="https://support.activeprospect.com/hc/en-us/sections/201013939-LeadConduit-Flows" target="_blank"> LeadConduit knowledge base</a>.</p>

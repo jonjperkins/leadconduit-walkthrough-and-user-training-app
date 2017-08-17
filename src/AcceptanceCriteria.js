@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip'
 
 class AcceptanceCriteria extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -44,7 +54,8 @@ class AcceptanceCriteria extends Component {
 						<li><strong>Phone_1</strong> OR <strong>email</strong> is not blank</li>
 					</ol>
 					<p>Here's how we'd set that up:</p>
-					<img className="img-background" src={require('../images/setacceptancecriteria.gif')} alt="Set Criteria" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/setacceptancecriteria.gif') : require('../images/setacceptancecriteriafalse.gif')} alt="Set Criteria" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>Don't forget to <strong>save</strong> your work!</p>
 					<p>If you set up the previous rules correctly, here's how your final acceptance criteria rules would look:</p>
 					<img className="img-background" src={require('../images/finalacceptancecriteria.png')} alt="Final Criteria"  />

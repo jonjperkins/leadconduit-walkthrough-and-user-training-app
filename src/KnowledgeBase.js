@@ -4,6 +4,16 @@ import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
 
 class KnowledgeBase extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -30,7 +40,7 @@ class KnowledgeBase extends Component {
 					place to look to see if you can find an article addressing what you"d like to do.</p>
 					<p><strong>Pro Tip</strong>: Use the search bar! This is how our team navigates our knowledge base, and I’m 
 					certain you’ll find it to be a much faster way to find what you need!</p>
-					<img className="img-background" src={require("../images/search.gif")} alt="Search KB" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/search.gif") : require("../images/searchfalse.gif")} alt="Search KB" /></p>
 					<Link className="previous-button" style={{ textDecoration: "none" }} to="/reporting">Back</Link>
 					<Link className="next-button" style={{ textDecoration: "none" }} to="/conclusion">Next</Link>
 				</div>

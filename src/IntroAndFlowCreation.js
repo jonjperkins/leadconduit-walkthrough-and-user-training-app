@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class IntroAndFlowCreation extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0) 		
 	}
@@ -42,7 +52,8 @@ class IntroAndFlowCreation extends Component {
 	 				Once you’re signed-in, launch the LeadConduit app and select the ‘Flows’ button from the navigation bar.</p>
 					<img className="img-background" src={require('../images/flow_button.png')} alt="Flow Button" />
 					<p>Select the ‘New Flow’ button and you’ll be taken to flow editor page for this new flow. Give your flow a name, and press the ‘Save’ button. </p>
-					<img className="img-background" src={require('../images/createandnameflow.gif')} alt="Create Name and Flow" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/createandnameflow.gif') : require('../images/createandnameflowfalse.gif')} alt="Create Name and Flow" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>You’ve just created your first flow - <em>great job!</em></p>
 					<p>Whenever you make changes to your LeadConduit flow, you need to save those changes to prevent losing them when you navigate away from 
 					the flow you're working on. You can save your flow by clicking the <strong>Save</strong> button in the upper right-hand corner of the screen. If the Save button 

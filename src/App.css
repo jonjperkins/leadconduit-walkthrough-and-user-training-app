@@ -450,6 +450,33 @@ img {
   border: 1px solid #E9ECEC;
 }
 
+.gif-background {
+  background: #f9fafc;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #E9ECEC;
+}
+
+.gif-background:hover {
+  background: #f9fafc;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #E9ECEC;
+  cursor: pointer;
+}
+
+.high-z-index {
+  z-index: 9999;
+}
+
 /* Navbar */
 
 .fixed-nav-bar {

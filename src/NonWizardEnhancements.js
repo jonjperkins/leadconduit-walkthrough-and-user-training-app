@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class NonWizardEnhancements extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -47,7 +57,8 @@ class NonWizardEnhancements extends Component {
 					<h2>Add Phone Validation</h2>
 					<p> Switch over to your 'Steps' tab in your flow and select the option to add an enhancement. This will 
 					bring up a menu of options to choose from. Scroll down and select the Telesign option.</p>
-					<img className="img-background" src={require('../images/telesign.gif')} alt="Telesign" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/telesign.gif') : require('../images/telesignfalse.gif')} alt="Telesign" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>When you select the bubble for Telesign, the section expands and alerts you to the pricing structure. 
 					It’s important to take note of what using this service will cost you per lead. Once this enhancement is in 
 					your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
@@ -63,8 +74,8 @@ class NonWizardEnhancements extends Component {
 					article <a href="https://support.activeprospect.com/hc/en-us/articles/204981955-Webbula-Email-Hygiene-Verification" target="_blank">here </a> 
 					to get familiar with what kind of information Webbula will send back to us.  When you’re ready, 
 					you can go ahead and add the Webbula step. If you get stuck, check out the video clip below for help.</p>
-					<img className="img-background" src={require('../images/addwebbula.gif')} alt="Webbula" />
-					
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/addwebbula.gif') : require('../images/addwebbulafalse.gif')} alt="Webbula" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/posting-instructions">Back</Link>
 					<Link className="next-button" style={{ textDecoration: 'none' }} to="/non-wizard-filters-and-rules">Next</Link>
 				</div>

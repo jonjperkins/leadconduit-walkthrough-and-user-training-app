@@ -189,13 +189,12 @@ class Main extends Component {
 									<Sidebar>
 										{this.state.isWebformUser &&
 											<div className="lead-source-sidebar-div">
-												<p data-tip="The Getting Started Guide will adjust its content based on the source type you choose here."><div className="source-div">
-													<ReactTooltip place="bottom" type="dark" effect="float"/>
+												<div className="source-div">
 													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
 	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
 	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
-      											</div></p>
+      											</div>
       											<br/>
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
@@ -224,13 +223,12 @@ class Main extends Component {
       									}
       									{this.state.isUnbounceUser &&
 											<div className="lead-source-sidebar-div">
-												<p data-tip="The Getting Started Guide will adjust its content based on the source type you choose here."><div className="source-div">
-													<ReactTooltip place="bottom" type="dark" effect="float"/>
+												<div className="source-div">
 													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
 	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Unbounce Webform"></CustomNavLink>
 	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" label="Other Webform"></CustomNavLink>									
-	      										</div></p>
+	      										</div>
 	      										<br />
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
@@ -259,13 +257,12 @@ class Main extends Component {
       									}
       									{this.state.isUsingVendor &&
     										<div className="lead-source-sidebar-div">
-												<p data-tip="The Getting Started Guide will adjust its content based on the source type you choose here."><div className="source-div">
-													<ReactTooltip place="bottom" type="dark" effect="float"/>
+												<div className="source-div">
 													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
 													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" className="active-source-type regular-css-bold" label="Partner Leads"></CustomNavLink>
 	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
 	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" label="Other Webform"></CustomNavLink>	
-	    										</div></p>
+	    										</div>
 	    										<br />
       											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
       											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>

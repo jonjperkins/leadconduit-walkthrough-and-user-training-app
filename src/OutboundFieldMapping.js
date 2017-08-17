@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class OutboundFieldMapping extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -64,8 +74,8 @@ class OutboundFieldMapping extends Component {
 					you to press enter or click on the field name from the dropdown list.</p>
 					<p>Next, select the box or drop down arrow on the right-side. Find the integration field name you want to map this 
 					value to, and select it. </p>
-					<img className="img-background" src={require('../images/customfieldintegration.gif')} alt="Custom Field Integration" />
-					
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/customfieldintegration.gif') : require('../images/customfieldintegrationfalse.gif')} alt="Custom Field Integration" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<h3>Custom Input Variables</h3>
 					<p><strong>Scenario</strong>: You would like to utilize one of the custom input variables in the integration.</p>
 					<p><strong>Custom input variables</strong> represent fields at the delivery destination that you may send data 

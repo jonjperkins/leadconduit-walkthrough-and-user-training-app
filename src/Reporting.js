@@ -4,6 +4,16 @@ import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
 
 class Reporting extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -31,7 +41,7 @@ class Reporting extends Component {
 					<p>To create a report, navigate to the reports tab on your flow’s homepage. Fill out the relevant 
 					information you want for the report. For example, here’s how you would create a report of all failed 
 					leads for a particular source:</p>
-					<img className="img-background" src={require("../images/reports.gif")} alt="Reports" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/reports.gif") : require("../images/reportsfalse.gif")} alt="Reports" /></p>
 					<p>The reporting tab gives you the information you requested, as well as filtering features like the ability 
 					to adjust the time frame you’d like to include in your report.</p>
 					<img className="img-background" src={require("../images/failreports.png")} alt="Fail Reports" />

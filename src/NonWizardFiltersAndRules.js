@@ -4,6 +4,16 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class NonWizardFiltersAndRules extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -40,10 +50,12 @@ class NonWizardFiltersAndRules extends Component {
 					<a href="https://support.activeprospect.com/hc/en-us/articles/208124963-TeleSign-Using-Phone-Validation-in-LeadConduit"> Telesign</a>). 
 					For any lead where the response from Telesign is ‘Failure’, that lead should enter the Webbula step so we can 
 					verify the email address since a Telesign failure indicates we cannot successfully call the lead.</p>
-					<img className="img-background" src={require('../images/webbularules.gif')} alt="Webbula Rules" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/webbularules.gif') : require('../images/webbularulesfalse.gif')} alt="Webbula Rules" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>At this point, a lead has entered the Telesign step, or both the Telesign and Webbula steps. We are ready to make a final determination 
 					on the fate of this lead. We’ll do this by adding a filter. </p>
-					<img className="img-background" src={require('../images/filter.gif')} alt="Filters Gif" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/filter.gif') : require('../images/filterfalse.gif')} alt="Filters Gif" /></p>
+					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>Here’s a snapshot of how our filter will look.</p>
 					<img className="img-background" src={require('../images/finalenhancementfilter.png')} alt="Final Enhancements" />
 					<p>We’ve used a decent amount of logic to set this up properly. Here’s how it works:</p>

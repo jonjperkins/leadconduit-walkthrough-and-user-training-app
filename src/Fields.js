@@ -4,6 +4,16 @@ import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
 
 class Fields extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -56,7 +66,8 @@ class Fields extends Component {
 							you’ll now see a check-box where a green check mark indicates that the field is currently in use in your flow.  </p>
 							<p>Uncheck all of the checkboxes you don’t need. Then update your changes by clicking the <strong>Update Fields </strong> 
 							button and <strong>Saving</strong> your work. </p>
-							<img id="webform-example" className="img-background" src={require("../images/editingfields.gif")} alt="Edit Fields" />
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/editingfields.gif") : require("../images/editingfieldsfalse.gif")} alt="Edit Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<br />
 							<h2>Standard Fields</h2>
 							<p>Click the <strong> Add/Edit Fields</strong> button again and search our list of standard fields to find fields that meet your needs. 
@@ -67,7 +78,8 @@ class Fields extends Component {
 							using the search bar, make sure you use correct spelling and feel free to use shortened versions of the name you’re 
 							looking for (e.g. <strong>phone</strong> instead of <strong>company phone</strong>).</p>
 							<p>Check the box beside the field names you want to add to your flow. Update your fields and save your flow.</p> 
-							<img className="img-background" id="webform-example" src={require("../images/search_fields.gif")} alt="Search Fields" />
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/search_fields.gif") : require("../images/search_fieldsfalse.gif")} alt="Search Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Fields with a <strong>green checkmark</strong> are already added to your flow (or about to be added once you update), and fields with a 
 							<strong> green circle</strong> are being used in another flow in your account.</p>
 							<br />
@@ -136,7 +148,8 @@ class Fields extends Component {
 							the search bar, make sure you use correct spelling and feel free to use shortened versions of the name you’re looking for 
 							(e.g. <strong>phone</strong> instead of <strong>company phone</strong>). </p>
 							<p>Check the box beside the field names you want to add to your flow. Update your fields and save your flow.</p>
-							<img className="img-background" id="webform-example" src={require("../images/search_fields.gif")} alt="Search Fields 2" />
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/search_fields.gif") : require("../images/search_fieldsfalse.gif")} alt="Search Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Fields with a <strong>green checkmark</strong> are already added to your flow (or about to be added once you update), and 
 							fields with a <strong>green circle</strong> are being used in another flow in your account.</p>
 							<br/>
@@ -159,7 +172,8 @@ class Fields extends Component {
 							<p>To remove a field from your flow, click the <strong>Add/Edit Fields</strong> button and uncheck all of the checkboxes beside 
 							the fields you don’t need. Then update your changes by clicking the <strong>Update Fields</strong> button and <strong>Saving</strong> your 
 							work.</p>
-							<img className="img-background" id="webform-example" src={require("../images/editingfields.gif")} alt="Edit FIelds 2" />
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/editingfields.gif") : require("../images/editingfieldsfalse.gif")} alt="Edit Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
 
@@ -211,7 +225,8 @@ class Fields extends Component {
 							the search bar, make sure you use correct spelling and feel free to use shortened versions of the name you’re looking for 
 							(e.g. <strong>phone</strong> instead of <strong>company phone</strong>). </p>
 							<p>Check the box beside the field names you want to add to your flow. Update your fields and save your flow.</p>
-							<img className="img-background" id="webform-example" src={require("../images/search_fields.gif")} alt="Search Fields 3" />
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/search_fields.gif") : require("../images/search_fieldsfalse.gif")} alt="Search Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Fields with a <strong>green checkmark</strong> are already added to your flow (or about to be added once you update), and 
 							fields with a <strong>green circle</strong> are being used in another flow in your account.</p>
 							<br/>
@@ -234,6 +249,8 @@ class Fields extends Component {
 							<p>To remove a field from your flow, click the <strong>Add/Edit Fields</strong> button and uncheck all of the checkboxes beside 
 							the fields you don’t need. Then update your changes by clicking the <strong>Update Fields</strong> button and <strong>Saving</strong> your 
 							work.</p>
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/editingfields.gif") : require("../images/editingfieldsfalse.gif")} alt="Edit Fields" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
 					<Link className="previous-button" style={{ textDecoration: "none" }} to="/sources">Back</Link>

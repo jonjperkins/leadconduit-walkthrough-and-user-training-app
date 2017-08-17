@@ -4,6 +4,16 @@ import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
 
 class PostingInstructions extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -30,7 +40,7 @@ class PostingInstructions extends Component {
 					You’ll be taken directly to the posting instructions page for that source in a new tab.</p>
 					<p>These posting instructions will stay up-to-date in real time as changes are made to your flow, and will always live at their unique URL. 
 					These do not require a login to access, and can be shared with your lead sources as necessary.</p>
-					<img className="img-background" src={require("../images/accessingpostinginstructions.gif")} alt="Access Instructions" />
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/accessingpostinginstructions.gif") : require("../images/accessingpostinginstructionsfalse.gif")} alt="Access Instructions" /></p>
 					<p>We won’t talk about everything in the posting instructions, but heres a quick overview of what you can find inside:</p>
 					<ul>
 						<li>The ability for sources to directly upload leads to your flow via .csv files</li>

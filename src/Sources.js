@@ -4,6 +4,16 @@ import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
 
 class Sources extends Component {
+	constructor() {
+		super();
+		this.state = {
+			gifShowing: true
+		}
+	}
+	resetGif() {
+		this.setState({gifShowing: !this.state.gifShowing})
+		console.log(this.state.gifShowing);
+	}
 	componentDidMount () {
   		window.scrollTo(0, 0)
 	}
@@ -38,7 +48,8 @@ class Sources extends Component {
 			 				<br/>
 			 				<h2>Configure Your Source</h2>
 			 				<p>If you just created your flow, you should be on the <strong>Fields</strong> tab. To work with sources, navigate to the <strong>Sources</strong> tab.</p>
-			 				<img className="img-background" src={require("../images/sourcetab.gif")} alt="Source Tab" />
+			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/sourcetab.gif") : require("../images/sourcetabfalse.gif")} alt="Source Tab" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<p>On the <strong>Sources</strong> tab, you can see that LeadConduit added a default source for you. Your default 
 			 				source name will be your account name.</p>
 			 				<p>If you didn’t add any more sources, every incoming lead would be associated with this default source. In some 
@@ -54,16 +65,19 @@ class Sources extends Component {
 			 				with as opposed to simply creating a custom source straight away. Selecting the standard source for your lead partner 
 			 				helps things move much more smoothly. We know how each partner likes to format their leads, and we’ve configured their 
 			 				standard source to make sure those leads get delivered to you correctly.</p>
-			 				<img className="img-background" src={require("../images/addstandardsource.gif")} alt="Add Standard Source" /> 
+			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/addstandardsource.gif") : require("../images/addstandardsourcefalse.gif")} alt="Add Standard Source" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<p>Using the search feature can save you time, but you’ll need to make sure you’re spelling the partner’s name 
 			 				exactly as it’s saved in our list.</p>
-			 				<img className="img-background" src={require("../images/searchsources.gif")} alt="Search Sources" /> 
+			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/searchsources.gif") : require("../images/searchsourcesfalse.gif")} alt="Search Sources" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<h2>Custom Sources</h2>
 			 				<p>If the lead partner you’re working with isn’t listed in our standard sources, you can create a custom source to 
 			 				help organize your workflow.</p>
 			 				<p>Click the <strong>Create New Source</strong> button to the right of the search bar. You’ll be asked whether this source of leads is 
 			 				a webform. Select <strong>No</strong>, and you’ll be taken to the custom source creation screen where you can create your source.</p>
-							<img className="img-background" src={require("../images/customvendor.gif")} alt="Custom Vendor" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/customvendor.gif") : require("../images/customvendorfalse.gif")} alt="Custom Vendor" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>You’ll notice there are several options available when creating a source (e.g. Advanced options and recommending 
 							the source as a standard source). Our recommendation is to use the Standard Inbound Integration for any custom 
 							sources you create, unless you have a specific need for one of the 
@@ -72,7 +86,8 @@ class Sources extends Component {
 							<h2>Edit Sources</h2>
 							<p>If you need to edit your custom source, you can do so by clicking the <strong>Libraries</strong> menu on the Navigation bar, 
 							and selecting <strong>Sources</strong>. Find the source you want to edit, and make the desired changes.</p>
-							<img className="img-background" src={require("../images/editcustomsource.gif")} alt="Edit" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/editcustomsource.gif") : require("../images/editcustomsourcefalse.gif")} alt="Edit" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>You can read more about <a href="https://support.activeprospect.com/hc/en-us/sections/115000574726-Inbound-Source-Integrations" target="_blank">adding sources </a> 
 							in our knowledge base.</p>
 						</div>
@@ -92,7 +107,8 @@ class Sources extends Component {
 			 				
 			 				<h2>Configure Your Source</h2>
 			 				<p>If you just created your flow, you should currently be on the <strong>Fields</strong> tab. To work with our sources, navigate to the <strong>Sources</strong> tab.</p>
-			 				<img className="img-background" src={require("../images/sourcetab.gif")} alt="Source Tab 2" />
+			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/sourcetab.gif") : require("../images/sourcetabfalse.gif")} alt="Source Tab 2" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<p>On the <strong>Sources</strong> tab, you can see that LeadConduit automatically adds a default source. Your default 
 			 				source name will be your account name.</p>
 			 				<p>If you didn’t add any more sources, every incoming lead would be associated with this default source. In some 
@@ -124,7 +140,8 @@ class Sources extends Component {
 							works, you can select the pencil icon beside the input box and create a custom field name.</p>
 							<p>We’ll discuss why this is so important later in this guide, but suffice it to say that selecting fields from the dropdown menu 
 							at this point (if at all possible) will save you a lot of time in the long run.</p>
-							<img className="img-background" src={require("../images/unbouncefieldmapping.gif")} alt="Unbounce Field Mapping" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/unbouncefieldmapping.gif") : require("../images/unbouncefieldmappingfalse.gif")} alt="Unbounce Field Mapping" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Once you’ve completed the webform wizard, LeadConduit will automatically add a new source to your flow that’s named after 
 							the Unbounce form. In my case, this source was named <strong>leadconduit-getting-started</strong>. It also adds the appropriate inbound mappings 
 							to make sure your webform and LeadConduit’s flow fields can communicate and send/receive data.</p>
@@ -146,15 +163,18 @@ class Sources extends Component {
 							you’ll be working with as opposed to simply creating a custom source straight away. Selecting the standard source 
 							for your lead partner helps things move much more smoothly. We know how each partner likes to format their leads, and 
 							we’ve configured their standard sources to make sure those leads get delivered to you correctly.</p>
-							<img className="img-background" src={require("../images/addstandardsource.gif")} alt="Add Standard Source" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/addstandardsource.gif") : require("../images/addstandardsourcefalse.gif")} alt="Add Standard Source" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Using the search feature can save you time, but you’ll need to make sure you’re spelling the partner’s name 
 							exactly as it’s saved in our list. </p>
-							<img className="img-background" src={require("../images/searchsources.gif")} alt="Search Sources" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/searchsources.gif") : require("../images/searchsourcesfalse.gif")} alt="Search Sources" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<h2>Edit Sources</h2>
 							<p>If you need to edit or remove a custom source, you can do so by clicking the Libraries menu on 
 							the <strong>Navigation bar</strong>, and selecting <strong>Sources</strong>. Find the source you 
 							want to edit, and make the desired changes.</p>
-							<img className="img-background" src={require("../images/editcustomsource.gif")} alt="Edit Custom Source 3" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/editcustomsource.gif") : require("../images/editcustomsourcefalse.gif")} alt="Edit" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
 
@@ -170,7 +190,8 @@ class Sources extends Component {
 			 				<br/>
 			 				<h2>Configure Your Source</h2>
 			 				<p>If you just created your flow, you should currently be on the <strong>Fields</strong> tab. To work with our sources, navigate to the <strong>Sources</strong> tab.</p>
-			 				<img className="img-background" src={require("../images/sourcetab.gif")} alt="Source Tab 3" />
+			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/sourcetab.gif") : require("../images/sourcetabfalse.gif")}alt="Source Tab 3" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<p>On the <strong>Sources</strong> tab, you can see that LeadConduit automatically adds a default source. Your default 
 			 				source name will be your account name.</p>
 			 				<p>If you didn’t add any more sources, every incoming lead would be associated with this default source. In some 
@@ -212,7 +233,7 @@ class Sources extends Component {
 							works, you can select the pencil icon beside the input box and create a custom field name.</p>
 							<p>We’ll discuss why this is so important later in this guide, but suffice it to say that selecting fields from the dropdown menu 
 							at this point (if at all possible) will save you a lot of time in the long run.</p>
-							<img className="img-background" src={require("../images/fieldselectionwebformwizard.gif")} alt="Selection Fields" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/fieldselectionwebformwizard.gif") : require("../images/fieldselectionwebformwizardfalse.gif")} alt="Selection Fields" /></p>
 							<p>Once you’ve mapped your fields, click <strong>Continue</strong>. Click the blue <strong>Update Sources</strong> button in 
 							the upper right corner, and then <strong>Save</strong> your flow. </p>
 							<p>You now have two sources on your source tab. The default source, and the webform source you just added. Also, you’ll 
@@ -231,15 +252,18 @@ class Sources extends Component {
 							you’ll be working with as opposed to simply creating a custom source straight away. Selecting the standard source 
 							for your lead partner helps things move much more smoothly. We know how each partner likes to format their leads, and 
 							we’ve configured their standard sources to make sure those leads get delivered to you correctly.</p>
-							<img className="img-background" src={require("../images/addstandardsource.gif")} alt="Add Standard Source 2" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/addstandardsource.gif") : require("../images/addstandardsourcefalse.gif")} alt="Add Standard Source 3" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p>Using the search feature can save you time, but you’ll need to make sure you’re spelling the partner’s name 
 							exactly as it’s saved in our list. </p>
-							<img className="img-background" src={require("../images/searchsources.gif")} alt="Search Sources 2" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/searchsources.gif") : require("../images/searchsourcesfalse.gif")} alt="Search Sources" /></p>
+			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<h2>Edit Sources</h2>
 							<p>If you need to edit or remove a custom source, you can do so by clicking the Libraries menu on 
 							the <strong>Navigation bar</strong>, and selecting <strong>Sources</strong>. Find the source you 
 							want to edit, and make the desired changes.</p>
-							<img className="img-background" src={require("../images/editcustomsource.gif")} alt="Edit Custom Source 2" />
+							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/editcustomsource.gif") : require("../images/editcustomsourcefalse.gif")} alt="Edit" /></p>
+							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
 					<Link className="previous-button" style={{ textDecoration: "none" }} to="/introandflowcreation">Back</Link>
