@@ -14,3 +14,6 @@ The flow tester makes two calls to the LeadConduit API through a Node.js server:
 
 Desktop:
 ![desktop](/images/desktop.png)
+
+Mobile:
+![mobile](/images/mobile.png)
