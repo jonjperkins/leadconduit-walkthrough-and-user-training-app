@@ -221,7 +221,6 @@ class TestingTool extends Component {
 								<div>
 									<br />
 									<h1 className="test-flow-header">Send a test lead.</h1>
-									<h4>The response from your LeadConduit flow will appear here after you click submit below.</h4>
 								</div>
 							}
 							<div className="outer-test-tool">
@@ -232,7 +231,7 @@ class TestingTool extends Component {
 										<hr />
 										{Object.entries(this.state.field_pairs).map(([key, value]) => {
 												
-												return 	<FormGroup key={key}>
+												return 	<FormGroup key={key} bsSize="small">
 															<ControlLabel>{key}</ControlLabel>
 															<FormControl name={value} className="input"></FormControl>	
 														</FormGroup>

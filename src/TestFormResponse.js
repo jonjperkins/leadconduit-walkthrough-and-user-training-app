@@ -18,7 +18,6 @@ class TestFormResponse extends Component {
 						<div className="lc_link"> Click <a href={ `https://next.leadconduit.com/events/${this.props.leadconduit_event_id}` } target="_blank"><span id={this.props.response_styling}>here</span></a> to see this lead in LeadConduit.</div>	
 					}
 				</div>
-				<hr/>
 			</div>
 		);
 	};
