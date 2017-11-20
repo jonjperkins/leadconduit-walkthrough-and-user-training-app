@@ -30,6 +30,7 @@ import Conclusion from './Conclusion';
 
 import ReactTooltip from 'react-tooltip';
 import 'babel-polyfill';
+import ReactGA from 'react-ga'
 
 
 class Main extends Component {
@@ -46,6 +47,8 @@ class Main extends Component {
 			isActive: false,
 			contentScroll: true
 		}
+		ReactGA.initialize('UA-78849770-3');
+		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
 	componentDidMount() {
 		console.log('wizard status: ' + this.props.wizard)
