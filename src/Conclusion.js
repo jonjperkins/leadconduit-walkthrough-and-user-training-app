@@ -4,8 +4,8 @@ import IconButton from './IconButton';
 import ReactTooltip from 'react-tooltip';
 
 class Conclusion extends Component {
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(

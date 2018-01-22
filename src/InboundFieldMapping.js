@@ -14,8 +14,8 @@ class InboundFieldMapping extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(
@@ -46,16 +46,16 @@ class InboundFieldMapping extends Component {
 			 				your partner is sending, you’ll need to perform inbound field mapping.</p>
 							<img className="img-background" id="webform-example" src={require("../images/mappingdiagram.png")} alt="Map Diagram" />
 							<p>To configure your inbound field mapping, navigate to your flow’s <strong>Sources</strong> tab and find the source that needs this field mapping. 
-							To the right, you will see a clickable link that says "Add Mappings". Click that link. You’ll be presented with a screen that looks like this:</p>
+							To the right, you will see a clickable link that says <strong>Add Mappings</strong>. Click that link and you will be presented with a screen that looks like this:</p>
 							<img className="img-background" id="webform-example" src={require("../images/inboundmappingmodal.png")} alt="Inbound Modal" />
-							<p><strong>First</strong>, select a LeadConduit standard field from the list on the left. Here"s a list of all the <a href="https://next.leadconduit.com/fields" target="_blank">Standard Fields in LeadConduit </a>
+							<p><strong>First</strong>, select a LeadConduit standard field from the list on the left. We maintain a list of all <a href="https://next.leadconduit.com/fields" target="_blank">Standard Fields in LeadConduit </a>
 							 so you know what’s available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
-							<p><strong>Next</strong>, type in the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the 
+							<p><strong>Next</strong>, type the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the 
 							text "Insert <em>field_name</em> as source field" to complete the mapping.</p>
 							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmapping.gif") : require("../images/addfieldmappingfalse.gif")} alt="Add Inbound" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p><strong style={{color: "red"}}>Warning!</strong> If you don’t press enter/return OR select the + button below and just leave in the text, 
-							LeadConduit will interpret that as text/string to be sent in every flow submission.</p>
+							LeadConduit will interpret that as text to be sent in every flow submission.</p>
 							<img className="img-background" id="webform-example" src={require("../images/wronginbound.png")} alt="Wrong Inbound" />
 							<img className="img-background" id="webform-example" src={require("../images/correctinbound.png")} alt="Correct Inbound" />
 							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping" target="_blank">inbound field mapping </a>in our knowledge base.</p>
@@ -71,7 +71,7 @@ class InboundFieldMapping extends Component {
 							<p>When discussing fields earlier, we mentioned that your web form and LeadConduit need to be able 
 							to communicate effectively. If the web form is using different input names to collect and send values 
 							to your flow via HTTP parameters than the fields LeadConduit has set up in the flow, there will be a 
-							breakdown in communication and your lead data will be sent, but never collected in your flow. Here’s 
+							breakdown in communication and your lead data will be sent, but never collected in your flow. Here is 
 							a visual representation of a hypothetical form and flow field configuration.</p>
 							<img className="img-background" id="webform-example" src={require("../images/fieldcomparison.png")} alt="Field Compare" />
 							<p>The gray box represents the web form, and the orange box represents LeadConduit’s flow fields. The 
@@ -88,14 +88,14 @@ class InboundFieldMapping extends Component {
 							that needs this field mapping. To the right, you will see a clickable link that says <strong>Add Mappings</strong>. Click 
 							that link. </p>
 							<img className="img-background" id="webform-example" src={require("../images/inboundmappingmodal.png")} alt="Inbound Modal 2" />
-							<p><strong>First</strong>, select a LeadConduit standard field from the list on the left. Here"s a list of all 
-							the <a href="https://next.leadconduit.com/fields">Standard Fields</a> in LeadConduit so you know 
-							what"s available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
+							<p><strong>First</strong>, select a LeadConduit standard field from the list on the left. We maintain a list of all 
+							<a href="https://next.leadconduit.com/fields"> Standard Fields</a> in LeadConduit so you know 
+							what is available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
 							<p><strong>Next</strong>, type in the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the text "Insert <em>field_name</em> as source field" to complete the mapping.</p>
 							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmapping.gif") : require("../images/addfieldmappingfalse.gif")} alt="Add Inbound" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
-							<p><strong style={{color: "red"}}>Warning!</strong> If you don"t press enter/return OR select the + button below and just leave in the text, 
-							LeadConduit will interpret that as text/string to be sent in every flow submission.</p>
+							<p><strong style={{color: "red"}}>Warning!</strong> If you don't press enter/return OR select the + button below and just leave in the text, 
+							LeadConduit will interpret that as text to be sent in every flow submission.</p>
 							<img className="img-background" id="webform-example" src={require("../images/wronginbound.png")} alt="Wrong Inbound 2"/>
 							<img className="img-background" id="webform-example" src={require("../images/correctinbound.png")} alt="Correct Inbound 2" />
 							<p>Learn more about <a href="https://support.activeprospect.com/hc/en-us/articles/209564466-LeadConduit-Inbound-Field-Mapping" target="_blank">inbound field mapping </a>in our knowledge base.</p>

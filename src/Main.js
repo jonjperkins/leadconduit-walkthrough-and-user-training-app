@@ -20,6 +20,7 @@ import TestingBasics from './TestingBasics';
 import './App.css';
 import CustomNavLink from './CustomNavLink';
 import ClientTestingPage from './ClientTestingPage';
+import withTracker from './withTracker';
 
 import Sources from './Sources';
 import Fields from './Fields';
@@ -30,8 +31,6 @@ import Conclusion from './Conclusion';
 
 import ReactTooltip from 'react-tooltip';
 import 'babel-polyfill';
-import ReactGA from 'react-ga'
-
 
 class Main extends Component {
 	constructor() {
@@ -47,8 +46,6 @@ class Main extends Component {
 			isActive: false,
 			contentScroll: true
 		}
-		ReactGA.initialize('UA-78849770-3');
-		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
 	componentDidMount() {
 		console.log('wizard status: ' + this.props.wizard)
@@ -71,6 +68,7 @@ class Main extends Component {
 	}
 	sidebarClose() {
 		this.setState({ isActive: false });
+		window.scrollTo(0, 0);
 	}
 	restart() {
 		this.setState({ isSourceWizard: true });
@@ -144,12 +142,12 @@ class Main extends Component {
 						isUsingVendor: false,
 						onBeginPage: true });
 	}
-	toggleContentScroll() {
-		this.setState({ contentScroll: !this.state.contentScroll })
-		var type = ''
-		this.state.contentScroll ? type = "hidden" : type = "scroll"
-		document.body.style.overflow = type;
-	}
+	// toggleContentScroll() {
+	// 	this.setState({ contentScroll: !this.state.contentScroll })
+	// 	var type = ''
+	// 	this.state.contentScroll ? type = "hidden" : type = "scroll"
+	// 	document.body.style.overflow = type;
+	// }
   	render() {
   		let wizardComponent = null;
     		if (this.state.onBeginPage === true) {
@@ -188,7 +186,7 @@ class Main extends Component {
 					<div id={this.state.isSourceWizard ? 'hidden' : 'wrapper'} className={this.state.walkthrough ? 'intro-tour-overlay' : ''}>
 						<div className='wrapper-ancestor'>
 							<div className={this.state.isActive ? 'active-sidebar-small-screen' : 'sidebar-wrapper'}>
-								<div className="sidebar-content" onMouseEnter={this.toggleContentScroll.bind(this)} onMouseLeave={this.toggleContentScroll.bind(this)}>
+								<div className="sidebar-content">
 									<Sidebar>
 										{this.state.isWebformUser &&
 											<div className="lead-source-sidebar-div">
@@ -303,26 +301,26 @@ class Main extends Component {
 									<Route path='/fields' render={() => <Fields isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
 									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
-									<Route path='/introandflowcreation' component={IntroAndFlowCreation}></Route>
+									<Route path='/introandflowcreation' component={withTracker(IntroAndFlowCreation)}></Route>
 									<Route path='/acceptance-criteria' component={AcceptanceCriteria}></Route>
-									<Route path='/posting-instructions' component={PostingInstructions}></Route>
-									<Route path='/non-wizard-enhancements' component={NonWizardEnhancements}></Route>
-									<Route path='/non-wizard-filters-and-rules' component={NonWizardFiltersAndRules}></Route>
-									<Route path='/lead-delivery' component={LeadDelivery}></Route>
-									<Route path='/outbound-field-mapping' component={OutboundFieldMapping}></Route>
-									<Route path='/response-parsing' component={ResponseParsing}></Route>
-									<Route path='/testing-basics' component={TestingBasics}></Route>
-									<Route path='/testing-tool' exact true component={TestingTool}></Route>
-									<Route path='/reporting' component={Reporting}></Route>
-									<Route path='/knowledge-base' component={KnowledgeBase}></Route>
-									<Route path='/conclusion' component={Conclusion}></Route>
+									<Route path='/posting-instructions' component={withTracker(PostingInstructions)}></Route>
+									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>
+									<Route path='/non-wizard-filters-and-rules' component={withTracker(NonWizardFiltersAndRules)}></Route>
+									<Route path='/lead-delivery' component={withTracker(LeadDelivery)}></Route>
+									<Route path='/outbound-field-mapping' component={withTracker(OutboundFieldMapping)}></Route>
+									<Route path='/response-parsing' component={withTracker(ResponseParsing)}></Route>
+									<Route path='/testing-basics' component={withTracker(TestingBasics)}></Route>
+									<Route path='/testing-tool' exact true component={withTracker(TestingTool)}></Route>
+									<Route path='/reporting' component={withTracker(Reporting)}></Route>
+									<Route path='/knowledge-base' component={withTracker(KnowledgeBase)}></Route>
+									<Route path='/conclusion' component={withTracker(Conclusion)}></Route>
 									<Route path='/testing-tool/:key/:flow/:source' render={props => (
 										<ClientTestingPage 
 											vendorSource={this.vendorSource.bind(this)} 
 											{...props}
 										/>
 									)}> 
-									</Route>								
+									</Route>							
 								</div>	
 							</div>
 						</div>

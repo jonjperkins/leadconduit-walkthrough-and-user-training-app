@@ -14,8 +14,8 @@ class PostingInstructions extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(
@@ -55,7 +55,7 @@ class PostingInstructions extends Component {
 					<img className="img-background" src={require("../images/postinginstructionsmappings.png")} alt="Posting Mappings" />
 					<p>Sources can also test the response they’ll receive from LeadConduit based on the Acceptance Criteria. Filters will not appear in the posting docs, and will not 
 					apply to the interactive example at the bottom of the docs.</p>
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/acceptance-criteria">Back</Link>
+					<Link className="previous-button"  style={{ textDecoration: "none" }} to="/acceptance-criteria">Back</Link>
 					<Link className="next-button" style={{ textDecoration: "none" }} to="/non-wizard-enhancements">Next</Link>
 				</div>
 			</div>

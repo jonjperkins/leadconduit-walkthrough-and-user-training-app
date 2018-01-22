@@ -14,8 +14,8 @@ class Fields extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(
@@ -36,7 +36,7 @@ class Fields extends Component {
 					<h1 className="title">Fields</h1>
 					{this.props.isUsingVendor &&
 						<div>
-							<p>LeadConduit Fields define what LeadConduit can receive from a lead vendor or web form. Data in 
+							<p>In LeadConduit, Fields define what kind of data your flow can receive from a lead vendor or web form. Data in 
 							a field is actionable i.e. you can make decisions based on it, and you can send it out to various 
 							types of recipients. If a lead vendor or your web form submits a parameter that does not match a 
 							defined field, that parameter will not cause problems, but LeadConduit will not capture it or be 
@@ -44,11 +44,11 @@ class Fields extends Component {
 			 				<p>Deciding what fields to add to your flow is typically determined by both the data you’re required 
 			 				to collect, and the optional data you’d like to collect. For example, if you’d like to deliver leads 
 			 				to a MailChimp account, you’ll be required to collect an email address, but you can also collect other 
-			 				data like first name and last name. For (almost) every piece of data you’d like to collect, you’ll need 
+			 				data like first name and last name. For (almost) every piece of data you’d like to collect, you need 
 			 				a field to ‘hold’ that data.</p>
 			 				<br/>
 			 				<h2>Preparation</h2>
-			 				<p>Make a list of the fields you must collect, and the fields you’d like to collect. Then navigate to 
+			 				<p>Make a list of the fields you must collect, and the fields you would like to collect. Then navigate to 
 			 				your flow’s <strong>Fields tab</strong> by clicking on the Fields tab below your flow’s name. </p>
 			 				<img className="img-background" src={require("../images/FieldsTab.png")} alt="Fields Tab" />
 			 				<p>When you created your flow, these 10 fields were added by default:</p>

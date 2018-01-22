@@ -14,8 +14,8 @@ class NonWizardFiltersAndRules extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(

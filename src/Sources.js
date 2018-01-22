@@ -14,8 +14,8 @@ class Sources extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
-	componentDidMount () {
-  		window.scrollTo(0, 0)
+	componentDidMount() {
+		window.scrollTo(0, 0);
 	}
 	render() {
 		return(
@@ -38,13 +38,11 @@ class Sources extends Component {
 					
 					{this.props.isUsingVendor &&
 						<div>
-							<p>At the most basic level, sources simply represent where your leads come from. Sources typically 
-							refer to a webform you own, or a partner who is generating leads and sending them into your flow.</p>
-			 				<p>Setting up sources for a particular flow allows you to organize your work. Instead of all leads 
-			 				coming into your flow from a single default source, setting up sources allows you to track and report 
-			 				on the health and success of a particular source of leads. If a source is sending a significant number 
-			 				of bad leads to your flow, you need to know that. Figuring out where the bad leads are coming from can 
-			 				be a headache if you don’t set up your sources properly.</p>
+							<p>In LeadConduit, a <strong>Source</strong> typically refers to a webform or partner who generates leads and sends 
+							them to your flow.</p>
+			 				<p>Setting up sources for a particular flow allows you to organize your work and enables you track 
+			 				and report on the health and success of a particular source of leads. If a source is sending a 
+			 				significant number of bad leads to your flow, you need to know that. </p>
 			 				<br/>
 			 				<h2>Configure Your Source</h2>
 			 				<p>If you just created your flow, you should be on the <strong>Fields</strong> tab. To work with sources, navigate to the <strong>Sources</strong> tab.</p>
@@ -60,25 +58,24 @@ class Sources extends Component {
 			 				<p>To add your source, begin by clicking the <strong>Add/Edit Sources</strong> button at the top left of the Sources tab. </p>
 			 				<img className="img-background" src={require("../images/addsourcebutton.png")} alt="Add Source Button" /> 
 			 				<h2>Standard Sources</h2>
-			 				<p>After clicking this button, you’ll be in <strong>source editing mode</strong> where you can choose from an extensive list of lead 
-			 				partners to configure as a standard source. It’s important to search this list for the lead partner you’ll be working 
+			 				<p>After clicking this button, you will be in <strong>source editing mode</strong> where you can choose from an extensive list of lead 
+			 				partners to configure as a standard source. It’s important to search this list for the lead partner you will be working 
 			 				with as opposed to simply creating a custom source straight away. Selecting the standard source for your lead partner 
-			 				helps things move much more smoothly. We know how each partner likes to format their leads, and we’ve configured their 
+			 				makes the integration process much more smooth and prevents you from having to do extra work. We know how each partner likes to format their leads, and we’ve configured their 
 			 				standard source to make sure those leads get delivered to you correctly.</p>
 			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/addstandardsource.gif") : require("../images/addstandardsourcefalse.gif")} alt="Add Standard Source" /></p>
 			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
-			 				<p>Using the search feature can save you time, but you’ll need to make sure you’re spelling the partner’s name 
-			 				exactly as it’s saved in our list.</p>
+			 				<p>Using the search feature can save you time, but you need to make sure you are spelling the partner’s name exactly as it’s saved in our list.</p>
 			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/searchsources.gif") : require("../images/searchsourcesfalse.gif")} alt="Search Sources" /></p>
 			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<h2>Custom Sources</h2>
-			 				<p>If the lead partner you’re working with isn’t listed in our standard sources, you can create a custom source to 
+			 				<p>If the lead partner you are working with isn’t listed in our standard sources, you can create a custom source to 
 			 				help organize your workflow.</p>
 			 				<p>Click the <strong>Create New Source</strong> button to the right of the search bar. You’ll be asked whether this source of leads is 
 			 				a webform. Select <strong>No</strong>, and you’ll be taken to the custom source creation screen where you can create your source.</p>
 							<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/customvendor.gif") : require("../images/customvendorfalse.gif")} alt="Custom Vendor" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
-							<p>You’ll notice there are several options available when creating a source (e.g. Advanced options and recommending 
+							<p>You will notice there are several options available when creating a source (e.g. Advanced options and recommending 
 							the source as a standard source). Our recommendation is to use the Standard Inbound Integration for any custom 
 							sources you create, unless you have a specific need for one of the 
 							<a href="https://support.activeprospect.com/hc/en-us/sections/115000574726-Inbound-Source-Integrations" target="_blank"> more advanced inbound integrations</a>.</p>
@@ -96,38 +93,36 @@ class Sources extends Component {
 					
 					{this.props.isUnbounceUser &&
 						<div>
-							<p>At the most basic level, sources simply represent where your leads come from. Sources typically 
-							refer to a webform you own, or a partner who is generating leads and sending them into your flow.</p>
-			 				<p>Setting up sources for a particular flow allows you to organize your work. Instead of all leads 
-			 				coming into your flow from a single default source, setting up sources allows you to track and report 
-			 				on the health and success of a particular source of leads. If a source is sending a significant number 
-			 				of bad leads to your flow, you need to know that. Figuring out where the bad leads are coming from can 
-			 				be a headache if you don’t set up your sources properly.</p>
+							<p>In LeadConduit, a <strong>Source</strong> typically refers to a webform or partner who generates leads and sends 
+							them to your flow.</p>
+			 				<p>Setting up sources for a particular flow allows you to organize your work and enables you track 
+			 				and report on the health and success of a particular source of leads. If a source is sending a 
+			 				significant number of bad leads to your flow, you need to know that. </p>
 			 				<br/>
 			 				
 			 				<h2>Configure Your Source</h2>
-			 				<p>If you just created your flow, you should currently be on the <strong>Fields</strong> tab. To work with our sources, navigate to the <strong>Sources</strong> tab.</p>
+			 				<p>If you just created your flow, you should be on the <strong>Fields</strong> tab. To work with sources, navigate to the <strong>Sources</strong> tab.</p>
 			 				<p data-tip="Click to restart"><img className="gif-background" onClick={this.resetGif.bind(this)} src={this.state.gifShowing ? require("../images/sourcetab.gif") : require("../images/sourcetabfalse.gif")} alt="Source Tab 2" /></p>
 			 				<ReactTooltip place="bottom" type="dark" effect="float"/>
 			 				<p>On the <strong>Sources</strong> tab, you can see that LeadConduit automatically adds a default source. Your default 
 			 				source name will be your account name.</p>
 			 				<p>If you didn’t add any more sources, every incoming lead would be associated with this default source. In some 
 			 				cases, if all leads are coming from your own, single form, this may be fine. However, most users want to 
-			 				set up specific sources for tracking and reporting purposes. For example, if you decide to set up more webforms or decide to 
-			 				start receiving leads from a lead partner, you should configure a source to represent each webform or partner. </p>
+			 				set up specific sources for tracking and reporting purposes. For example, if you are collecting leads from multiple web forms, 
+			 				you’ll need a way to know which web form generated each particular lead. Setting up sources helps you with that.</p>
 			 				<p>To add your source, begin by clicking the <strong>Add/Edit Sources</strong> button at the top left of the Sources tab. </p>
 			 				<img className="img-background" src={require("../images/addsourcebutton.png")} alt="Add Source Button 2" /> 
 			 				
 			 				<h2>Custom Sources</h2>
-			 				<p>You’ll need to configure a custom source if you’re using a <strong>webform</strong> to send leads to your LeadConduit flow. It’s worth 
+			 				<p>You will need to configure a custom source if you are using a <strong>webform</strong> to send leads to your LeadConduit flow. It’s worth 
 			 				noting that when receiving leads from <strong>partners</strong>, we always suggest that users search the standard source list first. This 
-			 				guide discusses standard sources later on in this section, but since you’re working with a webform this guide will focus on that first.</p>
+			 				guide discusses standard sources later on in this section, but this guide will focus on setting up a custom source first since you're using a web form.</p>
 							<p>To add a custom source, click the <strong>Create New Source</strong> button to the right of the search bar. You’ll be asked whether 
 							this source of leads is a webform. Select <strong>Yes</strong>, and you’ll enter the webform wizard. This wizard will walk you 
 							through setting up your webform as a source.</p>
-							<p>You’ll first copy and paste the url where your webform lives.</p>
+							<p>You will first copy and paste the url where your webform lives.</p>
 							<img className="img-background" src={require("../images/unbouncewebformurl.png")} alt="Unbounce Webform URL" />
-							<p>LeadConduit has a built-in integration with <strong>Unbounce</strong>, so when you copy and paste an Unbounce URL, you’ll be prompted to connect 
+							<p>LeadConduit has a built-in integration with <strong>Unbounce</strong>. When you copy and paste an Unbounce URL, you will be prompted to connect 
 							to your Unbounce account so that LeadConduit can grab some extra information and setup the Unbounce webhook on your behalf. </p>
 							<img className="img-background" src={require("../images/connectunbounceform.png")} alt="Connect Unbounce" />
 							<img className="img-background" src={require("../images/unbouncewebformmessage.png")} alt="Unbounce Message" />
@@ -180,13 +175,11 @@ class Sources extends Component {
 
 					{this.props.isWebformUser &&
 						<div>
-							<p>At the most basic level, sources simply represent where your leads come from. Sources typically 
-							refer to a webform you own, or a partner who is generating leads and sending them into your flow.</p>
-			 				<p>Setting up sources for a particular flow allows you to organize your work. Instead of all leads 
-			 				coming into your flow from a single default source, setting up sources allows you to track and report 
-			 				on the health and success of a particular source of leads. If a source is sending a significant number 
-			 				of bad leads to your flow, you need to know that. Figuring out where the bad leads are coming from can 
-			 				be a headache if you don’t set up your sources properly.</p>
+							<p>In LeadConduit, a <strong>Source</strong> typically refers to a webform or partner who generates leads and sends 
+							them to your flow.</p>
+			 				<p>Setting up sources for a particular flow allows you to organize your work and enables you track 
+			 				and report on the health and success of a particular source of leads. If a source is sending a 
+			 				significant number of bad leads to your flow, you need to know that. </p>
 			 				<br/>
 			 				<h2>Configure Your Source</h2>
 			 				<p>If you just created your flow, you should currently be on the <strong>Fields</strong> tab. To work with our sources, navigate to the <strong>Sources</strong> tab.</p>
