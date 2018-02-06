@@ -31,7 +31,7 @@ const withTracker = (WrappedComponent, options = {}) => {
       return <WrappedComponent {...this.props} />;
     }
   };
-
+  console.log(trackPage)
   return HOC;
 };
 

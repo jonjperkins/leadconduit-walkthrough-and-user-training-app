@@ -216,7 +216,18 @@ img {
       border: solid #f58025 1px;
       transition: all 0.4s ease 0s;
     }
-
+    .source-type-prompt > .source-choice {
+      margin-top: 30px;
+      display: inline-block;
+      border: solid #00d1b2 1px;
+      background-color: white;
+      color: #00d1b2;
+      padding: 8px 14px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: .65em;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1232,4 +1243,23 @@ float: right;
 }
 .arrow:hover {
   color: #233238;
+}
+.source-type-prompt {
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  background-color: #00d1b2;
+  border-radius: 3px;
+  color: white;
+}
+.source-choice {
+  margin-top: 30px;
+  display: inline-block;
+  border: solid #00d1b2 1px;
+  background-color: white;
+  color: #00d1b2;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  font-weight: bold;
 }

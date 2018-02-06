@@ -39,7 +39,7 @@ class Main extends Component {
 			onBeginPage: true,
 			onWebformQuestionPage: false,
 			onTypeofWebformPage: false,
-			isSourceWizard: true,
+			isSourceWizard: false,
 			isUnbounceUser: false,
 			isWebformUser: false,
 			isUsingVendor: false,
@@ -149,29 +149,25 @@ class Main extends Component {
 	// 	document.body.style.overflow = type;
 	// }
   	render() {
-  		let wizardComponent = null;
-    		if (this.state.onBeginPage === true) {
-  			wizardComponent = 	<Begin 
-  								handleBegin={this.begin.bind(this)} 
-  								/>
-  		}
-  		if (this.state.onWebformQuestionPage === true) {
-  			wizardComponent = 	<IsThisAWebform 
-  								handleWebformYes={this.webformYes.bind(this)} 
-  								handleWebformNo={this.webformNo.bind(this)} 
-  								handleStartOver={this.startOver.bind(this)}
-  								/>
-  		}
-  		if (this.state.onTypeofWebformPage === true) {
-  			wizardComponent = 	<TypeOfWebform 
-  								handleNonUnbounceUser={this.nonUnbounceWebForm.bind(this)} 
-  								handleUnbounceUser={this.unbounceWebForm.bind(this)}
-  								handleBegin={this.begin.bind(this)} 
-  								/>
-  		}
-  		// console.log(window.location.hash);
-  		// if (/(^#\/$)/.test(window.location.hash)) {
-  		// 	console.log('homepage');
+  		// let wizardComponent = null;
+    // 		if (this.state.onBeginPage === true) {
+  		// 	wizardComponent = 	<Begin 
+  		// 						handleBegin={this.begin.bind(this)} 
+  		// 						/>
+  		// }
+  		// if (this.state.onWebformQuestionPage === true) {
+  		// 	wizardComponent = 	<IsThisAWebform 
+  		// 						handleWebformYes={this.webformYes.bind(this)} 
+  		// 						handleWebformNo={this.webformNo.bind(this)} 
+  		// 						handleStartOver={this.startOver.bind(this)}
+  		// 						/>
+  		// }
+  		// if (this.state.onTypeofWebformPage === true) {
+  		// 	wizardComponent = 	<TypeOfWebform 
+  		// 						handleNonUnbounceUser={this.nonUnbounceWebForm.bind(this)} 
+  		// 						handleUnbounceUser={this.unbounceWebForm.bind(this)}
+  		// 						handleBegin={this.begin.bind(this)} 
+  		// 						/>
   		// }
    		return (
 			<div>
@@ -181,128 +177,57 @@ class Main extends Component {
 				<HashRouter>
 					<div>
 						<div className={!this.state.isSourceWizard ? 'hidden' : 'wizard-content-body'}>
-							{wizardComponent}
+							{}
 						</div>
 					<div id={this.state.isSourceWizard ? 'hidden' : 'wrapper'} className={this.state.walkthrough ? 'intro-tour-overlay' : ''}>
 						<div className='wrapper-ancestor'>
 							<div className={this.state.isActive ? 'active-sidebar-small-screen' : 'sidebar-wrapper'}>
 								<div className="sidebar-content">
-									<Sidebar>
-										{this.state.isWebformUser &&
-											<div className="lead-source-sidebar-div">
-												<div className="source-div">
-													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
-													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
-	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
-	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
-      											</div>
-      											<br/>
-      											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions" label="Posting Instructions"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Advanced Tutorials"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>
-      										</div>
-      									}
-      									{this.state.isUnbounceUser &&
-											<div className="lead-source-sidebar-div">
-												<div className="source-div">
-													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
-													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
-	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Unbounce Webform"></CustomNavLink>
-	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" label="Other Webform"></CustomNavLink>									
-	      										</div>
-	      										<br />
-      											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions" label="Posting Instructions"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Advanced Tutorials"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>
-      										</div>      									
-      									}
-      									{this.state.isUsingVendor &&
-    										<div className="lead-source-sidebar-div">
-												<div className="source-div">
-													<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
-													<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" className="active-source-type regular-css-bold" label="Partner Leads"></CustomNavLink>
-	    											<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
-	    											<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" label="Other Webform"></CustomNavLink>	
-	    										</div>
-	    										<br />
-      											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions" label="Posting Instructions"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
-      											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
-      											<br />
-      											<CustomNavLink to="#" className="bold" label="Advanced Tutorials"></CustomNavLink>
-      											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>								
-      										</div>								
-      									}
-										
+									<Sidebar>		
+										<div className="lead-source-sidebar-div">
+											<div className="source-div">
+												<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
+												<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
+												<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
+												<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
+											</div>
+											<br/>
+											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions" label="Posting Instructions"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-basics" label="Testing Basics"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/testing-tool" label="Testing Tool"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/reporting" label="Reporting"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/knowledge-base" label="Knowledge Base"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/conclusion" label="Conclusion"></CustomNavLink>
+											<br />
+											<CustomNavLink to="#" className="bold" label="Page Overviews"></CustomNavLink>
+											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>	
+											<br />
+											<CustomNavLink to="#" className="bold" label="Advanced Tutorials"></CustomNavLink>
+											<CustomNavLink to="#" label="Coming Soon!"></CustomNavLink>
+										</div>
 									</Sidebar>
 								</div>
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
-									<Route path='/' exact true render={() => <Restart isSourceWizard={this.state.isSourceWizard} handleBegin={this.begin.bind(this)}/>}></Route>
-									<Route path='/sources' render={() => <Sources isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
-									<Route path='/fields' render={() => <Fields isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
-									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping isUsingVendor={this.state.isUsingVendor} isWebformUser={this.state.isWebformUser} isUnbounceUser={this.state.isUnbounceUser} />}></Route>
+									<Route path='/' exact true component={withTracker(IntroAndFlowCreation)}></Route>
+									<Route path='/sources' component={withTracker(Sources)}></Route>
+									<Route path='/fields' component={withTracker(Fields)}></Route>
+									<Route path='/inbound-field-mapping' component={withTracker(InboundFieldMapping)}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
 									<Route path='/introandflowcreation' component={withTracker(IntroAndFlowCreation)}></Route>
-									<Route path='/acceptance-criteria' component={AcceptanceCriteria}></Route>
+									<Route path='/acceptance-criteria' component={withTracker(AcceptanceCriteria)}></Route>
 									<Route path='/posting-instructions' component={withTracker(PostingInstructions)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>
 									<Route path='/non-wizard-filters-and-rules' component={withTracker(NonWizardFiltersAndRules)}></Route>

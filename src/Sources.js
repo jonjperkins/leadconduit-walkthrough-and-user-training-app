@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import IconButton from "./IconButton";
 import ReactTooltip from "react-tooltip";
+import { Button } from "react-bootstrap";
+
+
 
 class Sources extends Component {
 	constructor() {
@@ -32,9 +35,15 @@ class Sources extends Component {
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
-					</div>
-					
+					</div>					
 					<h1 className="title">Sources</h1>
+					<div className="source-type-prompt">
+						<p style={{color: "white"}}>Hi there! It looks like you haven't selected a <span style={{fontWeight: "bold", color: "white", fontSize: "1.1em"}}>source type </span>
+						 yet. Please select from the options below.</p>
+						<Link className="source-choice" style={{ textDecoration: 'none' }} to="#">Vendor</Link>
+						<Link className="source-choice" style={{ textDecoration: 'none' }} to="#">Webform</Link>
+						<Link className="source-choice" style={{ textDecoration: 'none' }} to="#">Unbounce</Link>
+					</div>
 					
 					{this.props.isUsingVendor &&
 						<div>
@@ -259,9 +268,18 @@ class Sources extends Component {
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/introandflowcreation">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/fields">Next</Link>			
-					
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Introduction"><IconButton class_name="arrow" to="/introandflowcreation" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Fields"><IconButton class_name="arrow" to="/fields" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>	
 				</div>
 			</div>
 		);
