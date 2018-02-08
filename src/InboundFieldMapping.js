@@ -64,7 +64,7 @@ class InboundFieldMapping extends Component {
 						<div>
 							{this.state.sourceOptions &&
 							<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
-								<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
+								<button className="source-choice-active" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
 								<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
 								<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
 							</p>
@@ -103,7 +103,7 @@ class InboundFieldMapping extends Component {
 						<div>
 							{this.state.sourceOptions &&
 								<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
-									<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
+									<button className="source-choice-active" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
 									<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
 									<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
 								</p>
@@ -153,7 +153,7 @@ class InboundFieldMapping extends Component {
 						<div>
 							{this.state.sourceOptions &&
 								<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
-									<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
+									<button className="source-choice-active" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
 									<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
 									<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
 								</p>

@@ -1267,7 +1267,7 @@ float: right;
   margin-top: 30px;
   display: inline-block;
   border: solid #00d1b2 1px;
-  background-color: #DDFFF8;
+  background-color: white;
   color: #00d1b2;
   padding: 8px 14px;
   margin-bottom: 20px;
@@ -1289,7 +1289,7 @@ float: right;
 .source-choice-active {
   margin-top: 30px;
   display: inline-block;
-  border: solid #00d1b2 1px;
+  border: solid white 1px;
   background-color: #00d1b2;
   color: white;
   padding: 8px 14px;
