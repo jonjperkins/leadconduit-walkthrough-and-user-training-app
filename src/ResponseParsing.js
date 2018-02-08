@@ -78,8 +78,18 @@ class ResponseParsing extends Component {
 					that are not successfully delivered to your custom destination.</p>
 					<p><strong>Note</strong>: You’ll want to take another look at this article so that you can also configure 
 					your response parsing to capture the text of any failure or error messages.</p>
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/outbound-field-mapping">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/testing-basics">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Outbound Field Mapping"><IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Testing Basics"><IconButton class_name="arrow" to="/testing-basics" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

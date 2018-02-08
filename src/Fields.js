@@ -14,6 +14,21 @@ class Fields extends Component {
 		this.setState({gifShowing: !this.state.gifShowing})
 		console.log(this.state.gifShowing);
 	}
+	showSourceOptions() {
+		this.setState({sourceOptions: true})
+	}
+	hideSourceOptionsVendor() {
+		this.setState({sourceOptions: false})
+		this.props.handleVendorSource();
+	}
+	hideSourceOptionsUnbounce() {
+		this.setState({sourceOptions: false})
+		this.props.handleUnbounceUser();
+	}
+	hideSourceOptionsNonUnbounce() {
+		this.setState({sourceOptions: false})
+		this.props.handleNonUnbounceWebForm();
+	}
 	componentDidMount() {
 		window.scrollTo(0, 0);
 	}
@@ -34,8 +49,29 @@ class Fields extends Component {
 						</div>
 					</div>
 					<h1 className="title">Fields</h1>
+
+					{(!this.props.isUsingVendor && !this.props.isUnbounceUser && !this.props.isWebformUser) &&
+						<div className="source-type-prompt">
+							<p style={{color: "white"}}>It looks like you haven't selected a <span style={{fontWeight: "bold", color: "white", fontSize: "1.1em"}}>source type </span>
+							 yet. Please select from the options below.</p>
+							<button className="source-choice-start" onClick={this.props.handleVendorSource} style={{ textDecoration: 'none' }}>Vendor</button>
+							<button className="source-choice-start" onClick={this.props.handleNonUnbounceWebForm} style={{ textDecoration: 'none' }}>Webform</button>
+							<button className="source-choice-start" onClick={this.props.handleUnbounceUser} style={{ textDecoration: 'none' }}>Unbounce</button>
+						</div>
+					}
 					{this.props.isUsingVendor &&
 						<div>
+							{this.state.sourceOptions &&
+							<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
+								<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
+							</p>
+							}
+							{!this.state.sourceOptions &&
+								<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span> 
+								<button className="source-choice" onClick={this.showSourceOptions.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em" }}>Vendor</button></p>
+							}
 							<p>In LeadConduit, Fields define what kind of data your flow can receive from a lead vendor or web form. Data in 
 							a field is actionable i.e. you can make decisions based on it, and you can send it out to various 
 							types of recipients. If a lead vendor or your web form submits a parameter that does not match a 
@@ -102,6 +138,17 @@ class Fields extends Component {
 					}
 					{this.props.isUnbounceUser &&
 						<div>
+							{this.state.sourceOptions &&
+							<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
+								<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
+							</p>
+							}
+							{!this.state.sourceOptions &&
+								<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span> 
+								<button className="source-choice" onClick={this.showSourceOptions.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em" }}>Unbounce</button></p>
+							}
 							<p>The beauty of using LeadConduit’s <strong>web form wizard</strong> is that it performs almost all 
 							of the work for you! Assuming you used the wizard, <strong>your fields and the required inbound 
 							field mappings are already in place</strong>! Since your fields and mappings are all set up, this 
@@ -179,6 +226,17 @@ class Fields extends Component {
 
 					{this.props.isWebformUser && 
 						<div>
+							{this.state.sourceOptions &&
+							<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span>
+								<button className="source-choice" onClick={this.hideSourceOptionsNonUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Webform</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsUnbounce.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Unbounce</button>
+								<button className="source-choice" onClick={this.hideSourceOptionsVendor.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em"  }}>Vendor</button>
+							</p>
+							}
+							{!this.state.sourceOptions &&
+								<p><span style={{fontSize: ".7em", color: "#00d1b2", fontWeight: "bold"}}>Source Type: </span> 
+								<button className="source-choice" onClick={this.showSourceOptions.bind(this)} style={{ textDecoration: 'none', fontSize: ".7em" }}>Webform</button></p>
+							}
 							<p>The beauty of using LeadConduit’s <strong>web form wizard</strong> is that it performs almost all 
 							of the work for you! Assuming you used the wizard, <strong>your fields and the required inbound 
 							field mappings are already in place</strong>! Since your fields and mappings are all set up, this 
@@ -253,8 +311,20 @@ class Fields extends Component {
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 						</div>
 					}
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/sources">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/inbound-field-mapping">Next</Link>			
+					{(this.props.isUsingVendor || this.props.isUnbounceUser || this.props.isWebformUser) &&
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Sources"><IconButton class_name="arrow" to="/sources" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Inbound Field Mapping"><IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>	
+					}			
 				</div>
 			</div>
 		);

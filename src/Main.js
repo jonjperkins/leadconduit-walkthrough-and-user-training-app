@@ -47,21 +47,21 @@ class Main extends Component {
 			contentScroll: true
 		}
 	}
-	componentDidMount() {
-		console.log('wizard status: ' + this.props.wizard)
-		console.log('main component mounted')
-		if (this.props.wizard === false) {
-			this.setState({ onWebformQuestionPage: false, 
-							onTypeofWebformPage: false, 
-							isSourceWizard: false, 
-							isUnbounceUser: false, 
-							isWebformUser: false, 
-							isUsingVendor: true,
-							onBeginPage: false,
-							walkthrough: true });
-			console.log('props.wizard equals: ' + this.props.wizard)
-		}
-	}
+	// componentDidMount() {
+	// 	console.log('wizard status: ' + this.props.wizard)
+	// 	console.log('main component mounted')
+	// 	if (this.props.wizard === false) {
+	// 		this.setState({ onWebformQuestionPage: false, 
+	// 						onTypeofWebformPage: false, 
+	// 						isSourceWizard: false, 
+	// 						isUnbounceUser: false, 
+	// 						isWebformUser: false, 
+	// 						isUsingVendor: true,
+	// 						onBeginPage: false,
+	// 						walkthrough: true });
+	// 		console.log('props.wizard equals: ' + this.props.wizard)
+	// 	}
+	// }
 	sidebarToggle() {
 		var active = !this.state.isActive;
 		this.setState({ isActive: active });
@@ -222,11 +222,32 @@ class Main extends Component {
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
 									<Route path='/' exact true component={withTracker(IntroAndFlowCreation)}></Route>
-									<Route path='/sources' component={withTracker(Sources)}></Route>
-									<Route path='/fields' component={withTracker(Fields)}></Route>
-									<Route path='/inbound-field-mapping' component={withTracker(InboundFieldMapping)}></Route>
-									<Route path='/webscraper' component={WebScraper}></Route>
 									<Route path='/introandflowcreation' component={withTracker(IntroAndFlowCreation)}></Route>
+									<Route path='/sources' render={() => <Sources 
+											isUsingVendor={this.state.isUsingVendor} 
+											isWebformUser={this.state.isWebformUser} 
+											isUnbounceUser={this.state.isUnbounceUser} 
+											handleUnbounceUser={this.unbounceWebForm.bind(this)}
+											handleNonUnbounceWebForm={this.nonUnbounceWebForm.bind(this)}
+											handleVendorSource={this.vendorSource.bind(this)}
+											/>}></Route>
+									<Route path='/fields' render={() => <Fields 
+											isUsingVendor={this.state.isUsingVendor} 
+											isWebformUser={this.state.isWebformUser} 
+											isUnbounceUser={this.state.isUnbounceUser} 
+											handleUnbounceUser={this.unbounceWebForm.bind(this)}
+											handleNonUnbounceWebForm={this.nonUnbounceWebForm.bind(this)}
+											handleVendorSource={this.vendorSource.bind(this)}
+											/>}></Route>
+									<Route path='/inbound-field-mapping' render={() => <InboundFieldMapping 
+											isUsingVendor={this.state.isUsingVendor} 
+											isWebformUser={this.state.isWebformUser} 
+											isUnbounceUser={this.state.isUnbounceUser} 
+											handleUnbounceUser={this.unbounceWebForm.bind(this)}
+											handleNonUnbounceWebForm={this.nonUnbounceWebForm.bind(this)}
+											handleVendorSource={this.vendorSource.bind(this)}
+											/>}></Route>
+									<Route path='/webscraper' component={WebScraper}></Route>
 									<Route path='/acceptance-criteria' component={withTracker(AcceptanceCriteria)}></Route>
 									<Route path='/posting-instructions' component={withTracker(PostingInstructions)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>

@@ -55,8 +55,18 @@ class PostingInstructions extends Component {
 					<img className="img-background" src={require("../images/postinginstructionsmappings.png")} alt="Posting Mappings" />
 					<p>Sources can also test the response they’ll receive from LeadConduit based on the Acceptance Criteria. Filters will not appear in the posting docs, and will not 
 					apply to the interactive example at the bottom of the docs.</p>
-					<Link className="previous-button"  style={{ textDecoration: "none" }} to="/acceptance-criteria">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/non-wizard-enhancements">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Acceptance Criteria"><IconButton class_name="arrow" to="/acceptance-criteria" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

@@ -73,8 +73,18 @@ class AcceptanceCriteria extends Component {
 						<li><a href="https://support.activeprospect.com/hc/en-us/articles/115001385643-LeadConduit-Rules" target="_blank">LeadConduit Rules</a></li>
 						<li><a href="https://support.activeprospect.com/hc/en-us/articles/211164783-LeadConduit-Acceptance-Criteria" target="_blank">Acceptance Criteria</a></li>
 					</ul>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/inbound-field-mapping">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/posting-instructions">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Inbound Field Mapping"><IconButton class_name="arrow" to="/inbound-field-mapping" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Posting Instructions"><IconButton class_name="arrow" to="/posting-instructions" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

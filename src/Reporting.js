@@ -65,8 +65,18 @@ class Reporting extends Component {
 					menu. Also, if you’ve shared a report in error, or no longer want your contact to be able to view a report, you 
 					can change the URL at any time.</p>
 					<img className="img-background" src={require("../images/editreports.png")} alt="Edit Reports" />
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/testing-tool">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/knowledge-base">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Knowledge Base"><IconButton class_name="arrow" to="/knowledge-base" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

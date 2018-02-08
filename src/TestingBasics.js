@@ -85,8 +85,18 @@ class TestingBasics extends Component {
 					the page, you’ll see the color-coded outcome of your submission, as well as <strong>a link to the test lead in LeadConduit</strong>.  Effective 
 					problem solving in LeadConduit requires the ability to understand a lead event page, so we suggest clicking the test lead link to view the 
 					lifecycle of your lead through your flow.</p>
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/response-parsing">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/testing-tool">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Response Parsing"><IconButton class_name="arrow" to="/response-parsing" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Testing Tool"><IconButton class_name="arrow" to="/testing-tool" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

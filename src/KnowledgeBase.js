@@ -41,8 +41,18 @@ class KnowledgeBase extends Component {
 					<p><strong>Pro Tip</strong>: Use the search bar! This is how our team navigates our knowledge base, and I’m 
 					certain you’ll find it to be a much faster way to find what you need!</p>
 					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/search.gif") : require("../images/searchfalse.gif")} alt="Search KB" /></p>
-					<Link className="previous-button" style={{ textDecoration: "none" }} to="/reporting">Back</Link>
-					<Link className="next-button" style={{ textDecoration: "none" }} to="/conclusion">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Reporting"><IconButton class_name="arrow" to="/reporting" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Conclusion"><IconButton class_name="arrow" to="/conclusion" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

@@ -109,8 +109,18 @@ class OutboundFieldMapping extends Component {
 					<p>There are a variety of situations that require manually mapping the fields for the destination where you want to 
 					send your leads. Get more familiar with <a href="https://support.activeprospect.com/hc/en-us/articles/216009923-LeadConduit-Outbound-Field-Mapping" target="_blank">outbound field mapping </a>
 					by taking a look at the linked article in our knowledge base.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/lead-delivery">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/response-parsing">Next</Link>			
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Response Parsing"><IconButton class_name="arrow" to="/response-parsing" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

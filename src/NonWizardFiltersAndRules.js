@@ -74,8 +74,18 @@ class NonWizardFiltersAndRules extends Component {
 						flow and reject the lead. <strong>The logic here is that only leads with ‘bad’ phone number will enter the Webbula step, so if the 
 						Webbula outcome is ‘Failure’, then we know this is a bad lead because phone number <em>and</em> email are bad.</strong></li>
 					</ol>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/non-wizard-enhancements">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/lead-delivery">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

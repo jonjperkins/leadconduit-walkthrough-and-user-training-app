@@ -57,7 +57,14 @@ class Conclusion extends Component {
 						up at this bottom of <a href="https://activeprospect.com/" target="_blank">this page</a> to receive emails.</li>
 					</ol>
 
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/knowledge-base">Back</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Knowledge Base"><IconButton class_name="arrow" to="/knowledge-base" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

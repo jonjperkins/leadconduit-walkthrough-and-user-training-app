@@ -154,8 +154,18 @@ class LeadDelivery extends Component {
 					<p>Depending on the type of integration you’re using, you may be finished setting up your lead delivery. There are still a few configuration options 
 					available and sometimes necessary to properly set up a delivery. Ensuring that you’re sending all of the lead data you’ve collected to your destination 
 					is the focus of the next section of this guide.</p>
-					<Link className="previous-button" style={{ textDecoration: 'none' }} to="/non-wizard-filters-and-rules">Back</Link>
-					<Link className="next-button" style={{ textDecoration: 'none' }} to="/outbound-field-mapping">Next</Link>
+					<div className="arrow-wrapper">
+						<div className="inner-arrow-wrapper">
+							<div className="back-arrow">
+								<p data-tip="Filters and Rules"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+							<div className="forward-arrow">
+								<p data-tip="Outbound Field Mapping"><IconButton class_name="arrow" to="/outbound-field-mapping" name="angle-right" /></p>
+								<ReactTooltip place="bottom" type="dark" effect="float"/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
