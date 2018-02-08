@@ -185,13 +185,6 @@ class Main extends Component {
 								<div className="sidebar-content">
 									<Sidebar>		
 										<div className="lead-source-sidebar-div">
-											<div className="source-div">
-												<CustomNavLink to="#" className="bold" label="Your Lead Source Type"></CustomNavLink>
-												<CustomNavLink onClick={this.vendorSource.bind(this)} to="#" label="Partner Leads"></CustomNavLink>
-												<CustomNavLink onClick={this.unbounceWebForm.bind(this)} to="#" label="Unbounce Webform"></CustomNavLink>
-												<CustomNavLink onClick={this.nonUnbounceWebForm.bind(this)} to="#" className="active-source-type regular-css-bold" label="Other Webform"></CustomNavLink>									
-											</div>
-											<br/>
 											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
