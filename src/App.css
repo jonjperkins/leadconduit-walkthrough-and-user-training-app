@@ -216,7 +216,7 @@ img {
       border: solid #f58025 1px;
       transition: all 0.4s ease 0s;
     }
-    .source-type-prompt > .source-choice {
+    .source-type-prompt > .source-choice-start {
       margin-top: 30px;
       display: inline-block;
       border: solid #00d1b2 1px;
