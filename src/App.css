@@ -216,6 +216,14 @@ img {
       border: solid #f58025 1px;
       transition: all 0.4s ease 0s;
     }
+    .chapter-content-body > .source-type-prompt {
+      margin-right: 10px;
+      margin-left: 10px;
+      padding: 20px;
+      background-color: #00d1b2;
+      border-radius: 3px;
+      color: white;
+    }
     .source-type-prompt > .source-choice-start {
       margin-top: 30px;
       display: inline-block;
