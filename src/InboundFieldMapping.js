@@ -52,8 +52,8 @@ class InboundFieldMapping extends Component {
 
 					{(!this.props.isUsingVendor && !this.props.isUnbounceUser && !this.props.isWebformUser) &&
 						<div className="source-type-prompt">
-							<p style={{color: "white"}}>It looks like you haven't selected a <span style={{fontWeight: "bold", color: "white", fontSize: "1.1em"}}>source type </span>
-							 yet. Please select from the options below.</p>
+							<p style={{color: "white"}}>It looks like you haven't selected a <span style={{fontWeight: "bold", color: "white"}}>source type </span>
+							 yet. Please choose from the options below.</p>
 							<button className="source-choice-start" onClick={this.props.handleVendorSource} style={{ textDecoration: 'none' }}>Vendor</button>
 							<button className="source-choice-start" onClick={this.props.handleNonUnbounceWebForm} style={{ textDecoration: 'none' }}>Webform</button>
 							<button className="source-choice-start" onClick={this.props.handleUnbounceUser} style={{ textDecoration: 'none' }}>Unbounce</button>
