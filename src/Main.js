@@ -5,7 +5,7 @@ import Header from './Header';
 import TestingTool from './TestingTool';
 import WebScraper from './WebScraper';
 import AcceptanceCriteria from './AcceptanceCriteria';
-import PostingInstructions from './PostingInstructions';
+import SubmissionDocs from './SubmissionDocs';
 import NonWizardEnhancements from './NonWizardEnhancements';
 import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
 import LeadDelivery from './LeadDelivery';
@@ -191,7 +191,7 @@ class Main extends Component {
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
-											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/posting-instructions" label="Posting Instructions"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/submission-docs" label="Submission Docs"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
@@ -242,7 +242,7 @@ class Main extends Component {
 											/>}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
 									<Route path='/acceptance-criteria' component={withTracker(AcceptanceCriteria)}></Route>
-									<Route path='/posting-instructions' component={withTracker(PostingInstructions)}></Route>
+									<Route path='/submission-docs' component={withTracker(SubmissionDocs)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>
 									<Route path='/non-wizard-filters-and-rules' component={withTracker(NonWizardFiltersAndRules)}></Route>
 									<Route path='/lead-delivery' component={withTracker(LeadDelivery)}></Route>

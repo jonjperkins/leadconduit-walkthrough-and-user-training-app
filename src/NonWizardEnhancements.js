@@ -57,12 +57,11 @@ class NonWizardEnhancements extends Component {
 					<h2>Add Phone Validation</h2>
 					<p> Switch over to your 'Steps' tab in your flow and select the option to add an enhancement. This will 
 					bring up a menu of options to choose from. Scroll down and select the Telesign option.</p>
-					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/telesign.gif') : require('../images/telesignfalse.gif')} alt="Telesign" /></p>
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/telesignUpdate.gif') : require('../images/telesignUpdate2.gif')} alt="Telesign" /></p>
 					<ReactTooltip place="bottom" type="dark" effect="float"/>
-					<p>When you select the bubble for Telesign, the section expands and alerts you to the pricing structure. 
-					It’s important to take note of what using this service will cost you per lead. Once this enhancement is in 
-					your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
-					data will be appended to our lead.</p>
+					<p>It’s important to take note of what using this service will cost you per lead. Pricing information is highlighted in green for each enhancement.
+					Once this enhancement is in your flow, it will automatically send leads with phone numbers to Telesign for validation, and any relevant 
+					data will be appended to your lead.</p>
 					<br />
 					<h2>Add Email Validation</h2>
 					<p>Now it’s your turn to implement a step. In this section of the guide, you’ll implement the the email 
@@ -74,7 +73,7 @@ class NonWizardEnhancements extends Component {
 					article <a href="https://support.activeprospect.com/hc/en-us/articles/204981955-Webbula-Email-Hygiene-Verification" target="_blank">here </a> 
 					to get familiar with what kind of information Webbula will send back to us.  When you’re ready, 
 					you can go ahead and add the Webbula step. If you get stuck, check out the video clip below for help.</p>
-					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/addwebbula.gif') : require('../images/addwebbulafalse.gif')} alt="Webbula" /></p>
+					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/addwebbulaUpdate.gif') : require('../images/addwebbulaUpdate2.gif')} alt="Webbula" /></p>
 					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">

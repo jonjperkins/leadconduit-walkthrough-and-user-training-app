@@ -89,7 +89,7 @@ class InboundFieldMapping extends Component {
 							 so you know what’s available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
 							<p><strong>Next</strong>, type the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the 
 							text "Insert <em>field_name</em> as source field" to complete the mapping.</p>
-							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmapping.gif") : require("../images/addfieldmappingfalse.gif")} alt="Add Inbound" /></p>
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmappingUpdate.gif") : require("../images/addfieldmappingUpdate2.gif")} alt="Add Inbound" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p><strong style={{color: "red"}}>Warning!</strong> If you don’t press enter/return OR select the + button below and just leave in the text, 
 							LeadConduit will interpret that as text to be sent in every flow submission.</p>
@@ -140,7 +140,7 @@ class InboundFieldMapping extends Component {
 							<a href="https://next.leadconduit.com/fields"> Standard Fields</a> in LeadConduit so you know 
 							what is available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
 							<p><strong>Next</strong>, type in the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the text "Insert <em>field_name</em> as source field" to complete the mapping.</p>
-							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmapping.gif") : require("../images/addfieldmappingfalse.gif")} alt="Add Inbound" /></p>
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmappingUpdate.gif") : require("../images/addfieldmappingUpdate2.gif")} alt="Add Inbound" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p><strong style={{color: "red"}}>Warning!</strong> If you don't press enter/return OR select the + button below and just leave in the text, 
 							LeadConduit will interpret that as text to be sent in every flow submission.</p>
@@ -190,7 +190,7 @@ class InboundFieldMapping extends Component {
 							<a href="https://next.leadconduit.com/fields"> Standard Fields</a> in LeadConduit so you know 
 							what is available. If the field is not available in the list on the left, you need to add it to your flow first.</p>
 							<p><strong>Next</strong>, type in the field name from the lead vendor into the right side, then press enter/return OR select the + button below with the text "Insert <em>field_name</em> as source field" to complete the mapping.</p>
-							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmapping.gif") : require("../images/addfieldmappingfalse.gif")} alt="Add Inbound" /></p>
+							<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require("../images/addfieldmappingUpdate.gif") : require("../images/addfieldmappingUpdate2.gif")} alt="Add Inbound" /></p>
 							<ReactTooltip place="bottom" type="dark" effect="float"/>
 							<p><strong style={{color: "red"}}>Warning!</strong> If you don't press enter/return OR select the + button below and just leave in the text, 
 							LeadConduit will interpret that as text to be sent in every flow submission.</p>
