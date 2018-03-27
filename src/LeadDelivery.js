@@ -109,11 +109,11 @@ class LeadDelivery extends Component {
 
 
 					<h2>Delivery to a Custom Endpoint</h2>
-					<p>There are thousands of places you could delivery your leads, and LeadConduit has integrations for some of 
+					<p>There are thousands of places you could deliver your leads, and LeadConduit has integrations for some of 
 					the most popular of these destinations. If, however, you don’t see a destination you’re looking for in our 
-					list of integrated deliveries, you can always configure a custom delivery destination. </p>
-					<p>Setting up a custom delivery requires a little more legwork on your part. You’ll need to manually 
-					create the custom destination in your flow, and find <strong>posting instructions</strong> for this endpoint that tell 
+					list of integrated deliveries, you can always configure a custom recipient. </p>
+					<p>Setting up a custom recipient requires a little more legwork on your part. You’ll need to manually 
+					create the custom recipient in your flow, and find <strong>posting instructions</strong> for this endpoint that tell 
 					you things like what URL to POST your leads to, what fields are required, what optional fields you can 
 					send, whether you need to send along a secret key, and what sort of response you can expect from their 
 					server for successful and unsuccessful leads.</p>
@@ -122,15 +122,15 @@ class LeadDelivery extends Component {
 					on deliveries will act as a template for you if you ever need to set up your own custom destination.</p>
 					<p>If you’re learning how to setup a custom endpoint, use this mock URL endpoint as a placeholder for 
 					learning purposes: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong>.</p>
-					<p>To get started click the <strong>Add a Delivery</strong> button. Scroll to the very bottom and create a 
-					<strong>custom delivery</strong>. Give it a name, select a type of <strong>CRM</strong> and click <strong>Save and add to flow</strong>.</p>
+					<p>To get started click the <strong>Add Recipient</strong> button. Click 
+					<strong>create a new custom recipient</strong>. Give it a name, andclick <strong>Next</strong>.</p>
 					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/new_createcustomdelivery.gif') : require('../images/new_createcustomdeliveryfalse.gif')} alt="Custom Delivery" /></p>
 					<p>Next, you need to select your integration. This part might seem tricky if you don’t have much experience with HTTP. 
 					But not to worry, there are a finite amount of ways to send data to an endpoint, and we've covered each of them in our 
 					<a href="https://support.activeprospect.com/hc/en-us/sections/201013939-LeadConduit-Flows" target="_blank"> LeadConduit knowledge base</a>.</p>
 					<p>For this guide, you will send a <strong>Custom Form POST</strong> to the mock CRM destination. Form POSTs 
 					describe the way data is sent to the endpoint (the URL where the destination wants you to send leads). When 
-					reading through the delivery’s posting instructions in a real scenario, you’ll look to see what sort of format 
+					reading through the recipient's posting instructions in a real scenario, you’ll look to see what sort of format 
 					the destination requires. The more common options for sending data include: Form POSTs, JSON POSTs, XML POSTs, 
 					and Form GETs.</p>
 					<p><strong>GET</strong> and <strong>POST</strong> describes the method of sending the data, and <strong>JSON</strong>, 
@@ -143,16 +143,16 @@ class LeadDelivery extends Component {
 					This guide goes into more details regarding outbound mapping in later sections.</p>
 					<p>Select the <strong>Custom Form POST</strong> integration.</p>
 					<img className="img-background" src={require('../images/deliveryintegrationselection.png')} alt="Integrations Selection" />
-					<p>Next, begin configuring your delivery by clicking the <strong>Add Field Mappings</strong> button. This 
+					<p>Next, begin configuring your recipient by clicking the <strong>Add Field Mappings</strong> button. This 
 					is what you should see:</p>
 					<img className="img-background" src={require('../images/initialoutboundmapping.png')} alt="Outbound Mappings" />
 					<p>There's one field required and that's the URL we spoke about earlier. Here it is again: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong></p>
 					<p>Copy and paste that URL into the box.</p>
 					<img className="img-background" src={require('../images/mockendpointcustomdelivery.png')} alt="Endpoint for Custom Delivery" />
-					<p>Your custom delivery now has a name, a method and format for sending leads, and a place to send those leads. </p>
+					<p>Your custom recipient now has a name, a method and format for sending leads, and a place to send those leads. </p>
 					<h2>Next Steps</h2>
-					<p>Depending on the type of integration you’re using, you may be finished setting up your lead delivery. There are still a few configuration options 
-					available and sometimes necessary to properly set up a delivery. Ensuring that you’re sending all of the lead data you’ve collected to your destination 
+					<p>Depending on the type of integration you’re using, you may be finished setting up your lead recipient. There are still a few configuration options 
+					available and sometimes necessary to properly set up a recipient. Ensuring that you’re sending all of the lead data you’ve collected to your destination 
 					is the focus of the next section of this guide.</p>
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
