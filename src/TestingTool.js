@@ -119,7 +119,17 @@ class TestingTool extends Component {
 	goToStep2() {
 		this.setState({ step_1: false, step_2: true, step_3: false })
 	}
+	trackTestLeads() {
+		var request = new Request("https://hooks.zapier.com/hooks/catch/43094/wbae1b/", {
+			method: "POST", 
+			body: JSON.stringify({ posting_url: this.state.posting_url})
+		})
+		fetch(request)
+			.then(function(response) {
+  	})
+	}
 	createFormSubmissionBody() {
+		this.trackTestLeads()
 		var dynamic_fields = ReactDOM.findDOMNode(this.form)
 		var form_submission_body = {}
 		for (var i = 0; i < dynamic_fields.length; i++) {
