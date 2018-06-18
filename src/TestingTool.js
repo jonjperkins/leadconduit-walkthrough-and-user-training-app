@@ -89,7 +89,7 @@ class TestingTool extends Component {
 			this.setState({ posting_url: event.target.value });
 			this.setState({ posting_url_errors: ""});
 		} else {
-			this.setState({ posting_url_errors: "Please copy and paste your posting url exactly as it appears on your posting instructions."});
+			this.setState({ posting_url_errors: "Please copy and paste your Posting URL exactly as it appears on your Submission Docs."});
 		}
 	}
 	handleUpdateFirstName(event) {
@@ -123,6 +123,24 @@ class TestingTool extends Component {
 		var request = new Request("https://hooks.zapier.com/hooks/catch/43094/wbae1b/", {
 			method: "POST", 
 			body: JSON.stringify({ posting_url: this.state.posting_url})
+		})
+		fetch(request)
+			.then(function(response) {
+  	})
+	}
+	trackLinkClicks1() {
+		var request = new Request("https://hooks.zapier.com/hooks/catch/43094/wbae1b/", {
+			method: "POST", 
+			body: JSON.stringify({ posting_url: "API Key Link Clicked"})
+		})
+		fetch(request)
+			.then(function(response) {
+  	})
+	}
+	trackLinkClicks2() {
+		var request = new Request("https://hooks.zapier.com/hooks/catch/43094/wbae1b/", {
+			method: "POST", 
+			body: JSON.stringify({ posting_url: "Submission Docs Link Clicked"})
 		})
 		fetch(request)
 			.then(function(response) {
@@ -201,13 +219,13 @@ class TestingTool extends Component {
 												<h6 style={{color: "red"}}>{this.state.errors}</h6>
 											}
 											<FormControl name="api_key" className="input extra-margins" type="text" required onChange={this.handleUpdateAPIKey}></FormControl>
-											<h6 className="smaller-h6"><em>You can find your API key by clicking the <strong>Account Settings</strong> button in the top right corner of your <a href="https://sso.activeprospect.com/account" target="_blank">account page</a>.</em></h6>
+											<h6 className="smaller-h6"><em>You can find your API key by clicking the <strong>Account Settings</strong> button in the top right corner of your <a href="https://sso.activeprospect.com/account" target="_blank" onClick={this.trackLinkClicks1}>account page</a>.</em></h6>
 											<strong>Posting URL:</strong>
 											<FormControl name="postingUrl" className="input extra-margins" type="text" placeholder="The posting URL of the flow you want to test." required onChange={this.handleUpdatePostingUrl}></FormControl>
 											{(this.state.posting_url_errors !== "") &&
 											<h6 style={{color: "red"}}>{this.state.posting_url_errors}</h6>
 											}
-											<h6 className="smaller-h6"><em>Find the Posting URL in your <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank">posting instructions</a>.</em></h6>	
+											<h6 className="smaller-h6"><em>Find the Posting URL in your <a href="https://support.activeprospect.com/hc/en-us/articles/115002225566-Finding-and-Using-Posting-Instructions" target="_blank" onClick={this.trackLinkClicks2}>Submission Docs</a>.</em></h6>	
 											</div>
 										</FormGroup>
 									</Form>
