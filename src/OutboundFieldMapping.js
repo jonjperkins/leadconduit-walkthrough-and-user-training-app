@@ -35,28 +35,27 @@ class OutboundFieldMapping extends Component {
 					</div>
 					<h1 className="title">Outbound Field Mapping</h1>
 					<p>Outbound field mapping is nearly the same process as the inbound mapping discussed earlier 
-					in this guide. You’re configuring your flow to communicate effectively with an outside party. 
+					in this guide. You’re configuring your flow to communicate effectively with an outside system that belongs to you or someone else. 
 					However, it differs in a couple significant ways.</p>
-					<p>Instead of mapping fields so that your flow can accept parameter values from your lead partner, 
-					outbound mapping is concerned with ensuring you’re able to send fields from your flow to a destination 
-					successfully. If a destination expects to receive a value in a field called <strong>fname</strong>, but you’re sending 
-					that value in a parameter called <strong>first_name</strong>, that lead will not be delivered successfully because there’s 
-					essentially a breakdown in expectations and communication. <strong>Also</strong>, if a field isn’t mapped for outbound 
-					delivery (whether automatically or manually) it won’t be sent from your flow at all.</p>
-					<p> LeadConduit, outbound field mapping is not always required to send your data successfully. Depending on the 
-					type of delivery integration you’re using, you may not need to map any values at all. For example, if your 
-					lead partner sends you data for <strong>First Name</strong> along with an email address, the MailChimp step will automatically 
-					send the value for First Name as long as you’re using the LeadConduit standard field for <strong>First Name</strong>. </p>
-					<p>How do you know which fields are automatically passed along and which ones aren’t? You’ll need to visit 
-					our <a href="http://docs.leadconduit.com/integrations" target="_blank">integration docs</a> and find the relevant destination. 
+					<p>Instead of mapping fields so that your flow can accept parameter values from your lead partner or web form, 
+					outbound mapping is concerned with ensuring you’re able to send fields from your flow to a recipient 
+					successfully. If a recipient expects to receive a value in a field called <strong>fname</strong>, but you’re sending 
+					that value in a parameter called <strong>first_name</strong>, that lead will not be delivered successfully. As a result, you'll need to add
+					an outbound field mapping that will allow you to send your first_name value as fname.</p>
+					<p>In order to make this mapping process easier, we've built integrations with companies like <a href="https://support.activeprospect.com/hc/en-us/articles/115003837423-Salesforce" target="_blank">Salesforce</a>,
+					<a href="https://support.activeprospect.com/hc/en-us/articles/115003054103" target="_blank"> Marketo</a>, <a href="https://support.activeprospect.com/hc/en-us/articles/115002220163" taret="_blank">MailChimp</a>,
+					and others that will automatically map several fields for you. How do you know which fields are automatically passed along and which ones aren’t? You’ll can visit 
+					our <a href="http://docs.leadconduit.com/integrations" target="_blank">integration docs</a> and find the relevant recipient. 
 					Not sure how to read these docs? Visit <a href="https://support.activeprospect.com/hc/en-us/articles/205133075-Integrations-Associated-Fields" target="_blank">this</a> knowledge 
 					base article for an excellent explanation of our integrations and associated fields.</p>
-					<p>Successfully configuring your lead delivery requires that you understand which fields you’re collecting are being 
+					<p>Successfully configuring your lead delivery to a recipient requires that you understand which fields you’re collecting are being 
 					delivered automatically for you, and which you need to explicitly map.</p>
+					
 					<h2>Automatically Mapped Fields</h2>
-					<p>As mentioned in the paragraphs above, you’ll need to review the <a href="http://docs.leadconduit.com/integrations" target="_blank">integration docs</a> 
+					<p>As mentioned in the paragraphs above, you’ll need to review the <a href="http://docs.leadconduit.com/integrations" target="_blank">integration docs </a> 
 					and <a href="https://support.activeprospect.com/hc/en-us/articles/205133075-Integrations-Associated-Fields" target="_blank">this</a> article to 
-					understand which fields are automatically mapped, and to ensure that you’re using standard fields to facilitate this process.</p> 
+					understand which fields are automatically mapped, and to ensure that you’re using standard fields to facilitate this process. You can also search our 
+					<a href="https://support.activeprospect.com/hc/en-us/categories/200350369-LeadConduit" target="_blank"> knowledge base</a> for the recipient integration you're interested in using.</p> 
 					
 					<h2>Manually Mapped Fields</h2>
 					<p>Manual mapping is necessary when the integration you’re using does not automatically map fields for you, or you’re trying 

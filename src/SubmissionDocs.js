@@ -34,11 +34,12 @@ class SubmissionDocs extends Component {
 						</div>
 					</div>
 					<h1 className="title">Submission Docs</h1>
-					<p>When you create a flow and need a way to tell people how to send your lead data to your flow - send them the Submission Docs. 
-					Submissions Docs are source-specific and can be accessed in two locations.</p>
-					<p>The flow's homepage.</p>
+					<p>Submission Docs contain instructions for sending leads into your flow. For every source you create, LeadConduit will generate
+					a new set of Submission Docs with a unique Posting URL. You can access the Submission Docs in two ways:</p>
+					<br />
+					<p><strong>The flow's homepage.</strong></p>
 					<img className="img-background" src={require("../images/homepageSubmissionDocs.png")} alt="Submission Docs Homepage" />
-					<p>The flow's source view.</p>
+					<p><strong>The flow's source view.</strong></p>
 					<img className="img-background" src={require("../images/sourceViewSubmissionDocs.png")} alt="Submission Docs Source" />
 					<p>These Submission Docs will stay up-to-date in real time as changes are made to your flow, and will always live at their unique URL. 
 					The docs do not require a login to access, and can be shared with your lead sources as necessary.</p>

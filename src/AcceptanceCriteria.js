@@ -34,14 +34,17 @@ class AcceptanceCriteria extends Component {
 						</div>
 					</div>
 					<h1 className="title">Acceptance Criteria</h1>
-					<p>Acceptance Criteria functions as a gatekeeper for your flow. If a lead comes in and does not meet the 
-					proper criteria it will be rejected, never entering your flow steps. Unlike inbound field mappings, Acceptance 
-					Criteria can be specific to a single source, or apply to <em>all</em> sources.</p>
-					<p>Select the global <strong> +Add</strong> button (green arrow).</p>
+					<p>Before a lead is allowed to enter the steps of your flow (where validation, enhancement, and delivery occur), it must meet certain requirements LeadConduit calls Acceptance Criteria.
+					These criteria lay out the baseline requirements for each lead. For example, if you plan to call leads on the phone, then presumably you only want leads that contain phone numbers.
+					Further, you should check to see if the phone number is in a valid format. You can prevent the unwanted delivery of 'bad' leads to your call centers, CRMs, and 
+					databases by properly configuring Acceptance Criteria.</p>
+					<p>Unlike <a href="http://leadconduit-tutorial.herokuapp.com/#/inbound-field-mapping" target="_blank">inbound field mappings</a>, 
+					Acceptance Criteria can be specific to a single source, or apply to <em>all</em> sources.</p>
+					<p>Add acceptance criteria for all sources by selecting the global <strong> +Add</strong> button (green arrow).</p>
 					<img className="img-background" src={require('../images/addrulesinboundUpdate.png')} alt="Add Rules" />
 					<p>You'll be taken to a page where you can begin configuring your acceptance criteria. When you create a 
 					source rule, you’re effectively saying that a lead MUST have this data. Otherwise, we don't want it.</p>
-					<p>For example, we only want to accept leads where:</p>
+					<p>Imagine a scenario where you only want to accept leads where:</p>
 					<ol>
 						<li><strong>Age</strong> is greater than or equal to 18</li>
 						<li><strong>First name</strong> is not blank OR <strong>last name</strong> is not blank</li>
@@ -57,7 +60,7 @@ class AcceptanceCriteria extends Component {
 					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/setacceptancecriteriaUpdate.gif') : require('../images/setacceptancecriteriaUpdate2.gif')} alt="Set Criteria" /></p>
 					<ReactTooltip place="bottom" type="dark" effect="float"/>
 					<p>Don't forget to <strong>save</strong> your work!</p>
-					<p>If you set up the previous rules correctly, here's how your final acceptance criteria rules would look:</p>
+					<p>Here's how your final acceptance criteria rules should look based on the above parameters:</p>
 					<img className="img-background" src={require('../images/finalacceptancecriteriaUpdate.png')} alt="Final Criteria"  />
 					<p>In order for a lead to pass through the initial source rules to the flow's steps, it must pass <strong>ALL</strong> or <strong>ANY</strong> (depending on what you select) of the rules set up for the source. 
 					Within the larger rule, you can set up smaller rule sets which will give you a lot of power in determining what leads should make it into your flow's steps.</p>

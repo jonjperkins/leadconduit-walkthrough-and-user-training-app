@@ -8,6 +8,7 @@ import AcceptanceCriteria from './AcceptanceCriteria';
 import SubmissionDocs from './SubmissionDocs';
 import NonWizardEnhancements from './NonWizardEnhancements';
 import NonWizardFiltersAndRules from './NonWizardFiltersAndRules';
+import StepCriteria from './StepCriteria';
 import LeadDelivery from './LeadDelivery';
 import OutboundFieldMapping from './OutboundFieldMapping';
 import ResponseParsing from './ResponseParsing';
@@ -186,14 +187,15 @@ class Main extends Component {
 									<Sidebar>		
 										<div className="lead-source-sidebar-div">
 											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
-											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Intro and Flow Creation"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Create a Flow"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/fields" label="Fields"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/inbound-field-mapping" label="Inbound Field Mapping"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/acceptance-criteria" label="Acceptance Criteria"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/submission-docs" label="Submission Docs"></CustomNavLink>
-											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Marketplace Integrations & Enhancements"></CustomNavLink>
-											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters and Step Rules"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Enhancements"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/stepcriteria" label="Step Criteria"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
@@ -245,6 +247,7 @@ class Main extends Component {
 									<Route path='/submission-docs' component={withTracker(SubmissionDocs)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>
 									<Route path='/non-wizard-filters-and-rules' component={withTracker(NonWizardFiltersAndRules)}></Route>
+									<Route path='/stepcriteria' exact true component={withTracker(StepCriteria)}></Route>
 									<Route path='/lead-delivery' component={withTracker(LeadDelivery)}></Route>
 									<Route path='/outbound-field-mapping' component={withTracker(OutboundFieldMapping)}></Route>
 									<Route path='/response-parsing' component={withTracker(ResponseParsing)}></Route>

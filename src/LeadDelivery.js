@@ -122,8 +122,8 @@ class LeadDelivery extends Component {
 					on deliveries will act as a template for you if you ever need to set up your own custom destination.</p>
 					<p>If you’re learning how to setup a custom endpoint, use this mock URL endpoint as a placeholder for 
 					learning purposes: <strong>http://www.mocky.io/v2/5900f11b1200000317c7b71f</strong>.</p>
-					<p>To get started click the <strong>Add Recipient</strong> button. Click 
-					<strong>create a new custom recipient</strong>. Give it a name, andclick <strong>Next</strong>.</p>
+					<p>To get started click the <strong>Add Recipient</strong> button. Click  
+					<strong> create a new custom recipient</strong>. Give it a name, and click <strong>Next</strong>.</p>
 					<p data-tip="Click to restart"><img onClick={this.resetGif.bind(this)} className="gif-background" src={this.state.gifShowing ? require('../images/new_createcustomdelivery.gif') : require('../images/new_createcustomdeliveryfalse.gif')} alt="Custom Delivery" /></p>
 					<p>Next, you need to select your integration. This part might seem tricky if you don’t have much experience with HTTP. 
 					But not to worry, there are a finite amount of ways to send data to an endpoint, and we've covered each of them in our 
