@@ -24,11 +24,11 @@ class NonWizardFiltersAndRules extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Enhancements & Marketplace Integrations"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
+								<p data-tip="Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-right" /></p>
+								<p data-tip="Step Criteria"><IconButton class_name="arrow" to="/step-criteria" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
@@ -51,11 +51,11 @@ class NonWizardFiltersAndRules extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
+								<p data-tip="Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Lead Delivery"><IconButton class_name="arrow" to="/lead-delivery" name="angle-right" /></p>
+								<p data-tip="Step Criteria"><IconButton class_name="arrow" to="/step-criteria" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

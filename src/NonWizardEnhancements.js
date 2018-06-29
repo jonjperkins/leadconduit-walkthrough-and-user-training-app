@@ -24,11 +24,11 @@ class NonWizardEnhancements extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Posting Instructions"><IconButton class_name="arrow" to="/submission-docs" name="angle-left" /></p>
+								<p data-tip="Submission Docs"><IconButton class_name="arrow" to="/submission-docs" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Filters and Rules"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" /></p>
+								<p data-tip="Filters"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
@@ -78,11 +78,11 @@ class NonWizardEnhancements extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Posting Instructions"><IconButton class_name="arrow" to="/posting-instructions" name="angle-left" /></p>
+								<p data-tip="Submission Docs"><IconButton class_name="arrow" to="/submission-docs" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Filters and Rules"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" /></p>
+								<p data-tip="Filters"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

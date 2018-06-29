@@ -24,7 +24,7 @@ class StepCriteria extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Enhancements & Marketplace Integrations"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
+								<p data-tip="Filters"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
@@ -49,7 +49,7 @@ class StepCriteria extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-left" /></p>
+								<p data-tip="Filters"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">

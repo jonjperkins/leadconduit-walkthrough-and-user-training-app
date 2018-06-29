@@ -28,7 +28,7 @@ class SubmissionDocs extends Component {
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" /></p>
+								<p data-tip="Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
@@ -66,7 +66,7 @@ class SubmissionDocs extends Component {
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Marketplace Integrations & Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" /></p>
+								<p data-tip="Enhancements"><IconButton class_name="arrow" to="/non-wizard-enhancements" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

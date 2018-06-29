@@ -28,7 +28,7 @@ class AcceptanceCriteria extends Component {
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Posting Instructions"><IconButton class_name="arrow" to="/submission-docs" name="angle-right" /></p>
+								<p data-tip="Submission Docs"><IconButton class_name="arrow" to="/submission-docs" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>
@@ -85,7 +85,7 @@ class AcceptanceCriteria extends Component {
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
-								<p data-tip="Posting Instructions"><IconButton class_name="arrow" to="/posting-instructions" name="angle-right" /></p>
+								<p data-tip="Submission Docs"><IconButton class_name="arrow" to="/submission-docs" name="angle-right" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 						</div>

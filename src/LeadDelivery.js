@@ -24,7 +24,7 @@ class LeadDelivery extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Filters and Rules"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" /></p>
+								<p data-tip="Step Criteria"><IconButton class_name="arrow" to="/step-criteria" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">
@@ -157,7 +157,7 @@ class LeadDelivery extends Component {
 					<div className="arrow-wrapper">
 						<div className="inner-arrow-wrapper">
 							<div className="back-arrow">
-								<p data-tip="Filters and Rules"><IconButton class_name="arrow" to="/non-wizard-filters-and-rules" name="angle-left" /></p>
+								<p data-tip="Step Criteria"><IconButton class_name="arrow" to="/step-criteria" name="angle-left" /></p>
 								<ReactTooltip place="bottom" type="dark" effect="float"/>
 							</div>
 							<div className="forward-arrow">

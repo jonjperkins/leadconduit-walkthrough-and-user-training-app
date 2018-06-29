@@ -195,7 +195,7 @@ class Main extends Component {
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/submission-docs" label="Submission Docs"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-enhancements" label="Enhancements"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/non-wizard-filters-and-rules" label="Filters"></CustomNavLink>
-											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/stepcriteria" label="Step Criteria"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/step-criteria" label="Step Criteria"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/lead-delivery" label="Lead Delivery"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/outbound-field-mapping" label="Outbound Field Mapping"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/response-parsing" label="Response Parsing"></CustomNavLink>
@@ -247,7 +247,7 @@ class Main extends Component {
 									<Route path='/submission-docs' component={withTracker(SubmissionDocs)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>
 									<Route path='/non-wizard-filters-and-rules' component={withTracker(NonWizardFiltersAndRules)}></Route>
-									<Route path='/stepcriteria' exact true component={withTracker(StepCriteria)}></Route>
+									<Route path='/step-criteria' exact true component={withTracker(StepCriteria)}></Route>
 									<Route path='/lead-delivery' component={withTracker(LeadDelivery)}></Route>
 									<Route path='/outbound-field-mapping' component={withTracker(OutboundFieldMapping)}></Route>
 									<Route path='/response-parsing' component={withTracker(ResponseParsing)}></Route>
