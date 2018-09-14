@@ -56,7 +56,7 @@ class Overview extends Component {
 					<h4>Add Filters</h4>
 					<p><strong><a href="http://leadconduit-tutorial.herokuapp.com/#/non-wizard-filters-and-rules">Filters</a></strong> allow you to stop unwanted leads from ever entering your database. Use filters to provide a real-time response to your sources for leads that you don't want.</p>
 					<br />
-					<h2><strong>Step 5: </strong>Test your Flow</h2>
+					<h2><strong>Step 5: </strong>Test Your Flow</h2>
 					<p>Use our <strong><a href="http://leadconduit-tutorial.herokuapp.com/#/testing-tool">testing tool</a></strong> to test out your new flow.</p>
 					<br />
 					<h2><strong>Step 6: </strong>Share Your Submission Docs</h2>
