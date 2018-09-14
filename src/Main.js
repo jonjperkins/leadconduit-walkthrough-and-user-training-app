@@ -22,6 +22,7 @@ import './App.css';
 import CustomNavLink from './CustomNavLink';
 import ClientTestingPage from './ClientTestingPage';
 import withTracker from './withTracker';
+import Overview from './Overview';
 
 import Sources from './Sources';
 import Fields from './Fields';
@@ -186,6 +187,8 @@ class Main extends Component {
 								<div className="sidebar-content">
 									<Sidebar>		
 										<div className="lead-source-sidebar-div">
+											<CustomNavLink to="#" className="bold" label="Quickstart"></CustomNavLink>
+											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/overview" label="Overview"></CustomNavLink>
 											<CustomNavLink to="#" className="bold" label="Getting Started Guide"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/introandflowcreation" label="Create a Flow"></CustomNavLink>
 											<CustomNavLink onClick={this.sidebarClose.bind(this)} activeClassName='activePage' to="/sources" label="Sources"></CustomNavLink>
@@ -216,7 +219,7 @@ class Main extends Component {
 							</div>
 							<div id='page-content-wrapper'>
 								<div className="app-content-body">
-									<Route path='/' exact true component={withTracker(IntroAndFlowCreation)}></Route>
+									<Route path='/' exact true component={withTracker(Overview)}></Route>
 									<Route path='/introandflowcreation' component={withTracker(IntroAndFlowCreation)}></Route>
 									<Route path='/sources' render={() => <Sources 
 											isUsingVendor={this.state.isUsingVendor} 
@@ -243,6 +246,7 @@ class Main extends Component {
 											handleVendorSource={this.vendorSource.bind(this)}
 											/>}></Route>
 									<Route path='/webscraper' component={WebScraper}></Route>
+									<Route path='/overview' component={withTracker(Overview)}></Route>
 									<Route path='/acceptance-criteria' component={withTracker(AcceptanceCriteria)}></Route>
 									<Route path='/submission-docs' component={withTracker(SubmissionDocs)}></Route>
 									<Route path='/non-wizard-enhancements' component={withTracker(NonWizardEnhancements)}></Route>

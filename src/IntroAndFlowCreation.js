@@ -31,7 +31,7 @@ class IntroAndFlowCreation extends Component {
 					</div>
 					<h1 className="title">Create a Flow</h1>
 					<br />
-					<p>Welcome to the LeadConduit Getting Started Guide! This guide will walk you through the steps 
+					<p>Welcome to the LeadConduit Getting Started Guide&nbsp;! This guide will walk you through the steps 
 					necessary to begin receiving, enhancing, filtering and delivering leads in real time.</p>
 	 				<h2> Create Your Flow </h2>
 	 				<p>LeadConduit can do a lot, and the first step towards harnessing its power is <a href="https://support.activeprospect.com/hc/en-us/articles/115002511123-Logging-In-Launching-Products" target="_blank">signing-in</a>.
