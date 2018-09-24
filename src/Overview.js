@@ -46,10 +46,10 @@ class Overview extends Component {
 					</p>
 					<img className="img-background" src={require('../images/StepsOverview.png')} alt="Flow Button" />
 					<h4>Add an Enhancement</h4>
-					<p><strong><a href="http://leadconduit-tutorial.herokuapp.com/#/non-wizard-enhancements">Enhancements</a></strong> give you the power to append additional data to your leads and ensure the submitted lead data is accurate. </p>
+					<p><strong><a href="http://leadconduit-tutorial.herokuapp.com/#/non-wizard-enhancements">Enhancements</a></strong> give you the power to append additional data to your leads and ensure the submitted lead data is valid. </p>
 					<br />
 					<h4>Add a Recipient</h4>
-					<p>Recipients allow you to deliver your leads and enhancement data to a variety of systems (CRM, ESP, et.) or to other accounts. Use rules and/or volume caps to define which leads go to which recipients.</p>
+					<p>Recipients allow you to deliver your leads and enhancement data to a variety of systems (CRM, ESP, etc.) or to other accounts. Use rules and/or volume caps to define which leads go to which recipients.</p>
 					<p>Need to deliver leads to a recipient not listed in our integrations? Check out our <strong><a href="http://leadconduit-tutorial.herokuapp.com/#/lead-delivery">Lead Delivery</a></strong>, <strong><a href="http://leadconduit-tutorial.herokuapp.com/#/outbound-field-mapping">Outbound Field Mapping</a></strong>, 
 					and <strong><a href="http://leadconduit-tutorial.herokuapp.com/#/response-parsing">Response Parsing</a></strong> sections to learn more.</p>
 					<br />
